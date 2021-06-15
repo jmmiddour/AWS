@@ -350,4 +350,6 @@ Security groups and network ACLs are types of firewalls that your can use to pro
 
 3. Once you have installed it, open your terminal and type `aws --version` into the command line to ensure that it installed correctly.
 
-4. 
+## Section 2 - Amazon Elastic Compute Cloud (EC2)
+
+
