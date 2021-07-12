@@ -199,3 +199,217 @@ Principle of Least Principal in AWS:
 ### [Study Break: Security Domain](https://www.linkedin.com/learning/introduction-to-aws-for-non-engineers-2-security-2/study-break-security-domain?contextUrn=urn%3Ali%3AlyndaLearningPath%3Aember8982)
 
 ### [Identity and Access Management (IAM)](https://www.linkedin.com/learning/introduction-to-aws-for-non-engineers-2-security-2/identity-and-access-management-iam?contextUrn=urn%3Ali%3AlyndaLearningPath%3Aember8982)
+
+- A free service provided by AWS to manage access to services and resources on the AWS Cloud
+
+- You can create and manage users and groups
+
+- Can set permissions to allow or deny access to users or other AWS services
+
+- The permissions are global: the access you set for a user or group will be true for all regions in AWS Cloud
+
+- When providing access to users and services, follow the *principle of least privilege*
+
+There are a few ways to use IAM to set permissions for various services or users to access your AWS resources:
+
+1. Manage Users
+
+    - Create users in IAM and assign them individual security credentials
+    
+    - These users can have very precise permission sets
+    
+    - Users can be administrators that need console access to manage the AWS Cloud account and users who need to access content in the AWS Cloud account
+    
+    - You can provide programmatic access to data/resources for systems to access
+    
+    - **Programmatic Access:** applications directly accessing resources instead of humans doing the same activity
+
+2. Manage IAM Roles
+
+    - Create roles to manage permissions and control what those roles can do in your AWS instance
+    
+    - An entity assumes a role to obtain temporary security credentials to make API calls to your resources
+    
+    - This can be used to provide access to a user from another AWS account to your AWS account, such as when an organization has separate development and production environments
+
+3. Manage Federated Users
+
+    - By enabling identity federation: you can allow existing identities in your enterprise to access AWS Cloud instance without having to create IAM user for each identity 
+    
+    - You can use any identity management solution that supports SAML 2.0 or one of AWS's federation samples
+    
+    - Similar to when you use your gmail or Facebook account to sign in to another website
+    
+    - In a corporate setting, you could have your Microsoft Active Directory (AD) account sign in to your AWS account
+    
+Benefits of Identity and Access Management (IAM):
+
+- Enhanced Security
+
+- Granular Control
+
+- Ability to Provide Temporary Credentials
+
+- Flexible Security Credential Management
+
+- Federated Access
+
+- Seamless Integration Across Various AWS Services
+
+### [Web Application Firewall (WAF)](https://www.linkedin.com/learning/introduction-to-aws-for-non-engineers-2-security-2/web-application-firewall-waf?contextUrn=urn%3Ali%3AlyndaLearningPath%3Aember8982)
+
+- Protects web apps running on the AWS Cloud from common web exploits
+
+- Firewall service for your web applications
+
+- Can protect web apps against exploits that could compromise security or availability
+
+- Can protect apps from exploits that could force your app to consume excessive resources
+
+- Only pay for what you use, with no up-front commitments
+
+- Improves web traffic visibility
+
+- Provides cost-effective web app protection
+
+- Increased security and protection against web attacks
+
+- Easy to deploy and maintain
+
+- You can deploy it on your Amazon CloudFront as part of your content delivery network solution or via Amazon API gateway
+
+- No additional software you need to deploy, and you can reuse the centrally defined roles accessed all your web applications
+
+### [Shield](https://www.linkedin.com/learning/introduction-to-aws-for-non-engineers-2-security-2/shield?contextUrn=urn%3Ali%3AlyndaLearningPath%3Aember8982)
+
+DDoS (Distributed Denial of Service) Attack
+
+- An attempt to make a machine or network resource unavailable temporarily or indefinitely
+
+- Most often this is done by making excessive repeated requests to the website using thousands of unique IP addresses
+
+- Basically, a hacker sending multiple request to a server at the same time and overloading it to prevent normal users from being able to get on that server
+
+AWS Shield
+
+- AWS service which provides detection and automatic mitigations
+
+- Minimizes the effects of DDoS attacks to your apps
+
+- Helps to minimize application downtime and latency when an attack happens
+
+AWS Shield: There are 2 tiers in terms of protection and cost
+
+1. Standard:
+
+    - Automatically enabled
+    
+    - Free to use
+    
+    - Protects web applications against a majority of common DDoS attacks
+    
+    - When used with CloudFront and Route 53, you can get comprehensive availability protection against all known infrastructure attacks
+    
+2. Advanced:
+
+    - Provides continuous, 24/7 access to AWS DDoS response team
+    
+    - It detects and mitigates sophisticated DDoS attacks with near real-time visibility into the events
+    
+    - Integrates with AWS WAF
+    
+    - Provides higher level protections, network and transport layer protections, and automated application traffic monitoring
+    
+    - Provides financial protection against DDoS-related spikes in charges for EC2, elastic load balancers, CloudFront, and Route 53
+    
+    - Available globally on all CloudFront and Route 53 Edge locations
+    
+    - Your web application can be hosted anywhere in the world and still be protected by AWS Shield, as long as you are able to deploy CloudFront instance in front of the server
+    
+- With 2-tiered support, can provide comprehensive protection against DDoS attacks, small and large, catered to your budget and needs
+
+### [Inspector](https://www.linkedin.com/learning/introduction-to-aws-for-non-engineers-2-security-2/inspector?contextUrn=urn%3Ali%3AlyndaLearningPath%3Aember8982)
+
+- Automated security assessment service for applications deployed on AWS
+
+- Helps you improve the security and compliance of these applications by automatically assessing them for exposure, vulnerabilities, and derivations from best practices
+
+- Once the assessment is completed, it generates detailed reports to help check for unintended vulnerabilities
+
+- Security teams can get reports validating that the tests were performed
+
+- Helps you reduce the risk of introducing security issues during deployment and development by proactively identifying potential issues that do not align with best practices and policies
+
+- You can define your own standards and best practices
+
+- Or you can choose to utilize AWS's constantly updated standards
+
+- Inspects your applications to find security issues and bring them to your attention 
+
+### [Trusted Advisor](https://www.linkedin.com/learning/introduction-to-aws-for-non-engineers-2-security-2/trusted-advisor?contextUrn=urn%3Ali%3AlyndaLearningPath%3Aember8982)
+
+- AWS service that guides the provisioning of resources to follow AWS best practices
+
+- Scans your AWS infrastructure and advised you on how it is or is not following AWS best practices
+
+- Based on 5 categories:
+
+    1. Cost Optimization
+    
+    2. Performance
+    
+    3. Security
+    
+    4. Fault Tolerance
+    
+    5. Service Limits
+    
+- Provides action recommendations to meet best practices
+
+All AWS Customers have access to 7 Core Trusted Advisor Checks for FREE:
+
+1. S3 bucket permissions
+
+2. Security groups - specific ports unrestricted 
+
+3. IAM (Identity Access Management) use
+
+4. MFA (Mulit-Factor Authentication) on root account
+
+5. EBS (Elastic Block Store) public snapshots
+
+6. RDS (Relational Database Service) public snapshots
+
+7. Service Limits
+
+Enterprise or Business Support Plans have access to Full Trusted Advisor Checks
+
+- More types of checks on top of the 7 core checks listed above
+
+- Notifications through weekly updates
+
+- Ability to set up automated actions in response to alerts using CloudWatch
+
+- Programmatic access to scan results via the AWS Support API
+
+AWS Trusted Advisor is a valuable ally in making sure that deployment of your AWS Cloud resources are aligned with best practices, as well as providing you with customized recommendations based on proactive monitoring of your infrastructure.
+
+### [GuardDuty](https://www.linkedin.com/learning/introduction-to-aws-for-non-engineers-2-security-2/guardduty?contextUrn=urn%3Ali%3AlyndaLearningPath%3Aember8982)
+
+- A 24/7 threat detection service for the AWS Cloud
+
+- Monitors for malicious activity and unauthorized behavior
+
+- Analyzes billions of events across multiple AWS data sources to send actionable alerts via CloudWatch
+
+- Uses machine learning, anomaly detection, and integrated threat intelligence to identify and prioritize potential threats
+
+- Easy to deploy, you can deploy within a few clicks and there is no additional software or infrastructure to manage
+
+Amazon GuardDuty continuously monitors your AWS Cloud infrastructure, intelligently detects threats using machine learning, and helps you take action immediately if a threat is found so that you and your team can have a good nights sleep knowing your infrastructure is being monitored at all times.
+
+### [Study Break: Reviewing Security Services](https://www.linkedin.com/learning/introduction-to-aws-for-non-engineers-2-security-2/study-break-reviewing-security-services?contextUrn=urn%3Ali%3AlyndaLearningPath%3Aember8982)
+
+### [Study Break: Exam Tips and Resources](https://www.linkedin.com/learning/introduction-to-aws-for-non-engineers-2-security-2/study-break-exam-tips-and-resources?contextUrn=urn%3Ali%3AlyndaLearningPath%3Aember8982)
+
+### [Next Steps](https://www.linkedin.com/learning/introduction-to-aws-for-non-engineers-2-security-2/next-steps?contextUrn=urn%3Ali%3AlyndaLearningPath%3Aember8982)
