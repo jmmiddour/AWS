@@ -43,6 +43,18 @@ Setting up your own servers in a data center:
 
 6. Now you can finally begin to host your application on these servers. The worse part is, once you buy these servers, you are stuck with them.
 
+AWS EC2 has already done all the "heavy lifting" for you. They have already:
+
+- Built the datacenters
+
+- Secured the datacenters
+
+- Purchased the servers
+
+- Installed the servers
+
+- The servers are online and ready to use
+
 Setting up an EC2 instance on AWS:
 
 1. Go on your AWS account and request the EC2 instance(s) you want.
@@ -50,16 +62,56 @@ Setting up an EC2 instance on AWS:
 2. Choose which operating system you want (Windows or Linux).
 
 3. Choose what software you want.
+   1. Internal business apps
+   2. Web apps (simple or complex)
+   3. Databases
+   4. Third-party software
+   5. etc.
 
-4. Choose the size you want (memory and CPU).
+4. Choose the size you want (memory and CPU). You can always resize as needed (Vertical scaling).
 
-5. Then you are ready to begin hosting your application and this will happen all within a matter of minutes. Then when you want to stop the app from running, you just stop the instance, and you no longer have to pay for it. 
+5. Then you are ready to begin hosting your application and this will happen all within a matter of minutes. Then, when you want to stop the app from running, you just stop the instance, and you no longer have to pay for it. 
+
+EC2 runs on top of physical host machines managed by AWS using virtualization technology. When you spin up an EC2 instance you are not necessarily taking an entire host for yourself, instead you are sharing the host with multiple other instances, otherwise known as virtual machines.
 
 A **hypervisor** running on the host machine is responsible for sharing the underline physical resources between the virtual machines.
 
-This is know as **multitenancy:** Sharing underlying hardware between virtual machines.
+This idea of sharing underlying hardware is called **multitenancy:** (Sharing underlying hardware between virtual machines).
+
+The **hypervisor** is responsible for isolating the virtual machines from each other as they share resources from the host.
+
+This means EC2 instances are secure. Even though they may be sharing resources, one EC2 instance is not aware of any other EC2 instances also on that host. They are secure and separate from each other. 
 
 **Vertically Scaling an Instance:** You can start out with a small instance and then realize that your application is maxing out the server. All you have to do is just go into your account and increase the memory and cpu for that instance. You can make instances bigger or smaller whenever you need to.
+
+You can also control the networking aspect of an EC2. Control what types of request make it to your server and if they are publicly or privately accessible.
+
+### How Amazon EC2 Works
+
+1. Launch an instance: 
+
+   1. Select a template with basic configurations of your instance
+      1. These include operating system, application server, or applications
+
+   2. Select the instance type
+      1. This is the specific hardware configuration of your instance
+
+   3. Specify security settings to control the network traffic that can flow into and out of your instance
+      1. Later in this course will explore security features in greater detail
+
+2. Connect to the instance:
+
+   1. There are several ways to connect to the instance:
+      1. Your programs and applications have multiple methods to connect directly to the instance and exchange data
+      2. Users can also connect to the instance by logging in and accessing the computer desktop
+
+3. Use the instance:
+
+   1. You can run commands to: 
+      1. Install software
+      2. Add storage
+      3. Copy and organize files
+      4. And more...
 
 ### Amazon EC2 instance types
 
@@ -222,15 +274,17 @@ What is the difference between Amazon EC2 Savings Plans and Spot Instances?
 
 Scalability involves beginning with only the resources you need and designing your architecture to automatically respond to changing demand by scaling out and in. As a result, you pay for only the resources you use.
 
+> "Everything fails all the time, so plan for failure and nothing fails" - Werner Vogels
+
 **Amazon EC2 Auto Scaling**
 
 An AWS service that will automatically scale your instance for you. This enables you to automatically add or remove Amazon EC2 instances in response to changing application demand. 
 
 Within Amazon EC2 Auto Scaling, you can use 2 approaches:
 
-- ***Dynamic Scaling:*** Responds to changing demands
+- ***Dynamic Scaling:*** Responds to changing demands as they happen
 
-- ***Predictive Scaling:*** Automaticaly schedules the right number of Amazon EC2 instances based on predicted demand.
+- ***Predictive Scaling:*** Automatically schedules the right number of Amazon EC2 instances based on predicted demand.
 
 ***TIP:*** To scale faster, you can use dynamic and predictive scaling together.
 
@@ -240,13 +294,23 @@ There are 2 ways to handle growing demands:
 
 - **Scaling out:** Adding more machines to prevent overloading one machine.
 
-With Amazon EC2 Auto Scaling you do need to set a **minimum capacity** number of instances to run at all times. Then you need to also set the **desired capacity** number of instances, if you do not specify this, it defaults to your minimum capacity. Finally, you will set the **maximum capaciy** to ensure that you do not go over your budget becuase you will only have to pay for what you use.
+With Amazon EC2 Auto Scaling you do need to set a **minimum capacity** number of instances to run at all times. Then you need to also set the **desired capacity** number of instances, if you do not specify this, it defaults to your minimum capacity. Finally, you will set the **maximum capacity** to ensure that you do not go over your budget because you will only have to pay for what you use.
 
 ### Directing Traffic with Elastic Load Balancing
 
 **Elastic Load Balancing (ELB):**
 
 - The AWS service that automatically distributes incoming application traffic across multiple resources, such as EC2 instances.
+
+- AWS ELB is:
+  - A regional construct (more of an explanation later)
+    - ELB runs at the regional level rather than on individual EC2 instances, the service is automatically highly available with no additional effort on your part.
+  - High performing
+  - Cost-efficient
+  - Highly available
+  - Automatically scalable
+    - As your traffic grows, ELB is designed to handle the additional throughput with no change to the hourly cost.
+  - Acts like the "middle-man" between the frontend and backend processes to ensure all available servers are balanced properly
 
 - A load balancer acts as a single point of contact for all incoming web traffic to your Auto Scaling group. As you add or remove EC2 instances in response to the amount of incoming traffic, these requests route to the load balancer first. Then the requests spread across multiple resources that will handle them.
 
@@ -354,6 +418,13 @@ The "loosely-coupled" architecture is what AWS strives for. There are two servic
 
 - Not meant for long-running processes, like deep learning. It is more suited for running quick processing, like a web backend handling request, or a backend expense report processing server where each invocation takes less than 15 minutes to complete.
 
+- How to use AWS Lambda:
+
+  1. Upload your code to Lambda
+  2. Set your code to trigger from an event source, such as AWS services, mobile applications, or HTTP endpoints
+  3. Lambda runs your code only when triggered
+  4. You pay only for the compute time that you use. In the previous example of resizing images, you would pay only for the compute time that you use when uploading new images. Uploading the images triggers Lambda to run code for the image resizing function.
+
 **Containers:**
 
 - Provide you with a standard way to package your application's code and dependencies into a single object.
@@ -362,10 +433,114 @@ The "loosely-coupled" architecture is what AWS strives for. There are two servic
 
 - AWS uses `Docker` containers.
 
-**Amazon Elastic Container Service (ECS):**
+- They run on top of EC2 instances and run in isolation from each another, similar to how virtual machines work
 
-- 
+- **Container Orchestration:** orchestrates the need for processes to start, stop, restart, and monitor containers running across a number of EC2 instances, which is called a **cluster**. This helps you to deploy, manage, and scale your containerized applications
 
-**Amazon Elastic Kubernetes Service (EKS):**
+**[Amazon Elastic Container Service (ECS)](https://aws.amazon.com/ecs/):**
 
-- 
+- A **container orchestration tool**
+
+- Highly scalable
+
+- High-performance
+
+- Designed to help you run your containerized applications at scale without the hassle of managing your own container orchestration software
+
+- Supports [Docker](https://www.docker.com/) containers
+
+- Can run on top of EC2
+
+**[Amazon Elastic Kubernetes Service (EKS)](https://aws.amazon.com/eks/):**
+
+- A **container orchestration tool**
+
+- Open-source software that enables you to deploy and manage containerized applications at scale
+
+- Does the same thing as ECS but with different tooling and features
+
+- Can run on top of EC2
+
+**[AWS Fargate:](https://aws.amazon.com/fargate/)**
+
+- Serverless compute platform for ECS or EKS
+
+- Managed for you
+
+**AWS Lambda:**
+
+- Serverless compute platform for ECS or EKS
+
+- Great for: 
+  - Hosting short running functions
+  - Service-oriented applications
+  - Event driven applications
+  - You don't want to manage the underlying environment at all
+
+- No provisioning or managing servers
+
+To learn about additional services and solutions, visit [Compute on AWS](https://aws.amazon.com/products/compute)
+
+## [Module 2 Summary](https://content.aws.training/wbt/cecpeb/en/x1/1.0.1/index.html?endpoint=https%3a%2f%2flrs.aws.training%2fTCAPI%2f&auth=Basic%20OjFkMzU0YzM3LWUwNjktNDYwOC1hMjAzLTZkNmJiNmFhMDNiMA%3d%3d&actor=%7b%22objectType%22%3a%22Agent%22%2c%22name%22%3a%5b%22INQ5CE3B90aXZcEnqdt9gw2%22%5d%2c%22mbox%22%3a%5b%22mailto%3alms-user-INQ5CE3B90aXZcEnqdt9gw2%40amazon.com%22%5d%7d&registration=a1f41fc6-1511-44e4-85a4-8e1923af7bc6&activity_id=http%3a%2f%2fJsdOGRWZzljloSEdyFptOL7JZcTBEIYc_rise&grouping=http%3a%2f%2fJsdOGRWZzljloSEdyFptOL7JZcTBEIYc_rise&content_token=398cf977-0808-4412-aa21-9e2e2c4670b4&content_endpoint=https%3a%2f%2flrs.aws.training%2fTCAPI%2fcontent%2f&externalRegistration=CompletionThresholdPercent%7c100!InstanceId%7c0!PackageId%7ccecpeb_en_x1_1.0.1!RegistrationTimestampTicks%7c16225031567556825!SaveCompletion%7c1!TranscriptId%7cLwlMtrUQsUibqhjrMdAFoQ2!UserId%7cINQ5CE3B90aXZcEnqdt9gw2&externalConfiguration=&width=988&height=724&left=466&top=0#/lessons/7XLPOPI7q2TEGdNTIVm6J5-Naqpsz4Dj)
+
+What is Cloud Computing? 
+- The on-demand delivery of IT resources over the internet with pay-as-you-go pricing
+
+What does AWS offer?
+
+- Amazon EC2:
+  - Dynamically spin up and spin down virtual servers called "EC2 instances"
+  - When you launch an EC2 instance, you choose an EC2 "family"
+    - The "family" determines the hardware the EC2 runs on
+    - You can have instances that are built for your specific purpose
+    - The types of "families" are:
+      - General Purpose
+      - Compute Optimized
+      - Memory Optimized
+      - Accelerated Computing
+      - Storage Optimized
+  - You can resize your EC2 by scaling vertically (up), making the server larger, or by scaling horizontally (out), adding more instances
+
+- Amazon EC2 Autoscaling:
+  - Automated horizontal scaling
+
+- Elastic Load Balancing (ELB):
+  - Distributes the incoming traffic across multiple instances evenly
+
+- EC2 Billing Options:
+  - On-Demand: Most flexible and no contract
+  - Spot Instances: Allows you to utilize unused capacity at a discounted rate
+  - Reserved Instances: Allow you to enter into a contract to get a discounted rate when you commit to a certain level of usage
+  - Savings Plans: Which apply to AWS Lambda and AWS Fargate, as well as EC2 instances
+
+- Amazon Simple Queue Service (SQS):
+  - Allows you to decouple system components, messages remain in the queue until either consumed or deleted
+
+- Amazon Simple Notification Service (SNS):
+  - Used for sending messages, like emails, text messages, push notifications, or HTTP requests. Once a message is published, it is sent to all subscribers
+
+- Amazon Elastic Container Service (ECS):
+  - Container orchestration tool
+
+- Amazon Elastic Kubernetes Service (EKS):
+  - Container orchestration tool
+
+- AWS Fargate:
+  - Allows you to run your containers on top of a serverless compute platform
+
+- AWS Lambda:
+  - Allows you to upload your code, and configure it to run just based on "triggers" and you are only charged when the code is actually running
+
+### Additional Resources:
+
+- [Compute on AWS](https://aws.amazon.com/products/compute)
+
+- [AWS Compute Blog](https://aws.amazon.com/blogs/compute/)
+
+- [AWS Compute Services](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/compute-services.html)
+
+- [Hands-On Tutorials: Compute](https://aws.amazon.com/getting-started/hands-on/?awsf.getting-started-category=category%23compute&awsf.getting-started-content-type=content-type%23hands-on)
+
+- [Category Deep Dive: Serverless](https://aws.amazon.com/getting-started/deep-dive-serverless/)
+
+- [AWS Customer Stories: Serverless](https://aws.amazon.com/solutions/case-studies/?customer-references-cards.sort-by=item.additionalFields.publishedDate&customer-references-cards.sort-order=desc&awsf.customer-references-location=*all&awsf.customer-references-segment=*all&awsf.customer-references-product=product%23vpc%7Cproduct%23api-gateway%7Cproduct%23cloudfront%7Cproduct%23route53%7Cproduct%23directconnect%7Cproduct%23elb&awsf.customer-references-category=category%23serverless)
