@@ -138,20 +138,160 @@ Every Data Center, AZ, and Region is interconnected with highly available, low l
 
 ## [Reviewing Compute Services](https://www.linkedin.com/learning/introduction-to-aws-for-non-engineers-3-core-services-2/study-break-reviewing-compute-services-2?contextUrn=urn%3Ali%3AlyndaLearningPath%3Aember8982)
 
-## [S3](https://www.linkedin.com/learning/introduction-to-aws-for-non-engineers-3-core-services-2/s3-3?contextUrn=urn%3Ali%3AlyndaLearningPath%3Aember8982)
+## [Amazon Simple Storage Service (S3)](https://www.linkedin.com/learning/introduction-to-aws-for-non-engineers-3-core-services-2/s3-3?contextUrn=urn%3Ali%3AlyndaLearningPath%3Aember8982)
+- **Object storage service:** storing each file as a separate entity (object)
+- Offers industry-leading data availability, security, performance, and scalability
+- Scalability refers to the way you can scale your usage up or down with extreme flexibility
+- Charged only for what you use
+- Designed for 99.999999999% durability meaning there is almost no chance of the data becoming corrupted
+- Upload files (objects) of all sizes (0 byte ~ 5 terabytes)
+- Wide variety of uses, such as use uploaded files for:
+  - websites
+  - mobile apps
+  - backup and archiving
+  - enterprise applications
+  - IoT devices
+  - big data analytics
+- Easy-to-use management features to fine-tune access controls for your organization specific compliance requirements
+
+There are many storage classes available, which support different data access levels at corresponding pricing:
+1. Standard
+2. Intelligent-Tiering
+3. Standard-Infrequent Access
+4. One Zone-Infrequent Access
+5. Glacier
+6. Glacier Deep Archive
+
+You can also set up S3 "life-cycle" policies which will automatically transfer files from one storage class to a cheaper one after a certain number of days. These options range from using S3 Standard class to store your frequently accessed files to using S3 Glacier Deep Archive to store backup data that's rarely accessed for very cheap rates.
+
+## [Elastic Black Storage](https://www.linkedin.com/learning/introduction-to-aws-for-non-engineers-3-core-services-2/elastic-block-store-3?contextUrn=urn%3Ali%3AlyndaLearningPath%3Aember8982)
+- Allows you to add extra block storage to your EC2 instance and you don't even have to reboot your server
+- Behaves like raw, un-formatted block devices which can be attached to an EC2 instance to expand your server's storage
+- Can add multiple EBS volumes to the same EC2 instance
+- Can use these volumes as file systems or hard drives
+- Can dynamically change the configurations (settings, sizes, etc.) of a volume attached to an instance via the management console
+- Automatically replicated within its availability zone, making them highly available and durable
+- Many organizations use EBS to host their huge databases
+- There are different EBS storage types available to fit your needs and budgets
+- Can be encrypted for compliance
+- **Persistent block storage volumes:** they don't disappear when EC2 instances are rebooted
+- They exist independently of EC2 instances so they can be moved to other instances
+- They are like external hard drives for your virtual servers
+
+## [Snowball](https://www.linkedin.com/learning/introduction-to-aws-for-non-engineers-3-core-services-2/snowball-3?contextUrn=urn%3Ali%3AlyndaLearningPath%3Aember8982)
+- One of the very few **Hardware Solutions** offered by AWS
+- Data Migration Tool
+- AWS will physically ship you a "Snowball" to move your data onto and ship back to Amazon in order to migrate huge amounts of data at once
+- You can move up to 50 terabytes with a regular "Snowball" and up to 100 petabytes with a "Snowmobile" (45-foot-long shipping container pulled by a semi)
+- Usage Fee for a "Snowball": Free for 10 days of onsite usage; extra usage fees for every extra day you keep it
+- Service Fee per job starting at $200 for 50 terabytes "Snowball" to $320 for 80 terabyte "Snowball"
+- Storage Fee: storage fee for data transferred into S3 (but no transfer fee)
+- "Snowmobile": Expensive! (need to talk to an AWS associate for an estimate for your particular need)
+
+How to request and use a "Snowball":
+1. Go to your AWS Management Console and create a data transfer job
+2. AWS will deliver one or more "Snowball" devices to you based on the amount of data
+3. When it arrives, you attach the device to your local network
+4. Run the Snowball client on your machine
+5. Select the folder(s) and file(s) you want to encrypt and transfer onto the AWS cloud
+6. Once the transfers are completed, mail the device(s) back to AWS
+7. Once AWS receives the device(s), they will upload your files on to S3
+
+## [Storage Gateway](https://www.linkedin.com/learning/introduction-to-aws-for-non-engineers-3-core-services-2/storage-gateway-3?contextUrn=urn%3Ali%3AlyndaLearningPath%3Aember8982)
+- Connects your on premise storage with AWS Cloud storage, providing a hybrid storage solution for your IT infrastructure
+- Seamlessly ingrates on-premises enterprise applications and corporate workflows with AWS's Cloud Storage services through the use of a virtual machine installed onto an on-premises data center's host server
+- Basically it creates a "gate" that connects your on-site users and devices to the resources stored in AWS Cloud with minimum latency
+
+AWS offers 3 types of storage solutions to met your needs:
+1. File-based
+   1. Files are stored as objects in S3
+   2. There is a one-to-one representation of each file
+   3. Asynchronously updates the objects to S3 as local files are updated
+   4. Local cache is maintained to provide low-latency access to recently accessed files
+
+2. Volume-based
+   1. Uploads files in blocks (like virtual hard drives)
+   2. Asynchronously backed up as point-in-time snapshots and stored as Elastic Block Store (EBS) snapshots
+   3. There are two types of Volume Gateways:
+      1. **Stored Volume:** Complete copy on-premises; sends snapshots to AWS
+      2. **Cached Volume:** Keeps most recently accessed data on-premises; complete copy on AWS
+
+3. Tape-based
+   1. Utilizes virtual tapes
+   2. Uses existing tape-based backup infrastructure to back up to virtual tapes on S3
+   3. Can think of it as taking backup on physical tapes, except, instead of physical tapes they are digital tape cartilages stored on S3
+   4. Data is stored locally, then asynchronously uploaded to S3
+   5. The data can than be archived using AWS Glacier, which is like sending your physical tape backups to an off-site holding facility, like Iron Mountain
+
+AWS Storage Gateway Pricing:
+
+- You pay for storage and data retrieval
+- The quicker you can access the data, the more expensive the solution is
+
+## [Study Break: Review Storage](https://www.linkedin.com/learning/introduction-to-aws-for-non-engineers-3-core-services-2/study-break-reviewing-storage-services-4?contextUrn=urn%3Ali%3AlyndaLearningPath%3Aember8982)
+Amazon Simple Storage (S3):
+- Object storage service
+- Designed for scalability, data availability, security, and performance
+- Many storage classes available to fit your budget and needs
+- Can set up S3 lifecycle policies to automatically transfer files from one storage class to a cheaper one after a certain number of days 
+
+Amazon Elastic Block Store (EBS):
+- Block storage service
+- Behaves like raw, un-formatted block devices
+- Can be attached to EC2 instance to expand their storage capacities
+- Scalable, durable, and reliable storage option
+
+AWS Snowball:
+- One of very few hardware AWS services (a physical device)
+- Data migration tool that can function as a storage device
+- AWS physically ships you a "Snowball" to move data onto and mail back
+- AWS uploads the mailed back data onto AWS S3
+- Faster to upload to the cloud than using your internet
+
+Amazon Storage Gateway:
+- Hybrid storage solution for your IT infrastructure
+- Provides low-latency for file access while also providing benefit of cost and time savings by leveraging cloud computing
+- It is a "gate" that connects your onsite users and devices to resources stored in the AWS Cloud with minimal latency
+- Offers 3 types: File Gateway, Tape Gateway, and Volume Gateway
+
+## [DynamoDB](https://www.linkedin.com/learning/introduction-to-aws-for-non-engineers-3-core-services-2/dynamodb-3?contextUrn=urn%3Ali%3AlyndaLearningPath%3Aember8982)
 
 
-
-## [Elastic Black Storage]()
-
-
-## [Snowball]()
+##[RDS]()
 
 
-## [Storage Gateway]()
+##[Aurora]()
 
 
-## [Study Break: Review Storage]()
+##[Redshift]()
 
 
+##[Study Break: Reviewing Databases]()
+
+
+##[VPC]()
+
+
+##[CloudFront]()
+
+
+##[Route 53]()
+
+
+##[Study Break: Reviewing Network and Content Delivery]()
+
+
+##[CloudFormation]()
+
+
+##[CloudTrail]()
+
+
+##[CloudWatch]()
+
+
+##[Study Break: Reviewing Management Tools]()
+
+
+##[Study Break: Exam Tips and Resources]()
 
