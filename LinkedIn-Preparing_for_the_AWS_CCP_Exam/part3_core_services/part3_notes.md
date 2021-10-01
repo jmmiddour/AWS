@@ -255,43 +255,98 @@ Amazon Storage Gateway:
 - Offers 3 types: File Gateway, Tape Gateway, and Volume Gateway
 
 ## [DynamoDB](https://www.linkedin.com/learning/introduction-to-aws-for-non-engineers-3-core-services-2/dynamodb-3?contextUrn=urn%3Ali%3AlyndaLearningPath%3Aember8982)
+- Low-maintenance solution that scales up and down with your needs
+- Secure, scalable, fast, and flexible NoSQL database
+- Virtually unlimited throughput and storage
+- Will adapt with your needs so that your application speed and stability remains high
+- **Serverless:** no need to provision, manage, or update your own servers
+- AWS automatically scales your tables to adjust for capacity and maintain performance as well as maintaining stability with redundancies and fault tolerance
+- You have to option of paying only for what you use or specifying a workload amount and paying for that provision
+
+## [RDS](https://www.linkedin.com/learning/introduction-to-aws-for-non-engineers-3-core-services-2/rds-3?contextUrn=urn%3Ali%3AlyndaLearningPath%3Aember8982)
+- Set up, operate, and scale a relational database
+- Only pay for what you use or reserve at on-demand pricing (cheaper) or even lower hourly rates with Reserved Instance pricing
+- AWS takes care of the provisioning, monitoring, and maintaining the database
+- AWS does provide its own database engine, it is compatible with PostgresSQL, MySQL, MariaDB, Oracle Database, Microsoft SQL Server, and Amazon Aurora
+- If you already have existing database they can me migrated using AWS Database Migration Service to migrate or replicate them into AWS RDS
+
+## [Aurora](https://www.linkedin.com/learning/introduction-to-aws-for-non-engineers-3-core-services-2/aurora-3?contextUrn=urn%3Ali%3AlyndaLearningPath%3Aember8982) 
+- One of the six relational database engines that you can use in AWS RDS
+- Fully managed by AWS RDS; No administration or provisioning necessary
+- Monitor performance through AWS alerting services
+- MySQL and PostgresSQL compatible, but up to 5 times faster than standard MySQL and up to 3 times faster than standard PostgresSQL
+- Get the same security, availability, and reliability of commercial databases for just 1/10th of the cost
+- You can have databases scaling up to 64 TB per instance
+- Hosted on distributed, fault-tolerant, self-healing storage systems with low latency
+- You can migrate existing MySQL or PostgresSQL databases using the AWS Database Migration Service
+
+## [Redshift](https://www.linkedin.com/learning/introduction-to-aws-for-non-engineers-3-core-services-2/redshift-3?contextUrn=urn%3Ali%3AlyndaLearningPath%3Aember8982)
+- Fully managed, petabyte-scale data warehouse service
+- In 2019 was 10 times faster than it was just 2 years prior
+- Super fast and super cheap
+- You only pay for what you use, starting as low as $0.25 per hour all the way up to petabytes for under $1000 per terabyte per year
+- Fully integrated with your data lakes (repositories of data stored in their raw formats)
+- You can deploy a new data warehouse in minutes
+- Easily scalable with the click of a button
+- Security is builtin too, so you can secure your whole database with the click of a mouse
+- Data encryption is also simple, and encryption is compliant with many common requirements
+
+## [Study Break: Reviewing Databases](https://www.linkedin.com/learning/introduction-to-aws-for-non-engineers-3-core-services-2/study-break-reviewing-database-services-3?contextUrn=urn%3Ali%3AlyndaLearningPath%3Aember8982)
+- AWS DynamoDB:
+  - Fast, flexible, fully managed, and secure
+  - Nonrelational (NoSQL) database
+  - Can handle more than 10 trillion request per day, and support peaks of more than 20 million request per second
+  - Serverless - you don't have to provision, patch, or manage servers
+  - Automatically scales up or down to adjust to your needs
+
+- AWS Relational Database Service (RDS):
+  - Fully managed relational database: don't have to provision or manage any servers
+  - Highly scalable
+  - Six database engines to choose from:
+    - Amazon Aurora
+    - PostgresSQL
+    - MySQL
+    - MariaDB
+    - Oracle Database
+    - SQL Server
+
+- AWS Aurora:
+  - One of the database engines you can use with AWS RDS
+  - Fully managed by RDS (no servers to provision or manage)
+  - MySQL and PostgresSQL compatible
+  - Auto-scaling
+  - Get the same security, availability, and reliability of commercial databases for FASTER and CHEAPER
+
+- AWS Redshift:
+  - Cloud-Based, Fully Managed (no servers to provision or manage) petabyte-scale data warehouse service
+  - Faster and cheaper than other data warehouse providers
+  - **Data warehouse:** stores extremely large amounts of data collected from a wide range of sources to analyze
+  - Secure, quick to set up, and easy to scale
+  - Encryption is compliant with many industry regulations
+
+## [VPC]()
 
 
-##[RDS]()
+## [CloudFront]()
 
 
-##[Aurora]()
+## [Route 53]()
 
 
-##[Redshift]()
+## [Study Break: Reviewing Network and Content Delivery]()
 
 
-##[Study Break: Reviewing Databases]()
+## [CloudFormation]()
 
 
-##[VPC]()
+## [CloudTrail]()
 
 
-##[CloudFront]()
+## [CloudWatch]()
 
 
-##[Route 53]()
+## [Study Break: Reviewing Management Tools]()
 
 
-##[Study Break: Reviewing Network and Content Delivery]()
-
-
-##[CloudFormation]()
-
-
-##[CloudTrail]()
-
-
-##[CloudWatch]()
-
-
-##[Study Break: Reviewing Management Tools]()
-
-
-##[Study Break: Exam Tips and Resources]()
+## [Study Break: Exam Tips and Resources]()
 
