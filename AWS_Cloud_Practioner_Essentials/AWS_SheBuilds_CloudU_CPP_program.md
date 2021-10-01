@@ -85,4 +85,10 @@ A few updates... and Happy Friday 😊
 3. All resources have been Pinned and also Bookmarked now so hopefully easier to find. Please read the documents and watch the kick off recording when you join this channel before asking questions as you will most likely find the answers 😊 Big thanks for all those that are pointing people to this and answering questions as people join 😊 appreciated!
 4. Lastly, exam vouchers wont be getting issued until at least week 4 of this program - if you have already completed the cloud practitioner training then this program is not for you - you are welcome to join the solution architect associate program instead that commences in November https://awscloudushebuildsasaq3.splashthat.com/ 
 
+## [Cloud Essentials Event - Sept 22, 2021](https://mycamerapics.com/cloudu/Cloud%20Essentials%20-%2022%20September%202021-09-22-13-13-09.mp4)
+
+
+## [Q&A Session - Sept 27, 2021](https://mycamerapics.com/cloudu/AWS_SB_APJ_CPE_Q4_Week2_Q&A.mp4)
+
+
 
