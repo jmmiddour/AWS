@@ -627,7 +627,7 @@ What does AWS offer?
     > The correct response option is **Ensuring that no single Amazon EC2 instance has to carry the full workload on its own**
     >
     > Elastic Load Balancing is the AWS service that automatically distributes incoming application traffic across multiple resources, such as Amazon EC2 instances. This helps to ensure that no single resource becomes overutilized.
-
+    > 
     > The other response options are all examples of Auto Scaling.
     > 
     > Learn more:

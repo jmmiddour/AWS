@@ -57,12 +57,12 @@
 ![](module_list.jpg)
 
 ### Additional Resources
-- [She Builds CloudU - FAQ V3](She%20Builds%20CloudU%20-%20FAQ%20V3.pdf)
-- [She Builds CloudU QRG](She%20Builds%20CloudU%20QRG.pdf)
-- [Booking Cloud Prac exam instructions](Booking%20Cloud%20Prac%20exam%20instructions.pdf)
-- [CloudU CPE Training Account Sign Up Instructions](CloudU%20CPE%20Training%20Account%20Sign%20Up%20Instructions.pdf)
-- [CloudU She Builds CPE Q4 Global UTC0](CloudU%20She%20Builds%20CPE%20Q4%20Global%20UTC0.pdf)
-- [Event Registration Links - She Builds CloudU v2](Event%20Registration%20Links%20-%20She%20Builds%20CloudU%20v2.pdf)
+- [She Builds CloudU - FAQ V3](../She%20Builds%20CloudU%20-%20FAQ%20V3.pdf)
+- [She Builds CloudU QRG](../She%20Builds%20CloudU%20QRG.pdf)
+- [Booking Cloud Prac exam instructions](../Booking%20Cloud%20Prac%20exam%20instructions.pdf)
+- [CloudU CPE Training Account Sign Up Instructions](../CloudU%20CPE%20Training%20Account%20Sign%20Up%20Instructions.pdf)
+- [CloudU She Builds CPE Q4 Global UTC0](../CloudU%20She%20Builds%20CPE%20Q4%20Global%20UTC0.pdf)
+- [Event Registration Links - She Builds CloudU v2](../Event%20Registration%20Links%20-%20She%20Builds%20CloudU%20v2.pdf)
 - [Practice Exams](https://www.koenig-solutions.com/AWS)
 
 ## Message Posted on Slack by Donna Edwards Sept 22, 2021
