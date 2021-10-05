@@ -91,4 +91,7 @@ A few updates... and Happy Friday 😊
 ## [Q&A Session - Sept 27, 2021](https://mycamerapics.com/cloudu/AWS_SB_APJ_CPE_Q4_Week2_Q&A.mp4)
 
 
+## [US/Global timezone Q&A session - Sept 27, 2021](https://mycamerapics.com/cloudu/She%20Builds%20Cloud%20U%20CPE%20Q&A%2020210928.mp4)
+
+
 
