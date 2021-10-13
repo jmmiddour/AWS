@@ -199,8 +199,63 @@ RDS is available on six database engines, which optimize for memory, performance
 - Great for workloads that require high availability
 - Priced at 1/10th the cost of commercial databases
 
-## [Amazon DynamoDB]()
+## [Amazon DynamoDB](https://content.aws.training/wbt/cecpeb/en/x1/1.0.1/index.html?endpoint=https%3a%2f%2flrs.aws.training%2fTCAPI%2f&auth=Basic%20OjYyYjYxM2YwLTBjYmUtNGFlOS04YjZkLWYyOWM4ZmFiMTMwMA%3d%3d&actor=%7b%22objectType%22%3a%22Agent%22%2c%22name%22%3a%5b%22INQ5CE3B90aXZcEnqdt9gw2%22%5d%2c%22mbox%22%3a%5b%22mailto%3alms-user-INQ5CE3B90aXZcEnqdt9gw2%40amazon.com%22%5d%7d&registration=a1f41fc6-1511-44e4-85a4-8e1923af7bc6&activity_id=http%3a%2f%2fJsdOGRWZzljloSEdyFptOL7JZcTBEIYc_rise&grouping=http%3a%2f%2fJsdOGRWZzljloSEdyFptOL7JZcTBEIYc_rise&content_token=741a72c0-d07b-452b-b250-31a3bec71e64&content_endpoint=https%3a%2f%2flrs.aws.training%2fTCAPI%2fcontent%2f&externalRegistration=CompletionThresholdPercent%7c100!InstanceId%7c0!PackageId%7ccecpeb_en_x1_1.0.1!RegistrationTimestampTicks%7c16225031567556825!SaveCompletion%7c1!TranscriptId%7cLwlMtrUQsUibqhjrMdAFoQ2!UserId%7cINQ5CE3B90aXZcEnqdt9gw2&externalConfiguration=&width=988&height=724&left=466&top=0#/lessons/ic9iSyj-1l8bvd1gyBQMiMDAyqPYPs-R)
+### Non-relational Databases
+- Is just a table, where all data is stored, verses multiple tables in a relational database
+- Sometimes referred to as "NoSQL databases" because they use structures other than rows and columns to organize data
+- One type of structural approach is key-value pairs
+  - Data is organized into items (key) and items have attributes (values)
+    ![](key-value.jpg)
+  - Every item in the table does not have to have the same number or the same type of attributes
 
+### [Amazon DynamoDB](https://aws.amazon.com/dynamodb/)
+- A fully managed key-value non-relational database service
+- Purpose built; It has specific use cases and isn't the best fit for every workload out there
+- Delivers single-digit millisecond performance at any scale
+- Serverless; don't need to provision, patch, or manage servers
+  - You also don't have to install, maintain, or operate software
+- Automatic Scaling:
+  - Automatically scales to adjust for changes in capacity while maintaining consistent performance
+  - Suitable choice for use cases that require high performance while scaling
+
+### Comparing Amazon RDS and Amazon DynamoDB
+| RDS | DynamoDB |
+| --- | --- |
+| Automatic high availability | Uses key-value pairs |
+| Recovery provided | Requires no advance schema |
+| Customer ownership of data | Massive throughput capabilities |
+| Customer ownership of the schema | Petabytes size potential |
+| Customer control of the network | Granular API access |
+|  |  |
+|  |  |
+
+Relational databases have been around since the moment businesses started using computers. Being able to build complex analysis of data spread across multiple tables, is the strength of any relational system. 
+
+1. You have a sales supply chain management system that you have to analyze for weak spots. Which type of database would be the best fit?
+  > The RDS (Relational Database Service) would be the best fit here because it is built for business analytics because you need to do complex relational joins.
+
+2. Imagine you have an employee contact list: names, phone numbers, emails, employee IDs. Well, this is all single table territory. 
+   > I could use a relational database for this, but the things that make relational databases great, all of that complex functionality, creates overhead and lag and expense if you're not actually using it. This is where non-relational databases, Dynamo DB, delivers the knockout punch. By eliminating all the overhead, DynamoDB allows you to build powerful, incredibly fast databases where you don't need complex joining functionality.
+
+### Knowledge Check
+What are the scenarios in which you should use Amazon Relational Database Service (Amazon RDS)? (Select TWO.)
+
+- [ ] Running a serverless database
+
+- [ ] Using SQL to organize data
+
+- [ ] Storing data in a key-value database
+
+- [ ] Scaling up to 10 trillion requests per day
+
+- [ ] Storing data in an Amazon Aurora database
+
+> The two correct response options are:
+> 
+> - Using SQL to organize data
+> - Storing data in an Amazon Aurora database
+> 
+> The other three response options are scenarios in which you should use Amazon DynamoDB.
 
 ## [Amazon Redshift]()
 
