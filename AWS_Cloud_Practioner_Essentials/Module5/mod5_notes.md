@@ -226,16 +226,14 @@ RDS is available on six database engines, which optimize for memory, performance
 | Customer ownership of data | Massive throughput capabilities |
 | Customer ownership of the schema | Petabytes size potential |
 | Customer control of the network | Granular API access |
-|  |  |
-|  |  |
 
 Relational databases have been around since the moment businesses started using computers. Being able to build complex analysis of data spread across multiple tables, is the strength of any relational system. 
 
 1. You have a sales supply chain management system that you have to analyze for weak spots. Which type of database would be the best fit?
-  > The RDS (Relational Database Service) would be the best fit here because it is built for business analytics because you need to do complex relational joins.
+    > The RDS (Relational Database Service) would be the best fit here because it is built for business analytics because you need to do complex relational joins.
 
 2. Imagine you have an employee contact list: names, phone numbers, emails, employee IDs. Well, this is all single table territory. 
-   > I could use a relational database for this, but the things that make relational databases great, all of that complex functionality, creates overhead and lag and expense if you're not actually using it. This is where non-relational databases, Dynamo DB, delivers the knockout punch. By eliminating all the overhead, DynamoDB allows you to build powerful, incredibly fast databases where you don't need complex joining functionality.
+    > I could use a relational database for this, but the things that make relational databases great, all of that complex functionality, creates overhead and lag and expense if you're not actually using it. This is where non-relational databases, Dynamo DB, delivers the knockout punch. By eliminating all the overhead, DynamoDB allows you to build powerful, incredibly fast databases where you don't need complex joining functionality.
 
 ### Knowledge Check
 What are the scenarios in which you should use Amazon Relational Database Service (Amazon RDS)? (Select TWO.)
@@ -281,7 +279,6 @@ What are the scenarios in which you should use Amazon Relational Database Servic
 - The key is that when you need big data BI solutions that Redshift allows you to get started with a single API call
 
 ## [AWS Database Migration Service](https://content.aws.training/wbt/cecpeb/en/x1/1.0.1/index.html?endpoint=https%3a%2f%2flrs.aws.training%2fTCAPI%2f&auth=Basic%20OjYyYjYxM2YwLTBjYmUtNGFlOS04YjZkLWYyOWM4ZmFiMTMwMA%3d%3d&actor=%7b%22objectType%22%3a%22Agent%22%2c%22name%22%3a%5b%22INQ5CE3B90aXZcEnqdt9gw2%22%5d%2c%22mbox%22%3a%5b%22mailto%3alms-user-INQ5CE3B90aXZcEnqdt9gw2%40amazon.com%22%5d%7d&registration=a1f41fc6-1511-44e4-85a4-8e1923af7bc6&activity_id=http%3a%2f%2fJsdOGRWZzljloSEdyFptOL7JZcTBEIYc_rise&grouping=http%3a%2f%2fJsdOGRWZzljloSEdyFptOL7JZcTBEIYc_rise&content_token=741a72c0-d07b-452b-b250-31a3bec71e64&content_endpoint=https%3a%2f%2flrs.aws.training%2fTCAPI%2fcontent%2f&externalRegistration=CompletionThresholdPercent%7c100!InstanceId%7c0!PackageId%7ccecpeb_en_x1_1.0.1!RegistrationTimestampTicks%7c16225031567556825!SaveCompletion%7c1!TranscriptId%7cLwlMtrUQsUibqhjrMdAFoQ2!UserId%7cINQ5CE3B90aXZcEnqdt9gw2&externalConfiguration=&width=988&height=724&left=466&top=0#/lessons/9p4y8NCLhhGICPnL0jodKOHVFZfE5Hzk)
-- 
 
 ### [AWS Database Migration Service (AWS DMS)](https://aws.amazon.com/dms/)
 - Enables you to migrate relational databases, non-relational databases, and other types of data stores
@@ -361,8 +358,144 @@ What are the scenarios in which you should use Amazon Relational Database Servic
 - An in-memory cache for DynamoDB
 - Helps improve response times from single-digit milliseconds to microseconds
 
-## [Module 5 Summary]()
+## [Module 5 Summary](https://content.aws.training/wbt/cecpeb/en/x1/1.0.1/index.html?endpoint=https%3a%2f%2flrs.aws.training%2fTCAPI%2f&auth=Basic%20OjYyYjYxM2YwLTBjYmUtNGFlOS04YjZkLWYyOWM4ZmFiMTMwMA%3d%3d&actor=%7b%22objectType%22%3a%22Agent%22%2c%22name%22%3a%5b%22INQ5CE3B90aXZcEnqdt9gw2%22%5d%2c%22mbox%22%3a%5b%22mailto%3alms-user-INQ5CE3B90aXZcEnqdt9gw2%40amazon.com%22%5d%7d&registration=a1f41fc6-1511-44e4-85a4-8e1923af7bc6&activity_id=http%3a%2f%2fJsdOGRWZzljloSEdyFptOL7JZcTBEIYc_rise&grouping=http%3a%2f%2fJsdOGRWZzljloSEdyFptOL7JZcTBEIYc_rise&content_token=741a72c0-d07b-452b-b250-31a3bec71e64&content_endpoint=https%3a%2f%2flrs.aws.training%2fTCAPI%2fcontent%2f&externalRegistration=CompletionThresholdPercent%7c100!InstanceId%7c0!PackageId%7ccecpeb_en_x1_1.0.1!RegistrationTimestampTicks%7c16225031567556825!SaveCompletion%7c1!TranscriptId%7cLwlMtrUQsUibqhjrMdAFoQ2!UserId%7cINQ5CE3B90aXZcEnqdt9gw2&externalConfiguration=&width=988&height=724&left=466&top=0#/lessons/rIaLMeDry0dnSUscUkpq-Gk1lqSSp9YB)
 
 
-## [Module 5 Quiz]()
+### Additional Resources
+- [Cloud Storage on AWS](https://aws.amazon.com/products/storage)
+- [AWS Storage Blog](https://aws.amazon.com/blogs/storage/)
+- [Hands-On Tutorials: Storage](https://aws.amazon.com/getting-started/hands-on/?awsf.getting-started-category=category%23storage&awsf.getting-started-content-type=content-type%23hands-on)
+- [AWS Customer Stories: Storage](https://aws.amazon.com/solutions/case-studies/?customer-references-cards.sort-by=item.additionalFields.publishedDate&customer-references-cards.sort-order=desc&awsf.customer-references-location=*all&awsf.customer-references-segment=*all&awsf.customer-references-product=product%23vpc%7Cproduct%23api-gateway%7Cproduct%23cloudfront%7Cproduct%23route53%7Cproduct%23directconnect%7Cproduct%23elb&awsf.customer-references-category=category%23storage)
+- [AWS Database Migration Service](https://aws.amazon.com/dms/)
+- [Databases on AWS](https://aws.amazon.com/products/databases)
+- [Category Deep Dive: Databases](https://aws.amazon.com/getting-started/deep-dive-databases/)
+- [AWS Database Blog](https://aws.amazon.com/blogs/database/)
+- [AWS Customer Stories: Databases](https://aws.amazon.com/solutions/case-studies/?customer-references-cards.sort-by=item.additionalFields.publishedDate&customer-references-cards.sort-order=desc&awsf.customer-references-location=*all&awsf.customer-references-segment=*all&awsf.customer-references-product=product%23vpc%7Cproduct%23api-gateway%7Cproduct%23cloudfront%7Cproduct%23route53%7Cproduct%23directconnect%7Cproduct%23elb&awsf.customer-references-category=category%23databases)
 
+## [Module 5 Quiz](https://content.aws.training/wbt/cecpeb/en/x1/1.0.1/index.html?endpoint=https%3a%2f%2flrs.aws.training%2fTCAPI%2f&auth=Basic%20OjYyYjYxM2YwLTBjYmUtNGFlOS04YjZkLWYyOWM4ZmFiMTMwMA%3d%3d&actor=%7b%22objectType%22%3a%22Agent%22%2c%22name%22%3a%5b%22INQ5CE3B90aXZcEnqdt9gw2%22%5d%2c%22mbox%22%3a%5b%22mailto%3alms-user-INQ5CE3B90aXZcEnqdt9gw2%40amazon.com%22%5d%7d&registration=a1f41fc6-1511-44e4-85a4-8e1923af7bc6&activity_id=http%3a%2f%2fJsdOGRWZzljloSEdyFptOL7JZcTBEIYc_rise&grouping=http%3a%2f%2fJsdOGRWZzljloSEdyFptOL7JZcTBEIYc_rise&content_token=741a72c0-d07b-452b-b250-31a3bec71e64&content_endpoint=https%3a%2f%2flrs.aws.training%2fTCAPI%2fcontent%2f&externalRegistration=CompletionThresholdPercent%7c100!InstanceId%7c0!PackageId%7ccecpeb_en_x1_1.0.1!RegistrationTimestampTicks%7c16225031567556825!SaveCompletion%7c1!TranscriptId%7cLwlMtrUQsUibqhjrMdAFoQ2!UserId%7cINQ5CE3B90aXZcEnqdt9gw2&externalConfiguration=&width=988&height=724&left=466&top=0#/lessons/PdObCoCaMmvIM6Yfd9c_2U9Ii5cTMb1D)
+
+Which Amazon S3 storage classes are optimized for archival data? (Select TWO.)
+
+- [ ] S3 Standard
+
+- [x] S3 Glacier
+
+- [ ] S3 Intelligent-Tiering
+
+- [ ] S3 Standard-IA
+
+- [x] S3 Glacier Deep Archive
+
+> The correct two response options are:
+> 
+> - **S3 Glacier**
+> - **S3 Glacier Deep Archive**
+> 
+> Objects stored in the S3 Glacier storage class can be retrieved within a few minutes to a few hours. By comparison, objects that are stored in the S3 Glacier Deep Archive storage class can be retrieved within 12 hours.
+> 
+> The other response options are incorrect because:
+> 
+> - S3 Standard is a storage class that is ideal for frequently accessed data, not archival data.
+> - S3 Intelligent-Tiering monitors access patterns of objects and automatically moves them between the S3 Standard and S3 Standard-IA storage classes. It is not designed for archival data.
+> - S3 Standard-IA is ideal for data that is infrequently accessed but requires high availability when needed.
+> 
+> **Learn more:**
+> 
+> - [Amazon S3 storage classes](https://aws.amazon.com/s3/storage-classes/)
+> 
+
+Which statement or statements are TRUE about Amazon EBS volumes and Amazon EFS file systems?
+
+- [x] EBS volumes store data within a single Availability Zone. Amazon EFS file systems store data across multiple Availability Zones.
+
+- [ ] EBS volumes store data across multiple Availability Zones. Amazon EFS file systems store data within a single Availability Zone.
+
+- [ ] EBS volumes and Amazon EFS file systems both store data within a single Availability Zone.
+
+- [ ] EBS volumes and Amazon EFS file systems both store data across multiple Availability Zones.
+
+> The correct response option is: **EBS volumes store data within a single Availability Zone. Amazon EFS file systems store data across multiple Availability Zones.**
+> 
+> An EBS volume must be located in the same Availability Zone as the Amazon EC2 instance to which it is attached.
+> 
+> Data in an Amazon EFS file system can be accessed concurrently from all the Availability Zones in the Region where the file system is located.
+> 
+> **Learn more:**
+> 
+> - [Amazon EBS volumes](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volumes.html)
+> - [Amazon EFS: How it works](https://docs.aws.amazon.com/efs/latest/ug/how-it-works.html)
+> 
+
+You want to store data in an object storage service. Which AWS service is best for this type of storage?
+
+- [ ] Amazon Managed Blockchain
+
+- [ ] Amazon Elastic File System (Amazon EFS)
+
+- [ ] Amazon Elastic Block Store (Amazon EBS)
+
+- [x] Amazon Simple Storage Service (Amazon S3)
+
+> The correct response option is **Amazon Simple Storage Service (Amazon S3)**.
+> 
+> The other response options are incorrect because:
+> 
+> - Amazon Managed Blockchain is a service that you can use to create and manage blockchain networks with open-source frameworks. Blockchain is a distributed ledger system that lets multiple parties run transactions and share data without a central authority.
+> - Amazon Elastic File System (Amazon EFS) is a scalable file system used with AWS Cloud services and on-premises resources. It does not store data as object storage.
+> - Amazon Elastic Block Store (Amazon EBS) is a service that provides block-level storage volumes that you can use with Amazon EC2 instances.
+> 
+> **Learn more:**
+> 
+> - [Amazon S3](https://aws.amazon.com/s3)
+> - [What is cloud object storage?](https://aws.amazon.com/what-is-cloud-object-storage/)
+> 
+
+Which statement best describes Amazon DynamoDB?
+
+- [ ] A service that enables you to run relational databases in the AWS Cloud
+
+- [x] A serverless key-value database service
+
+- [ ] A service that you can use to migrate relational databases, nonrelational databases, and other types of data stores
+
+- [ ] An enterprise-class relational database
+
+> The correct response option is **A serverless key-value database service**.
+> 
+> Amazon DynamoDB is a key-value database service. It is serverless, which means that you do not have to provision, patch, or manage servers.
+> 
+> The other response options are incorrect because:
+> 
+> - A service that enables you to run relational databases in the AWS Cloud describes Amazon Relational Database Service (Amazon RDS).
+> - A service that you can use to migrate relational databases, nonrelational databases, and other types of data stores describes AWS Database Migration Service (AWS DMS).
+> - An enterprise-class relational database describes Amazon Aurora.
+> 
+> **Learn more:**
+> 
+> - [Amazon DynamoDB](https://aws.amazon.com/dynamodb)
+> 
+
+Which service is used to query and analyze data across a data warehouse?
+
+- [x] Amazon Redshift
+
+- [ ] Amazon Neptune
+
+- [ ] Amazon DocumentDB
+
+- [ ] Amazon ElastiCache
+
+> The correct response option is **Amazon Redshift**.
+> 
+> Amazon Redshift is a data warehousing service that you can use for big data analytics. Use Amazon Redshift to collect data from many sources and help you understand relationships and trends across your data.
+> 
+> The other response options are incorrect because:
+> 
+> - Amazon Neptune is a graph database service. You can use Amazon Neptune to build and run applications that work with highly connected datasets, such as recommendation engines, fraud detection, and knowledge graphs.
+> - Amazon DocumentDB is a document database service that supports MongoDB workloads.
+> - Amazon ElastiCache is a service that adds caching layers on top of your databases to help improve the read times of common requests.
+> 
+> **Learn more:**
+> 
+> - [Amazon Redshift](https://aws.amazon.com/redshift)
+> 
