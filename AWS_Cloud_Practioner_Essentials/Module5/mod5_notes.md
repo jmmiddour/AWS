@@ -242,13 +242,13 @@ What are the scenarios in which you should use Amazon Relational Database Servic
 
 - [ ] Running a serverless database
 
-- [ ] Using SQL to organize data
+- [x] Using SQL to organize data
 
 - [ ] Storing data in a key-value database
 
 - [ ] Scaling up to 10 trillion requests per day
 
-- [ ] Storing data in an Amazon Aurora database
+- [x] Storing data in an Amazon Aurora database
 
 > The two correct response options are:
 > 
@@ -257,8 +257,28 @@ What are the scenarios in which you should use Amazon Relational Database Servic
 > 
 > The other three response options are scenarios in which you should use Amazon DynamoDB.
 
-## [Amazon Redshift]()
+## [Amazon Redshift](https://content.aws.training/wbt/cecpeb/en/x1/1.0.1/index.html?endpoint=https%3a%2f%2flrs.aws.training%2fTCAPI%2f&auth=Basic%20OjYyYjYxM2YwLTBjYmUtNGFlOS04YjZkLWYyOWM4ZmFiMTMwMA%3d%3d&actor=%7b%22objectType%22%3a%22Agent%22%2c%22name%22%3a%5b%22INQ5CE3B90aXZcEnqdt9gw2%22%5d%2c%22mbox%22%3a%5b%22mailto%3alms-user-INQ5CE3B90aXZcEnqdt9gw2%40amazon.com%22%5d%7d&registration=a1f41fc6-1511-44e4-85a4-8e1923af7bc6&activity_id=http%3a%2f%2fJsdOGRWZzljloSEdyFptOL7JZcTBEIYc_rise&grouping=http%3a%2f%2fJsdOGRWZzljloSEdyFptOL7JZcTBEIYc_rise&content_token=741a72c0-d07b-452b-b250-31a3bec71e64&content_endpoint=https%3a%2f%2flrs.aws.training%2fTCAPI%2fcontent%2f&externalRegistration=CompletionThresholdPercent%7c100!InstanceId%7c0!PackageId%7ccecpeb_en_x1_1.0.1!RegistrationTimestampTicks%7c16225031567556825!SaveCompletion%7c1!TranscriptId%7cLwlMtrUQsUibqhjrMdAFoQ2!UserId%7cINQ5CE3B90aXZcEnqdt9gw2&externalConfiguration=&width=988&height=724&left=466&top=0#/lessons/IZFcd63Mcl04Y7e83TgSBfL8dT1H67Eq)
+- Sometimes we have a business need that goes outside what is happening right now to what did happen
+- This data analysis is a realm of a whole different class of databases
+- Modern databases that are engineered for high speed, real time ingestion, and queries may not be the best fit
+  - In order to handle the velocity of real time read/write functionality, most relational databases tend to function fabulously at certain capacities
+  - The problem with historical analytics, is the data collection never stops
+  - The volume of data can overwhelm even the beefiest traditional relational databases
+  - Not just the volume, but the variety of data can be a problem
+  - Say you want to run business intelligence (BI) projects against data coming from different data stores?
+    - A single query against multiple databases sounds nice, but traditional databases don't handle them easily
+- Once data becomes too complex to handle with traditional relational databases, you've entered the world of ***data warehouses***
+  - **Data Warehouses:** Engineered specifically for handling big data, where you are looking at historical (happened in the past, will not change) data as opposed to operational (currently happening, can change) data
 
+### [Amazon Redshift](https://aws.amazon.com/redshift)
+- Data warehousing service that you can use for big data analytics
+- Offers the ability to collect data from many sources
+- Helps you understand relationships and trends across your data
+- Massively scalable
+- Redshift nodes in multiple petabyte sizes is very common
+- In cooperation with Amazon Redshift Spectrum, you can directly run a single SQL query against exabytes of unstructured data running in data lakes
+- Uses a variety of innovations that allow you to achieve up to 10 times higher performance than traditional databases, when it comes to BI workloads
+- The key is that when you need big data BI solutions that Redshift allows you to get started with a single API call
 
 ## [AWS Database Migration Service]()
 
