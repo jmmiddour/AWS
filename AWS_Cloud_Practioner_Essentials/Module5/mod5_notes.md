@@ -280,8 +280,46 @@ What are the scenarios in which you should use Amazon Relational Database Servic
 - Uses a variety of innovations that allow you to achieve up to 10 times higher performance than traditional databases, when it comes to BI workloads
 - The key is that when you need big data BI solutions that Redshift allows you to get started with a single API call
 
-## [AWS Database Migration Service]()
+## [AWS Database Migration Service](https://content.aws.training/wbt/cecpeb/en/x1/1.0.1/index.html?endpoint=https%3a%2f%2flrs.aws.training%2fTCAPI%2f&auth=Basic%20OjYyYjYxM2YwLTBjYmUtNGFlOS04YjZkLWYyOWM4ZmFiMTMwMA%3d%3d&actor=%7b%22objectType%22%3a%22Agent%22%2c%22name%22%3a%5b%22INQ5CE3B90aXZcEnqdt9gw2%22%5d%2c%22mbox%22%3a%5b%22mailto%3alms-user-INQ5CE3B90aXZcEnqdt9gw2%40amazon.com%22%5d%7d&registration=a1f41fc6-1511-44e4-85a4-8e1923af7bc6&activity_id=http%3a%2f%2fJsdOGRWZzljloSEdyFptOL7JZcTBEIYc_rise&grouping=http%3a%2f%2fJsdOGRWZzljloSEdyFptOL7JZcTBEIYc_rise&content_token=741a72c0-d07b-452b-b250-31a3bec71e64&content_endpoint=https%3a%2f%2flrs.aws.training%2fTCAPI%2fcontent%2f&externalRegistration=CompletionThresholdPercent%7c100!InstanceId%7c0!PackageId%7ccecpeb_en_x1_1.0.1!RegistrationTimestampTicks%7c16225031567556825!SaveCompletion%7c1!TranscriptId%7cLwlMtrUQsUibqhjrMdAFoQ2!UserId%7cINQ5CE3B90aXZcEnqdt9gw2&externalConfiguration=&width=988&height=724&left=466&top=0#/lessons/9p4y8NCLhhGICPnL0jodKOHVFZfE5Hzk)
+- 
 
+### [AWS Database Migration Service (AWS DMS)](https://aws.amazon.com/dms/)
+- Enables you to migrate relational databases, non-relational databases, and other types of data stores
+- Offers a secure and easy way to migrate data
+- You move data between a ***source database and target database***
+  - The [source database and target database](https://aws.amazon.com/dms/resources) can be of the same type or different types
+    - **Homogenous Databases:** The same type of databases
+      - Examples:
+        - MySQL --> Amazon RDS for MySQL
+        - Microsoft SQL Server --> Amazon RDS for SQL Server
+        - Oracle --> Amazon RDS for Oracle
+      - The process is fairly straightforward since schema structures, data types, and database code is compatible between the source and target
+      - The source can be:
+        - On-premises
+        - Running on an EC2 instance
+        - Running on an Amazon RDS
+      - The target can be:
+        - A database running on an Amazon EC2 instance
+        - A database running on Amazon RDS
+    - **Heterogeneous Databases:** different types of databases
+      - This is a little more complicated and is a 2-step process
+        - Since the schema structures, data types, and database code is different, we first need to convert them using the ***AWS Schema Conversion Tool***
+          - This will convert the source schema and code to match that of the target database
+          - Then need to use DMS to migrate data from the source database to the target database
+  - During migration, your source database remains operational 
+    - This will reduce downtime for any applications that rely on the database
+
+### Other Use Cases for AWS DMS
+- Development and test database migrations
+  - Enabling developers to test applications against production data without affecting production users
+  - Would use DMS to migrate a copy of your production database to your dev or testing environment
+  - It can be set up as once-off or continuously
+- Database consolidation
+  - Combining several databases into a single database
+- Continuous replication
+  - Sending ongoing copies of your data to other target sources instead of doing a one-time migration
+  - Can use this for disaster recover
+  - Also, can use for geographic separation
 
 ## [Additional Database Services]()
 
