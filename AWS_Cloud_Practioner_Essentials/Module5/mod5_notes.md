@@ -321,8 +321,45 @@ What are the scenarios in which you should use Amazon Relational Database Servic
   - Can use this for disaster recover
   - Also, can use for geographic separation
 
-## [Additional Database Services]()
+## [Additional Database Services](https://content.aws.training/wbt/cecpeb/en/x1/1.0.1/index.html?endpoint=https%3a%2f%2flrs.aws.training%2fTCAPI%2f&auth=Basic%20OjYyYjYxM2YwLTBjYmUtNGFlOS04YjZkLWYyOWM4ZmFiMTMwMA%3d%3d&actor=%7b%22objectType%22%3a%22Agent%22%2c%22name%22%3a%5b%22INQ5CE3B90aXZcEnqdt9gw2%22%5d%2c%22mbox%22%3a%5b%22mailto%3alms-user-INQ5CE3B90aXZcEnqdt9gw2%40amazon.com%22%5d%7d&registration=a1f41fc6-1511-44e4-85a4-8e1923af7bc6&activity_id=http%3a%2f%2fJsdOGRWZzljloSEdyFptOL7JZcTBEIYc_rise&grouping=http%3a%2f%2fJsdOGRWZzljloSEdyFptOL7JZcTBEIYc_rise&content_token=741a72c0-d07b-452b-b250-31a3bec71e64&content_endpoint=https%3a%2f%2flrs.aws.training%2fTCAPI%2fcontent%2f&externalRegistration=CompletionThresholdPercent%7c100!InstanceId%7c0!PackageId%7ccecpeb_en_x1_1.0.1!RegistrationTimestampTicks%7c16225031567556825!SaveCompletion%7c1!TranscriptId%7cLwlMtrUQsUibqhjrMdAFoQ2!UserId%7cINQ5CE3B90aXZcEnqdt9gw2&externalConfiguration=&width=988&height=724&left=466&top=0#/lessons/gK3FuAwnmxecwPzoEkMDYEQe_eVOmTm5)
 
+- No matter what any database vendor may try to tell you, there is no one-size-fits-all database for all purposes
+
+### [Amazon DocumentDB](https://aws.amazon.com/documentdb)
+- Document database service that supports MongoDB (a document database program) workloads
+- Great for content management, catalogs, or user profiles
+- Can add more "attributes" than you can with AWS DynamoDB
+
+### [Amazon Neptune](https://aws.amazon.com/neptune)
+- A graph database service
+- Can be used to build and run applications that work with highly connected datasets
+  - Examples:
+    - Recommendation engines
+    - Fraud detection
+    - Knowledge graphs
+    - Social media site
+
+### [Amazon Quantum Ledger Database (Amazon QLDB)](https://aws.amazon.com/qldb)
+- A ledger database service
+- An immutable system of record, where an entry can never be removed from the audits
+  - Examples:
+    - A supply chain - tracking with assurances that nothing is lost
+    - Banking or financial records that require 100% immutability
+- Can be used to review a complete history of all changes that have been made to your application
+
+### [Amazon Managed Blockchain](https://aws.amazon.com/managed-blockchain)
+- A service that you can use to create and manage blockchain networks with open-source frameworks
+  - **Blockchain:** A distributed ledger system that lets multiple parties run transactions and share data without a central authority
+
+### [Amazon ElastiCache](https://aws.amazon.com/elasticache)
+- A service that adds caching layers on top of your database to help improve the read timers of common requests
+- Supports two types of data stores:
+  - Redis
+  - Memcached
+
+### [Amazon DynamoDB Accelerator (DAX)](https://aws.amazon.com/dynamodb/dax/)
+- An in-memory cache for DynamoDB
+- Helps improve response times from single-digit milliseconds to microseconds
 
 ## [Module 5 Summary]()
 
