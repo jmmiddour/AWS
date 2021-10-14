@@ -75,8 +75,67 @@ Which tasks are the responsibilities of customers? (Select TWO.)
 > - [AWS shared responsibility model](https://aws.amazon.com/compliance/shared-responsibility-model/)
 > 
 
-## [User Permissions and Access]()
+## [User Permissions and Access](https://content.aws.training/wbt/cecpeb/en/x1/1.0.1/index.html?endpoint=https%3a%2f%2flrs.aws.training%2fTCAPI%2f&auth=Basic%20Ojg0OTY0Y2JlLWY1ZjYtNDc0OC04NmVkLTg0OGY1NzNjMjIxYg%3d%3d&actor=%7b%22objectType%22%3a%22Agent%22%2c%22name%22%3a%5b%22INQ5CE3B90aXZcEnqdt9gw2%22%5d%2c%22mbox%22%3a%5b%22mailto%3alms-user-INQ5CE3B90aXZcEnqdt9gw2%40amazon.com%22%5d%7d&registration=a1f41fc6-1511-44e4-85a4-8e1923af7bc6&activity_id=http%3a%2f%2fJsdOGRWZzljloSEdyFptOL7JZcTBEIYc_rise&grouping=http%3a%2f%2fJsdOGRWZzljloSEdyFptOL7JZcTBEIYc_rise&content_token=28c38183-c397-4df9-8e8a-1625213c83c0&content_endpoint=https%3a%2f%2flrs.aws.training%2fTCAPI%2fcontent%2f&externalRegistration=CompletionThresholdPercent%7c100!InstanceId%7c0!PackageId%7ccecpeb_en_x1_1.0.1!RegistrationTimestampTicks%7c16225031567556825!SaveCompletion%7c1!TranscriptId%7cLwlMtrUQsUibqhjrMdAFoQ2!UserId%7cINQ5CE3B90aXZcEnqdt9gw2&externalConfiguration=&width=988&height=724&left=466&top=0#/lessons/xz0tTSNzf7mhV-D2Um36ld3NAup1ieHi)
 
+### [AWS Identity and Access Management (IAM)](https://aws.amazon.com/iam/)
+- Enables you to manage access to AWS services and resources securely
+- Gives you flexibility to configure access based on your company's specific operational and security needs
+
+### [AWS account root user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html)
+- The main "owner" of the AWS account
+- This account has complete access to ALL AWS services and resources in the account
+  ![](access_tree.jpg)
+- **Best Practice:**
+  - Do **NOT** use the root user for everyday tasks
+  - Use the root user to create your first IAM user and assign it permission to create other users
+  - Use IAM user identities to perform regular tasks throughout AWS
+  - Only use root user if you have to perform a task that is only available to the root user
+    - Examples: changing root user email address and changing AWS support plan
+
+### IAM users
+- Represents the person or application that interacts with AWS service or resources
+- Consists of a name and credentials
+- By default, when created, it has no permissions associated with it
+  - At first the IAM user can not even login to the account
+  - You must grant the user with the necessary permissions
+- You can actually avoid creating IAM users for every person in your organization by ***federating*** users into your account
+  - This means that they could use their regular corporate credentials to log into AWS by mapping their corporate identities to IAM roles
+- **Best Practices:**
+  - Recommended to create individual IAM users for each person who needs to access AWS
+  - Even if you have multiple employees who require the same level of access, this provides additional security
+
+### IAM policies
+- A JSON document that allows or denies permissions to AWS services and resources
+- Enables you to customize users' levels of access to resources
+- There are only two options for the `"Effect"` setting; `"Allow"` or `"Deny"`
+- For the `"Action"` setting you can list any AWS API call
+- For the `"Resource"` setting you would list what AWS resource the API call is for
+- **Best Practices:**
+  - Follow the security principle of **least privilege** when granting permissions
+    - **Least Privilege Principle:** A user is granted access only to what they need
+    - This helps prevent users or roles from having more permissions than needed to perform their tasks
+  - You can always add on to the policy as the need arises in the future
+
+### [IAM groups](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups.html)
+- A collection of IAM users
+- When assigning an IAM policy to a group, all users in the group are granted the same permissions in that policy
+- This will save time, instead of having to add the same policy to multiple IAM users, you can just add them to the group
+- This will also ensure that if an employee changes permissions and you move them to a different group, they will only have the permission for the current group they are in
+
+### [IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html)
+- They have associated permissions that allow or deny specific actions
+- These roles can be assumed for temporary amounts of time
+- It is similar to a user, but has no username or password
+- It is an identity that you can assume to gain temporary access to permissions
+- When someone assumes an IAM role they abandon all previous permissions they had under the previous role and assume the permissions of the new role
+- Before an IAM user, application, or service can assume an IAM role, they must be grated permissions to switch to the role
+- **Best Practices:**
+  - Roles are ideal for situations in which access to services or resources need to be granted temporarily, instead of long-term
+
+### [Multi-factor authentication (MFA)](https://aws.amazon.com/iam/features/mfa/)
+- It is a recommendation to set this up on your root user account as soon as you create it, before doing anything else
+- This just provides an extra layer of security for your AWS account
+- It is also best practices to set this up on all IAM user accounts too
 
 ## [AWS Organizations]()
 
