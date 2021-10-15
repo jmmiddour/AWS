@@ -36,13 +36,12 @@
 
 - What collaboration channels are used?
   - Slack
-    - #cloudpractitioner-sep2021
+    - `cloudpractitioner-sep2021`
       - main channel for events and information about the program
   - Webex
 - You do not need to attend every event
 - All events are remote
 - The program is FREE
-- 
 
 ### How to Get Exam Voucher
 
@@ -93,5 +92,10 @@ A few updates... and Happy Friday 😊
 
 ## [US/Global timezone Q&A session - Sept 27, 2021](https://mycamerapics.com/cloudu/She%20Builds%20Cloud%20U%20CPE%20Q&A%2020210928.mp4)
 
+
+## [Q&A Session - Oct 5, 2021](https://mycamerapics.com/cloudu/She%20Builds%20CloudU%20CPE%20Q&A-20211006%200223.mp4)
+
+
+## [Q&A Session - Oct 13, 2021](https://mycamerapics.com/cloudu/CloudU%20Q&A%2014102021.mp4)
 
 
