@@ -189,11 +189,13 @@ RDS is available on six database engines, which optimize for memory, performance
 
 ### [Amazon Aurora](https://aws.amazon.com/rds/aurora/)
 - An enterprise-class relational database that is compatible with MySQL and PostgresSQL relational databases
+- Cloud native - built on the cloud, never been an on-premises database engine
 - Up to 5 times faster than standard MySQL databases
 - Up to 3 times faster than standard PostgresSQL databases
 - Helps reduce costs by reducing unnecessary input/output (I/O) operations, while ensuring that your database resources remain reliable and available
 - Replicates 6 copies of your data across 3 AZs
 - Up to 15 read replicas
+  - Customer specifies how many they need
 - Continuously backs up your data to AWS S3
 - Point-in-time recovery so you can recover data from a specific period
 - Great for workloads that require high availability
