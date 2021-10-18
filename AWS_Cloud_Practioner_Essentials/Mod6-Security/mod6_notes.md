@@ -267,8 +267,71 @@ Which tasks can you complete in AWS Artifact? (Select TWO.)
 > - [AWS Artifact](https://aws.amazon.com/artifact)
 > 
 
-## [Denial-of-Service Attacks]()
+## [Denial-of-Service Attacks](https://content.aws.training/wbt/cecpeb/en/x1/1.0.1/index.html?endpoint=https%3a%2f%2flrs.aws.training%2fTCAPI%2f&auth=Basic%20OjM0YzViZTJjLWFiODEtNDY3NC05Njk0LTc0ZTEyNTQxYjRhNg%3d%3d&actor=%7b%22objectType%22%3a%22Agent%22%2c%22name%22%3a%5b%22INQ5CE3B90aXZcEnqdt9gw2%22%5d%2c%22mbox%22%3a%5b%22mailto%3alms-user-INQ5CE3B90aXZcEnqdt9gw2%40amazon.com%22%5d%7d&registration=a1f41fc6-1511-44e4-85a4-8e1923af7bc6&activity_id=http%3a%2f%2fJsdOGRWZzljloSEdyFptOL7JZcTBEIYc_rise&grouping=http%3a%2f%2fJsdOGRWZzljloSEdyFptOL7JZcTBEIYc_rise&content_token=cf7d9b18-53b2-4403-90a2-04b078a79bd5&content_endpoint=https%3a%2f%2flrs.aws.training%2fTCAPI%2fcontent%2f&externalRegistration=CompletionThresholdPercent%7c100!InstanceId%7c0!PackageId%7ccecpeb_en_x1_1.0.1!RegistrationTimestampTicks%7c16225031567556825!SaveCompletion%7c1!TranscriptId%7cLwlMtrUQsUibqhjrMdAFoQ2!UserId%7cINQ5CE3B90aXZcEnqdt9gw2&externalConfiguration=&width=988&height=724&left=466&top=0#/lessons/-iYLeKJ2acqjyo9TdfT36xi2T70xBCIJ)
 
+### Denial-of-service attacks (DoS)
+- A deliberate attempt to make a website or application unavailable to users
+  ![](dos_attack.jpg)
+- For example, an attacker might flood a website or application with excessive network traffic until the targeted website or application becomes overloaded and is no longer able to respond
+  - If the website or application becomes unavailable, this denies service to users who are trying to make legitimate requests.
+
+### Distributed denial-of-service attacks (DDoS)
+- Now, suppose that the prankster has enlisted the help of friends. 
+- The objective is to shut down your application's ability to function by overwhelming the system to the point it can no longer operate
+- Multiple sources are used to start an attack that aims to make a website or application unavailable
+  ![](ddos_attack.jpg)
+  ![](ddos_attack_vid_image.jpg)
+- This can come from a group of attackers, or even a single attacker
+- The single attacker can use multiple infected computers (also known as “bots”) to send excessive traffic to a website or application
+- There are several kinds of DDoS Attacks:
+  - UDP Flood:
+    ![](UDP_flood.jpg)
+    - Based on the helpful parts of the internet, like the national weather service
+    - Anyone can send a small request to the Weather Service, and ask, "Give me weather," and in return, the Weather Service's fleet of machines will send back a massive amount of weather telemetry, forecasts, updates, lots of stuff
+    - The attack here is simple:
+      - The bad actor sends a simple request, "give me weather"
+      - Gives a fake return address on the request, your return address
+      - Now the Weather Service very happily floods your server with megabytes of rain forecasts, and your system could be brought to a standstill, just sorting through the information it never wanted in the first place
+    - This is just one example of half a dozen low-level, brute force attacks, all designed to exhaust your network
+    - AWS solution for this type of attack: **Security Groups**
+      - Security groups only allow in proper request traffic
+      - Things like weather reports use an entirely different protocol than the ones your customers use
+      - Not on the list, you don't get to talk to the server
+      - Operate at the AWS network level, not at the EC2 instance level, like an operating system firewall might
+      - So massive attacks like UDP floods or reflection attacks just get shrugged off by the scale of the entire AWS Regions capacity, not your individual EC2's capacity
+  - HTTP Level Attacks:
+    ![](HTTP_level_attacks.jpg)
+    - Much more sophisticated than the UDP Flood
+    - Looks like normal customers asking for normal things like complicated product searches over and over and over, all coming from an army of zombified bot machines
+    - They ask for so much attention that regular customers can't get in
+  - Slowloris Attack:
+    ![](slowloris_attack.jpg)
+    - Instead of a normal connection, the attacker pretends to have a terribly slow connection
+    - Meanwhile, your production servers are standing there waiting for the customer to finish their request so they can dash off and return the result
+    - Until they get the entire packet, they can't move on to the next thread (the next customer)
+    - A few Slowloris attackers can exhaust the capacity of your entire front end with almost no effort at all
+    - AWS solution for this type of attack: **Elastic Load Balancer (ELB)**
+      - ELB handles the http traffic request first, so it waits until the entire message, no matter how fast or slow, is complete before sending it over to the front end web server
+      - Sure, you can try to overwhelm it, but remember the ELB is scalable and it runs at the region level
+      - To overwhelm ELB, you would have to overwhelm the entire AWS region
+        - It's not theoretically impossible, but too massively expensive for anyone to pull off
+- For the sharpest, most sophisticated attacks, AWS also offers specialized defense tools called ***AWS Shield*** with ***AWS WAF***
+  ![](aws_shield_waf.jpg)
+  - **AWS WAF** uses a web application firewall to filter incoming traffic for the signatures of bad actors
+  - It has extensive machine learning capabilities, and can recognize new threats as they evolve
+  - It proactively helps defend your system against an ever-growing list of destructive vectors
+
+### [AWS Shield](https://aws.amazon.com/shield)
+- Protects applications against DoS and DDoS attacks
+- Provides two levels of protection:
+  - AWS Shield Standard:
+    - Automatically protects all AWS customers at no cost
+    - Protects your AWS resources from the most common, frequently occurring types of DDoS attacks
+    - As network traffic comes into your applications, AWS Shield Standard uses a variety of analysis techniques to detect malicious traffic in real time and automatically mitigates it
+  - AWS Shield Advanced:
+    - A paid service that provides detailed attack diagnostics and the ability to detect and mitigate sophisticated DDoS attacks
+    - It also integrates with other services such as Amazon CloudFront, Amazon Route 53, and Elastic Load Balancing
+    - You can integrate AWS Shield with AWS WAF by writing custom rules to mitigate complex DDoS attacks
 
 ## [Additional Security Services]()
 
