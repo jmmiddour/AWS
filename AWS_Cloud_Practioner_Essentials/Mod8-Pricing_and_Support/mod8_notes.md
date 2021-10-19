@@ -181,10 +181,24 @@ In an earlier module, you learned about AWS Organizations, a service that enable
 - Let's look at the EC2 instance; you want to ensure your company's usage does not exceed $200 for the month
 - You could set a custom budget to notify you when your usage has reached half of this amount ($100)
   - With this setting you would receive an alert and then you can decide how to proceed with your continued use of the EC2
-- 
 
-## AWS Cost Explorer
+## [AWS Cost Explorer](https://aws.amazon.com/aws-cost-management/aws-cost-explorer/)
 
+- A tool that enables you to visualize, understand, and manage your AWS costs and usage over time
+- A console-based service that allows you to visually see and analyze how you are spending money with AWS
+- Includes a default report of the costs and usage for your top five cost-accruing AWS services
+- Gives you up to 12 months of historical data
+- You can apply custom filters and groups to analyze your data
+  - One that is really useful, is to group by a ***Tag***
+  - **Tag:** User-defined key-value pairs
+    - Useful for tagging a service with a specific project name for better organization
+- Allows you to create custom reports and save them for later use
+
+### Example
+![](cost_explorer_example.jpg)
+This example of the Cost Explorer Dashboard displays monthly costs for EC2 instances over a 6-month period
+- The bar for each month separates the costs for different EC2 instance types (such as t2.micro or m3.large)
+- By analyzing your AWS costs over time, you can make informed decisions about future costs and how to plan your budgets
 
 ## AWS Support Plans
 
