@@ -108,7 +108,48 @@ Which tasks can you perform using AWS CloudTrail? (Select TWO.)
 > - [AWS CloudTrail](https://aws.amazon.com/cloudtrail)
 > 
 
-## [AWS Trusted Advisor]()
+## [AWS Trusted Advisor](https://content.aws.training/wbt/cecpeb/en/x1/1.0.1/index.html?endpoint=https%3a%2f%2flrs.aws.training%2fTCAPI%2f&auth=Basic%20OjBiMGI4Y2UzLThjOTMtNDc5OS1hYjc5LWEyZTRiOTY1YWRjNw%3d%3d&actor=%7b%22objectType%22%3a%22Agent%22%2c%22name%22%3a%5b%22INQ5CE3B90aXZcEnqdt9gw2%22%5d%2c%22mbox%22%3a%5b%22mailto%3alms-user-INQ5CE3B90aXZcEnqdt9gw2%40amazon.com%22%5d%7d&registration=a1f41fc6-1511-44e4-85a4-8e1923af7bc6&activity_id=http%3a%2f%2fJsdOGRWZzljloSEdyFptOL7JZcTBEIYc_rise&grouping=http%3a%2f%2fJsdOGRWZzljloSEdyFptOL7JZcTBEIYc_rise&content_token=f1d42faf-a210-4c2d-b42a-9fe2b337f828&content_endpoint=https%3a%2f%2flrs.aws.training%2fTCAPI%2fcontent%2f&externalRegistration=CompletionThresholdPercent%7c100!InstanceId%7c0!PackageId%7ccecpeb_en_x1_1.0.1!RegistrationTimestampTicks%7c16225031567556825!SaveCompletion%7c1!TranscriptId%7cLwlMtrUQsUibqhjrMdAFoQ2!UserId%7cINQ5CE3B90aXZcEnqdt9gw2&externalConfiguration=&width=988&height=724&left=466&top=0#/lessons/8zQlS1_8fIqpfQ3ZXFJW--7eA9J8MNOf)
+
+- [AWS Trusted Advisor](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/) is a web service that inspects your AWS environment and provides real-time recommendations in accordance with AWS best practices
+- A service that you can use in your AWS account that will evaluate your resources against five pillars:
+  - Cost Optimization
+    - Checks on the utilization of the services you are currently using to determine if you are getting the most for your money
+    - Will alert you if a service is being under or over utilized, so you can investigate and determine if the service needs to be scaled up or down or needs to be stopped
+  - Performance
+    - Checks to ensure that all services are performing at their optimal performance level
+  - Security 
+    - Checks for security issues that could result in unauthorized access
+    - Some things that it may check for is:
+      - IAM Password Policies
+      - MFA on Root Account
+      - Security Groups
+      - IAM Access keys
+  - Fault Tolerance
+    - Checks to ensure that services are backed up to avoid any data loses
+    - Some things it may check for:
+      - EBS Snapshot age
+      - EC2 AZ balance
+      - RDS in multiple AZs
+  - Service Limits
+    - Checks if you are approaching or hitting AWS service limits
+    - A lot of service limits are "soft limits" meaning that they can be lifted to some degree
+    - It is good to know when you are approaching one of those limits and when it is time to turn in a support ticket with AWS to get them changed
+- Trusted Advisor, in real-time, runs through a series of checks for each pillar in your account, based on AWS best practices, and it compiles categorized items for you to look into, and you can view them directly in the AWS console
+- Some checks are free and are included in your AWS account
+- Other checks are available depending on the level of your support plan
+- Need to make sure that you have Trusted Advisor turned on in your AWS account
+
+### AWS Trusted Advisor dashboard
+![](trusted_advisor_dashboard.jpg)
+When you access the Trusted Advisor dashboard on the AWS Management Console, you can review completed checks for cost optimization, performance, security, fault tolerance, and service limits
+
+For each category:
+
+- The **green check** indicates the number of items for which it detected **no problems**.
+
+- The **orange triangle** represents the number of **recommended investigations**.
+
+- The **red circle** represents the number of **recommended actions**.
 
 
 ## [Module 7 Summary]()
