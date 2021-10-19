@@ -151,21 +151,50 @@ In an earlier module, you learned about AWS Organizations, a service that enable
 - Another benefit of consolidated billing is the ability to share bulk discount pricing, Savings Plans, and Reserved Instances across the accounts in your organization
 - It is a Free feature, no additional costs
 
-## [AWS Budgets]()
+## [AWS Budgets](https://aws.amazon.com/aws-cost-management/aws-budgets)
+
+- You can create budgets to plan your service usage, service costs, and instance reservations
+- The information updates 3 times a day
+  - This helps to accurately determine how close your usage is to your budgeted amounts or the Free Tier limits
+- You can set custom alerts when your usage exceeds, or is forecasted to, the monthly budgeted amount
+- How to set up a budget:
+  - Navigate to the billing section on your AWS Management Console
+  - Click on "Budgets" in the panel, on the left side, under "Cost Management"
+  - In the top right corner, click the "Create budget" blue button
+  - Choose a budget type
+  - On the next page, fill in your requirements, then click "Configure alerts"
+  - On this page, we will set up the alert(s) we want to receive
+    - We can set up one or many alerts on this page
+  - Click on "Confirm budget"
+  - Then you will see a summary page of your budget; make sure to click the "Create" button to complete the creation of the budget
+
+### Example:
+![](budgets_example.jpg)
+1. In this sample budget, you can review the following important details:
+   - The current amount you have incurred for EC2 so far this month ($136.90)
+   - The amount that you are forecasted to spend for the month ($195.21), based on your usage patterns
+
+2. You can also review comparisons of your current vs budgeted usage, and forecasted vs budgeted usage
+   - Example:
+     - In the top row of this sample, the forecasted vs budgeted bar is at 125.17%
+       - The reason for the increase is that the forecasted amount ($56.33) exceeds the amount that had been budgeted for that item for the month ($45)
+- Let's look at the EC2 instance; you want to ensure your company's usage does not exceed $200 for the month
+- You could set a custom budget to notify you when your usage has reached half of this amount ($100)
+  - With this setting you would receive an alert and then you can decide how to proceed with your continued use of the EC2
+- 
+
+## AWS Cost Explorer
 
 
-## [AWS Cost Explorer]()
+## AWS Support Plans
 
 
-## [AWS Support Plans]()
+## AWS Marketplace
 
 
-## [AWS Marketplace]()
+## Module 8 Summary
 
 
-## [Module 8 Summary]()
-
-
-## [Module 8 Quiz]()
+## Module 8 Quiz
 
 
