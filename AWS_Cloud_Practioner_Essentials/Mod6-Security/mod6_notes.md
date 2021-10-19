@@ -333,8 +333,73 @@ Which tasks can you complete in AWS Artifact? (Select TWO.)
     - It also integrates with other services such as Amazon CloudFront, Amazon Route 53, and Elastic Load Balancing
     - You can integrate AWS Shield with AWS WAF by writing custom rules to mitigate complex DDoS attacks
 
-## [Additional Security Services]()
+## [Additional Security Services](https://content.aws.training/wbt/cecpeb/en/x1/1.0.1/index.html?endpoint=https%3a%2f%2flrs.aws.training%2fTCAPI%2f&auth=Basic%20OjM0YzViZTJjLWFiODEtNDY3NC05Njk0LTc0ZTEyNTQxYjRhNg%3d%3d&actor=%7b%22objectType%22%3a%22Agent%22%2c%22name%22%3a%5b%22INQ5CE3B90aXZcEnqdt9gw2%22%5d%2c%22mbox%22%3a%5b%22mailto%3alms-user-INQ5CE3B90aXZcEnqdt9gw2%40amazon.com%22%5d%7d&registration=a1f41fc6-1511-44e4-85a4-8e1923af7bc6&activity_id=http%3a%2f%2fJsdOGRWZzljloSEdyFptOL7JZcTBEIYc_rise&grouping=http%3a%2f%2fJsdOGRWZzljloSEdyFptOL7JZcTBEIYc_rise&content_token=cf7d9b18-53b2-4403-90a2-04b078a79bd5&content_endpoint=https%3a%2f%2flrs.aws.training%2fTCAPI%2fcontent%2f&externalRegistration=CompletionThresholdPercent%7c100!InstanceId%7c0!PackageId%7ccecpeb_en_x1_1.0.1!RegistrationTimestampTicks%7c16225031567556825!SaveCompletion%7c1!TranscriptId%7cLwlMtrUQsUibqhjrMdAFoQ2!UserId%7cINQ5CE3B90aXZcEnqdt9gw2&externalConfiguration=&width=988&height=724&left=466&top=0#/lessons/4gZuQD46epLuvnO_soPfLp5QdH4VZ1Di)
 
+- **Encryption:** Securing a message or data in a way that can only be accessed by authorized parties
+  - Non-authorized parties are therefore less likely to be able to access the message or not able to access it at all
+- At AWS, encryption comes in two variations:
+  - Encryption at Rest: when your data is idle
+    - Your data is just being stored and not moving anywhere
+    - Server-side encryption at rest is enabled on all DynamoDB table data
+      - This helps prevent unauthorized access
+      - DynamoDB's encryption at rest also integrates with AWS KMS, or Key Management Service, for managing the encryption key that is used to encrypt your tables
+      - This is the "key" that unlocks the "door" to your data, so make sure to store it in a safe place, because without it, you can not access your data
+  - Encryption in Transit: when your data is traveling between locations
+    - Example:
+      - We have a Redshift instance running and we want to connect it with a SQL client
+      - We use secure sockets layer, or SSL connections to encrypt data, and we can use service certificates to validate, and authorize a client
+        - This means that data is protected when passing between Redshift, and our client
+    - This functionality exists in numerous other AWS services such as SQS, S3, RDS, and many more
+
+### [AWS Key Management Service (AWS KMS)](https://aws.amazon.com/kms)
+- Enables you to perform encryption operations through the use of **cryptographic keys**
+  - **Cryptographic Key** is a random string of digits used for locking (encrypting) and unlocking (decrypting) data
+- You can use AWS KMS to create, manage, and use cryptographic keys
+- You can also control the use of keys across a wide range of services and in your applications
+- Can choose the specific levels of access control that you need for your keys
+- Can specify which IAM users and roles are able to manage keys
+- Can temporarily disable keys so that they are no longer in use by anyone
+- Your keys never leave AWS KMS, and you are always in control of them
+
+### [AWS WAF](https://aws.amazon.com/waf)
+- A web application firewall that lets you monitor network requests that come into your web applications
+- Works together with Amazon CloudFront and an Application Load Balancer
+- AWS WAF works in a similar way as a Network access Control List (NaCL) to block or allow traffic
+- However, it does this by using a [web access control list (ACL)](https://docs.aws.amazon.com/waf/latest/developerguide/web-acl.html) to protect your AWS resources
+- Example of how you can use AWS WAF to allow and block specific requests:
+  - You want to prevent malicious network requests from several IP addresses from continuing to access your application, but you also want to ensure that legitimate users can still access it
+  - You configure the web ACL to allow all requests except those from the IP addresses that you have specified
+  - ![](waf_cust_request.jpg)
+    - When a request comes into AWS WAF, it checks against the list of rules that you have configured in the web ACL
+    - If a request did not come from one of the blocked IP addresses, it allows access to the application 
+  - ![](waf_hacker_request.jpg)
+    - If a request came from one of the blocked IP addresses that you have specified in the web ACL, it is denied access
+
+### [Amazon Inspector](https://aws.amazon.com/inspector/)
+- Helps to improve the security and compliance of your AWS deployed applications by running automated security assessments against your infrastructure
+- Checks applications for security vulnerabilities and deviations from security best practices
+- Checks for things such as open access to Amazon EC2 instances and installations of vulnerable software versions
+- After it has performed an assessment, it provides you with a list of security findings
+  - The list prioritizes by severity level, including a detailed description of each security issue and a recommendation for how to fix it
+  - AWS does not guarantee that following the provided recommendations resolves every potential security issue
+  - Under the shared responsibility model, customers are responsible for the security of their applications, processes, and tools that run on AWS services
+- This service consists of 3 parts:
+  - Network Configuration Reachability Piece
+  - Amazon Agent
+    - Can be installed on EC2 instances
+  - Security Assessment Service
+
+### [Amazon GuardDuty](https://aws.amazon.com/guardduty)
+![](guardduty.jpg)
+- Provides intelligent threat detection for your AWS infrastructure and resources
+- It identifies threats by continuously monitoring the network activity and account behavior within your AWS environment
+- After enabling GuardDuty for your AWS account, it begins monitoring your network and account activity
+- You do not have to deploy or manage any additional security software
+- continuously analyzes data from multiple AWS sources, including VPC Flow Logs and DNS logs
+- If it detects any threats, you can review detailed findings about them from the AWS Management Console
+  - Findings include recommended steps for remediation
+  - Can also configure AWS Lambda functions to take remediation steps automatically in response to security findings
+- It runs independently from your other AWS services, so it won't affect performance or availability of your existing infrastructure and workloads
 
 ## [Module 6 Summary]()
 
