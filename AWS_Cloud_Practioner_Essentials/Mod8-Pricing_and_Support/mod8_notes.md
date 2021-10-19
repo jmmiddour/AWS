@@ -276,8 +276,25 @@ Which Support plan includes all AWS Trusted Advisor checks at the lowest cost?
 > - [Compare AWS Support plans](https://aws.amazon.com/premiumsupport/plans/)
 > 
 
-## AWS Marketplace
+## [AWS Marketplace](https://aws.amazon.com/marketplace)
 
+- A curated digital catalog that includes thousands of software listings from independent software vendors
+- You can use AWS Marketplace to find, test, and buy software that runs on AWS
+- There are options in the marketplace like "one-click deployment" to make get started fast and easy
+- Most vendors on the marketplace will allow you to use any annual licenses you already own and credit them for AWS deployment
+- Most vendors also offer pay-as-you-go options
+- Many vendors offer free trials or "quick-start" plans to help you experiment and learn about their offerings
+- The marketplace has Enterprise Support Plan focused features:
+  - Custom terms and pricing
+  - A private marketplace:
+    - You can create a custom catalog of pre-approved software solutions that meet your specific legal or security standards
+  - Integration into your procurement systems
+  - A range of cost management tools
+  - Plus more...
+- For each listing, you can access detailed information on pricing options, available support, and reviews from other AWS customers
+- Can explore software solutions by industry and use case
+  ![](marketplace_cats.jpg)
+- Within each category you can narrow your search by browsing through product listings in subcategories
 
 ## Module 8 Summary
 
