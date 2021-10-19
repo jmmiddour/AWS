@@ -412,6 +412,123 @@ Which tasks can you complete in AWS Artifact? (Select TWO.)
 - [AWS Compliance](https://aws.amazon.com/compliance)
 - [AWS Customer Stories: Security, Identity, and Compliance](https://aws.amazon.com/solutions/case-studies/?customer-references-cards.sort-by=item.additionalFields.publishedDate&customer-references-cards.sort-order=desc&awsf.customer-references-location=*all&awsf.customer-references-segment=*all&awsf.customer-references-product=product%23vpc%7Cproduct%23api-gateway%7Cproduct%23cloudfront%7Cproduct%23route53%7Cproduct%23directconnect%7Cproduct%23elb&awsf.customer-references-category=category%23security-identity-compliance)
 
-## [Module 6 Quiz]()
+## [Module 6 Quiz](https://content.aws.training/wbt/cecpeb/en/x1/1.0.1/index.html?endpoint=https%3a%2f%2flrs.aws.training%2fTCAPI%2f&auth=Basic%20OjBiMGI4Y2UzLThjOTMtNDc5OS1hYjc5LWEyZTRiOTY1YWRjNw%3d%3d&actor=%7b%22objectType%22%3a%22Agent%22%2c%22name%22%3a%5b%22INQ5CE3B90aXZcEnqdt9gw2%22%5d%2c%22mbox%22%3a%5b%22mailto%3alms-user-INQ5CE3B90aXZcEnqdt9gw2%40amazon.com%22%5d%7d&registration=a1f41fc6-1511-44e4-85a4-8e1923af7bc6&activity_id=http%3a%2f%2fJsdOGRWZzljloSEdyFptOL7JZcTBEIYc_rise&grouping=http%3a%2f%2fJsdOGRWZzljloSEdyFptOL7JZcTBEIYc_rise&content_token=f1d42faf-a210-4c2d-b42a-9fe2b337f828&content_endpoint=https%3a%2f%2flrs.aws.training%2fTCAPI%2fcontent%2f&externalRegistration=CompletionThresholdPercent%7c100!InstanceId%7c0!PackageId%7ccecpeb_en_x1_1.0.1!RegistrationTimestampTicks%7c16225031567556825!SaveCompletion%7c1!TranscriptId%7cLwlMtrUQsUibqhjrMdAFoQ2!UserId%7cINQ5CE3B90aXZcEnqdt9gw2&externalConfiguration=&width=988&height=724&left=466&top=0#/lessons/B947N_Ch24ZOp6U7_QmM7lnswms8qrY8)
 
+Which statement best describes an IAM policy?
 
+- [ ] An authentication process that provides an extra layer of protection for your AWS account
+
+- [x] A document that grants or denies permissions to AWS services and resources
+
+- [ ] An identity that you can assume to gain temporary access to permissions
+
+- [ ] The identity that is established when you first create an AWS account
+
+> The correct response option is: **A document that grants or denies permissions to AWS services and resources**.
+> 
+> IAM policies provide you with the flexibility to customize users’ levels of access to resources. For instance, you can allow users to access all the Amazon S3 buckets in your AWS account or only a specific bucket.
+> 
+> The other response options are incorrect because:
+> 
+> - Multi-factor authentication (MFA) is an authentication process that provides an extra layer of protection for your AWS account.
+> - An IAM role is an identity that you can assume to gain temporary access to permissions.
+> - The root user identity is the identity that is established when you first create an AWS account.
+> 
+> **Learn more:**
+> 
+> - [AWS IAM: Policies and permissions](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html)
+> 
+
+An employee requires temporary access to create several Amazon S3 buckets. Which option would be the best choice for this task?
+
+- [ ] AWS account root user
+
+- [ ] IAM group
+
+- [x] IAM role
+
+- [ ] Service control policy (SCP)
+
+> The correct answer is **IAM role**.
+> 
+> An IAM role is an identity that you can assume to gain temporary access to permissions. When someone assumes an IAM role, they abandon all permissions that they had under a previous role and assume the permissions of the new role. IAM roles are ideal for situations in which access to services or resources needs to be granted temporarily instead of long-term.
+> 
+> The other response options are incorrect because:
+> 
+> - The AWS account root user is established when you first create an AWS account. As a best practice, do not use the root user for everyday tasks.
+> - Although you can attach IAM policies to an IAM group, this would not be the best choice for this scenario because the employee only needs to be granted temporary permissions.
+> - Service control policies (SCPs) enable you to centrally control permissions for the accounts in your organization. An SCP is not the best choice for granting temporary permissions to an individual employee.
+> 
+> **Learn more:**
+> 
+> - [IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html)
+> 
+
+Which statement best describes the principle of least privilege?
+
+- [ ] Adding an IAM user into at least one IAM group
+
+- [ ] Checking a packet’s permissions against an access control list
+
+- [x] Granting only the permissions that are needed to perform specific tasks
+
+- [ ] Performing a denial of service attack that originates from at least one device
+
+> The correct response option is: **Granting only the permissions that are needed to perform specific job tasks**.
+> 
+> When you grant permissions by following the principle of least privilege, you prevent users or roles from having more permissions than needed to perform specific job tasks. For example, cashiers in the coffee shop should be given access to the cash register system. As a best practice, grant IAM users and roles a minimum set of permissions and then grant additional permissions as needed.
+> 
+> **Learn more:**
+> 
+> - [Security best practices in IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)
+> 
+
+Which service helps protect your applications against distributed denial-of-service (DDoS) attacks?
+
+- [ ] Amazon GuardDuty
+
+- [ ] Amazon Inspector
+
+- [ ] AWS Artifact
+
+- [x] AWS Shield
+
+> The correct response option is **AWS Shield**.
+> 
+> As network traffic comes into your applications, AWS Shield uses a variety of analysis techniques to detect potential DDoS attacks in real time and automatically mitigates them.
+> 
+> The other response options are incorrect because:
+> 
+> - Amazon GuardDuty is a service that provides intelligent threat detection for your AWS infrastructure and resources. It identifies threats by continuously monitoring the network activity and account behavior within your AWS environment.
+> - Amazon Inspector checks applications for security vulnerabilities and deviations from security best practices, such as open access to Amazon EC2 instances and installations of vulnerable software versions.
+> - AWS Artifact is a service that provides on-demand access to AWS security and compliance reports and select online agreements.
+> 
+> **Learn more:**
+> 
+> - [AWS Shield](https://aws.amazon.com/shield/)
+> 
+
+Which task can AWS Key Management Service (AWS KMS) perform?
+
+- [ ] Configure multi-factor authentication (MFA).
+
+- [ ] Update the AWS account root user password.
+
+- [x] Create cryptographic keys.
+
+- [ ] Assign permissions to users and groups.
+
+> The correct response option is: **Create cryptographic keys**.
+> 
+> AWS Key Management Service (AWS KMS) enables you to perform encryption operations through the use of cryptographic keys. A cryptographic key is a random string of digits used for locking (encrypting) and unlocking (decrypting) data. You can use AWS KMS to create, manage, and use cryptographic keys. You can also control the use of keys across a wide range of services and in your applications.
+> 
+> The other response options are incorrect because:
+> 
+> - You can configure multi-factor authentication (MFA) in *AWS Identity and Access Management (IAM)*.
+> - You can update the AWS account root user password in the *AWS Management Console*.
+> - You can assign permissions to users and groups in *AWS Identity and Access Management (IAM)*.
+> 
+> **Learn more:**
+> 
+> - [AWS KMS](https://aws.amazon.com/kms/)
+> 
