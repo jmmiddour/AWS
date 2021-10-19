@@ -296,9 +296,135 @@ Which Support plan includes all AWS Trusted Advisor checks at the lowest cost?
   ![](marketplace_cats.jpg)
 - Within each category you can narrow your search by browsing through product listings in subcategories
 
-## Module 8 Summary
+## [Module 8 Summary](https://dxdn3xrr0vpde.cloudfront.net/files/a/w/aws_prod1_docebosaas_com/1634677200/BGJ-01y7gHt_YkbwkyJJH3xmEkRHBg2l7kHPDYQPsl0/tincan/9fcdd31716ade4bd2b683417d7ab62bbaa2de2ed/index.html?endpoint=https%3A%2F%2Fexplore.skillbuilder.aws%2Ftcapi%2F&auth=Basic%20L2YyZDI3MjgzLWMzNTYtNDY3ZS04NmQzLWI3M2JkM2Q1OTkyMDokMnkkMTMkNHB5Njg3aVVnSy9vbnA4WTlrSmwwZTIuWTg3bEk3c0RXbnpmOFJ1eGlDaUtvNUxacnhKRnU%3D&actor=%7B%22mbox%22%3A%22mailto%3Ajoanne-middour%40outlook.com%22%2C%22name%22%3A%22Joanne+Middour%22%7D&registration=7eb5932e-f317-4da7-a8a8-17f73f3f0422&activity_id=http%3A%2F%2FJsdOGRWZzljloSEdyFptOL7JZcTBEIYc_rise&Accept-Language=en&course_id=134&content_token=7eb5932e-f317-4da7-a8a8-17f73f3f0422&session_context=lms&course_code=DIG-BF-100-CECPEB-10-EN&course_id=134&username=f2d27283-c356-467e-86d3-b73bd3d59920&user_id=748669&hash=742480e34a02697f77a43362ebb311ab0012df6cf1e43ee8bb14788a6b80eff1#/lessons/2coOyxQjWCWmZqMSu0KrO_yT-tgwPCdP)
 
+### Additional resources
+
+- [AWS Pricing](https://aws.amazon.com/pricing)
+- [AWS Free Tier](https://aws.amazon.com/free)
+- [AWS Cost Management](https://aws.amazon.com/aws-cost-management/)
+- [Whitepaper: How AWS Pricing Works](https://d1.awsstatic.com/whitepapers/aws_pricing_overview.pdf)
+- [Whitepaper: Introduction to AWS Economics](https://d1.awsstatic.com/whitepapers/introduction-to-aws-cloud-economics-final.pdf)
+- [AWS Support](https://aws.amazon.com/premiumsupport)
+- [AWS Knowledge Center](https://aws.amazon.com/premiumsupport/knowledge-center/)
 
 ## Module 8 Quiz
 
+Which action can you perform with consolidated billing?
 
+- [ ] Review how much cost your predicted AWS usage will incur by the end of the month.
+
+- [ ] Create an estimate for the cost of your use cases on AWS.
+
+- [x] Combine usage across accounts to receive volume pricing discounts.
+
+- [ ] Visualize and manage your AWS costs and usage over time.
+
+> The correct response option is: **Combine usage across accounts to receive volume pricing discounts.**
+> 
+> The other response options are incorrect because:
+> 
+> - Review how much your predicted AWS usage will incur in costs by the end of the month - You can perform this action in AWS Budgets.
+> - Create an estimate for the cost of your use cases on AWS - You can perform this action in AWS Pricing Calculator.
+> - Visualize and manage your AWS costs and usage over time - You can perform this action in AWS Cost Explorer.
+> 
+> **Learn more:**
+> 
+> - [Consolidated billing for AWS Organizations](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/consolidated-billing.html)
+> 
+
+Which pricing tool is used to visualize, understand, and manage your AWS costs and usage over time?
+
+- [ ] AWS Pricing Calculator
+
+- [ ] AWS Budgets
+
+- [x] AWS Cost Explorer
+
+- [ ] AWS Free Tier
+
+> The correct response option is **AWS Cost Explorer**.
+> 
+> AWS Cost Explorer includes a default report of the costs and usage for your top five cost-accruing AWS services. You can apply custom filters and groups to analyze your data. For example, you can view resource usage at the hourly level.
+> 
+> The other response options are incorrect because:
+> 
+> - AWS Pricing Calculator enables you to create an estimate for the cost of your use cases on AWS.
+> - AWS Budgets enables you to create budgets to plan your service usage, service costs, and instance reservations. In AWS Budgets, you can also set custom alerts when your usage exceeds (or is forecasted to exceed) the budgeted amount.
+> - The AWS Free Tier is a program that consists of three types of offers that allow customers to use AWS services without incurring costs: Always free, 12 months free, and Trials.
+> 
+> **Learn more:**
+> 
+> - [AWS Cost Explorer](https://aws.amazon.com/aws-cost-management/aws-cost-explorer/)
+> 
+
+Which pricing tool enables you to receive alerts when your service usage exceeds a threshold that you have defined?
+
+- [ ] Billing dashboard in the AWS Management Console
+
+- [x] AWS Budgets
+
+- [ ] AWS Free Tier
+
+- [ ] AWS Cost Explorer
+
+> The correct response option is **AWS Budgets**.
+> 
+> In AWS Budgets, you can set custom alerts that will notify you when your service usage exceeds (or is forecasted to exceed) the amount that you have budgeted.
+> 
+> Your budget can be based on costs or usage. For example, you can set an alert that will notify you when you have incurred $100.00 of costs in Amazon EC2 or 500,000 requests in AWS Lambda.
+> 
+> The other response options are incorrect because:
+> 
+> - From the billing dashboard in the AWS Management Console, you can view details on your AWS bill, such as service costs by Region, month to date spend, and more. However, you cannot set alerts from the billing dashboard.
+> - The AWS Free Tier is a program that consists of three types of offers that allow customers to use AWS services without incurring costs: Always free, 12 months free, and Trials.
+> - AWS Cost Explorer is a tool that enables you to visualize, understand, and manage your AWS costs and usage over time.
+> 
+> **Learn more:**
+> 
+> - [AWS Budgets](https://aws.amazon.com/aws-cost-management/aws-budgets)
+> 
+
+Your company wants to receive support from an AWS Technical Account Manager (TAM). Which support plan should you choose?
+
+- [ ] Developer
+
+- [x] Enterprise
+
+- [ ] Basic
+
+- [ ] Business
+
+> The correct response option is **Enterprise**.
+> 
+> A Technical Account Manager (TAM) is available only to AWS customers with an Enterprise Support plan. A TAM provides guidance, architectural reviews, and ongoing communication with your company as you plan, deploy, and optimize your applications.
+> 
+> **Learn more:**
+> 
+> - [Compare AWS Support plans](https://aws.amazon.com/premiumsupport/plans/)
+> 
+
+Which service or resource is used to find third-party software that runs on AWS?
+
+- [x] AWS Marketplace
+
+- [ ] AWS Free Tier
+
+- [ ] AWS Support
+
+- [ ] Billing dashboard in the AWS Management Console
+
+> The correct response option is **AWS Marketplace**.
+> 
+> AWS Marketplace is a digital catalog that includes thousands of software listings from independent software vendors. You can use AWS Marketplace to find, test, and buy software that runs on AWS.
+> 
+> The other response options are incorrect because:
+> 
+> - The AWS Free Tier consists of offers that allow customers to use AWS services without incurring costs. These offers are related to AWS services, not third-party software that can be used on AWS.
+> - AWS Support is a resource that can answer questions about best practices, assist with troubleshooting issues, help you to identify ways to optimize your use of AWS services, and so on.
+> - You can use the billing dashboard in the AWS Management Console to view details such as service costs by Region, the top services being used by your account, and forecasted billing costs. From the billing dashboard, you can also access other AWS billing tools, such as AWS Cost Explorer, AWS Budgets, and AWS Budgets Reports.
+> 
+> **Learn more:**
+> 
+> - [AWS Marketplace]()
+> 
