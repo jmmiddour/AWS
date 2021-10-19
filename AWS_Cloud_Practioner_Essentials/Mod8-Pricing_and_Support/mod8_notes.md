@@ -200,8 +200,81 @@ This example of the Cost Explorer Dashboard displays monthly costs for EC2 insta
 - The bar for each month separates the costs for different EC2 instance types (such as t2.micro or m3.large)
 - By analyzing your AWS costs over time, you can make informed decisions about future costs and how to plan your budgets
 
-## AWS Support Plans
+## [AWS Support Plans](https://aws.amazon.com/premiumsupport/plans/)
 
+- AWS offers 4 Support Plans to help you troubleshoot issues, lower costs, and efficiently use AWS services:
+
+  - Basic:
+    - Free for all AWS customers
+    - 24/7 customer support access
+    - Includes access to whitepapers, documentation, and support communities
+    - You can contact AWS for billing questions and service limit increases
+    - You have access to a limited selection of AWS Trusted Advisor checks (7 core checks)
+    - You can use the AWS Personal Health Dashboard (a tool that provides alerts and remediation guidance when AWS is experiencing events that may affect you)
+
+  - Developer:
+    - Includes all the benefits of the Basic Support Plan
+    - Business hours email access to Cloud Support Associates
+    - Ability to open an unrestricted number of technical support cases through only 1 primary contact person
+    - Response time of 12 hours (system impaired) to 24 hours (general guidance)
+    - Pay-by-the-month pricing, in addition to normal AWS service charges, and requires no long-term contract
+    - The lowest priced plan out of the paid plans @ $29 or 3% of monthly AWS usage (whichever is greater) per month
+    - Best practice guidance
+    - Client-side diagnostic tools
+    - Building-block architecture support, which consists of guidance for how to use AWS offerings, features, and services together
+
+  - Business:
+    - Includes all the benefits of the Basic and Developer Support Plans
+    - 24/7 phone, email, and chat access to Cloud Support Engineers
+    - Ability to open an unrestricted number of technical support cases by unlimited number of IAM users
+    - Response time of 1 hour (production system down) to 24 hours (general guidance)
+    - Pay-by-the-month pricing, in addition to normal AWS service charges, and requires no long-term contract
+    - Still affordable @ $100 or 3% - 10% of monthly AWS usage (whichever is greater) per month
+    - Use-case guidance to identify AWS offerings, features, and services that can best support your specific needs
+    - All AWS Trusted Advisor checks
+    - Limited support for third-party software, such as common operating systems and application stack components
+
+  - Enterprise:
+    - Includes all the benefits of the Basic, Developer, and Business Support Plans
+    - Response time of 15 minutes (business-critical system down) to 24 hours (general guidance)
+    - The most expensive Support Plan @ $15,000 or 3% - 10% or monthly AWS usage (whichever is greater) per month
+    - Application architecture guidance, which is a consultative relationship to support your company's specific use cases and applications
+    - Infrastructure event management: A short-term engagement with AWS Support that helps your company gain a better understanding of your use cases
+      - This also provides your company with architectural and scaling guidance
+    - A **Technical Account Manager (TAM)**
+      - Your primary point of contact at AWS
+      - Provides guidance, architectural reviews, and ongoing communication with your company as you plan, deploy, and optimize your applications
+        - Five Pillars of a Well-Architected Framework:
+          - Operational Excellence
+          - Security
+          - Reliability
+          - Performance Efficiency
+          - Cost Optimization
+      - Provides expertise across the full range of AWS services
+      - Help you design solutions that efficiently use multiple services together through an integrated approach
+    - Access to online self-paced training labs
+    - Concierge Support Team (TAM is included in this team)
+
+### Knowledge Check
+
+Which Support plan includes all AWS Trusted Advisor checks at the lowest cost?
+
+- [ ] Basic
+
+- [ ] Developer
+
+- [x] Business
+
+- [ ] Enterprise
+
+> The correct response option is **Business**. 
+> 
+> Only the Business and Enterprise Support plans include all AWS Trusted Advisor checks. Of these two Support plans, the Business Support plan has a lower cost.
+> 
+> **Learn more:**
+> 
+> - [Compare AWS Support plans](https://aws.amazon.com/premiumsupport/plans/)
+> 
 
 ## AWS Marketplace
 
