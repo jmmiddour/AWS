@@ -52,9 +52,61 @@ As a business owner, you need visibility into the state of your systems to ensur
 - You can even customize separate dashboards for different business purposes, applications, or resources
 - The dashboard auto-refreshes when it is opened to get the most recent metrics on your resources
 
+## [AWS CloudTrail](https://content.aws.training/wbt/cecpeb/en/x1/1.0.1/index.html?endpoint=https%3a%2f%2flrs.aws.training%2fTCAPI%2f&auth=Basic%20OjBiMGI4Y2UzLThjOTMtNDc5OS1hYjc5LWEyZTRiOTY1YWRjNw%3d%3d&actor=%7b%22objectType%22%3a%22Agent%22%2c%22name%22%3a%5b%22INQ5CE3B90aXZcEnqdt9gw2%22%5d%2c%22mbox%22%3a%5b%22mailto%3alms-user-INQ5CE3B90aXZcEnqdt9gw2%40amazon.com%22%5d%7d&registration=a1f41fc6-1511-44e4-85a4-8e1923af7bc6&activity_id=http%3a%2f%2fJsdOGRWZzljloSEdyFptOL7JZcTBEIYc_rise&grouping=http%3a%2f%2fJsdOGRWZzljloSEdyFptOL7JZcTBEIYc_rise&content_token=f1d42faf-a210-4c2d-b42a-9fe2b337f828&content_endpoint=https%3a%2f%2flrs.aws.training%2fTCAPI%2fcontent%2f&externalRegistration=CompletionThresholdPercent%7c100!InstanceId%7c0!PackageId%7ccecpeb_en_x1_1.0.1!RegistrationTimestampTicks%7c16225031567556825!SaveCompletion%7c1!TranscriptId%7cLwlMtrUQsUibqhjrMdAFoQ2!UserId%7cINQ5CE3B90aXZcEnqdt9gw2&externalConfiguration=&width=988&height=724&left=466&top=0#/lessons/I91h-X-iy0nX_j5r5sPmtgW6-_TWTi_P)
 
-## [AWS CloudTrail]()
+- [AWS CloudTrail](https://aws.amazon.com/cloudtrail/) a comprehensive API auditing tool that records API calls for your account
+- **Every** request gets logged in the CloudTrail engine
+- CloudTrail can save logs indefinitely in secure S3 buckets
+- The recorded information includes:
+  - The identity of the API caller
+  - The time of the API call
+  - The source IP address of the API caller
+  - And more...
+- Think of CloudTrail as a “trail” of breadcrumbs (or a log of actions) that someone has left behind them
+- You can view a complete history of user activity and API calls for your applications and resources
+- Events are typically updated within 15 minutes after an API call
+- You can filter events by:
+  - Specifying the time and date that an API call occurred
+  - The user who requested the action
+  - The type of resource that was involved in the API call
+  - And more...
+- Example: AWS CloudTrail event: Suppose that the coffee shop owner is browsing through the AWS Identity and Access Management (IAM) section of the AWS Management Console. They discover that a new IAM user named Mary was created, but they do not know who, when, or which method created the user. To answer these questions, the owner navigates to AWS CloudTrail.
+  ![](cloudtrail_example.jpg)
+  - In the CloudTrail Event History section, the owner applies a filter to display only the events for the “CreateUser” API action in IAM
+  - The owner locates the event for the API call that created an IAM user for Mary
+  - This event record provides complete details about what occurred: 
+    > On January 1, 2020 at 9:00 AM, IAM user John created a new IAM user (Mary) through the AWS Management Console.
 
+### [CloudTrail Insights](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-insights-events-with-cloudtrail.html)
+- This optional feature allows CloudTrail to automatically detect unusual API activities in your AWS account
+- For example, CloudTrail Insights might detect that a higher number of Amazon EC2 instances than usual have recently launched in your account
+  - You can then review the full event details to determine which actions you need to take next
+
+### Knowledge Check
+
+Which tasks can you perform using AWS CloudTrail? (Select TWO.)
+
+- [ ] Monitor your AWS infrastructure and resources in real time
+
+- [x] Track user activities and API requests throughout your AWS infrastructure
+
+- [ ] View metrics and graphs to monitor the performance of resources
+
+- [x] Filter logs to assist with operational analysis and troubleshooting
+
+- [ ] Configure automatic actions and alerts in response to metrics
+
+> The correct two response options are:
+> 
+> - **Track user activities and API requests throughout your AWS infrastructure**
+> - **Filter logs to assist with operational analysis and troubleshooting**
+> 
+> The other response options are tasks that you can perform in Amazon CloudWatch.
+> 
+> **Learn more:**
+> 
+> - [AWS CloudTrail](https://aws.amazon.com/cloudtrail)
+> 
 
 ## [AWS Trusted Advisor]()
 
