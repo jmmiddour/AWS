@@ -109,8 +109,78 @@ Which Perspective of the AWS Cloud Adoption Framework helps you design, implemen
 > - [Whitepaper: An Overview of the AWS Cloud Adoption Framework](https://d1.awsstatic.com/whitepapers/aws_cloud_adoption_framework.pdf)
 > 
 
-## Migration Strategies
+## [Migration Strategies](https://aws.amazon.com/blogs/enterprise-strategy/6-strategies-for-migrating-applications-to-the-cloud/)
 
+- Every application (or application group, if they are tightly coupled) will have six possible options when it comes to your enterprise migration
+- We call these "The 6 R's"
+  - Once you've gone through the discovery phase and know exactly what you have in your existing environment, you decide which option is the best fit based on time, cost, priority, and criticality
+
+**Six (R's) Strategies for Migration:**
+- **Re-hosting: (AKA "lift-and-shift")**
+  - Involves moving applications without changes
+  - This is the easiest option to do, since you are not making any changes right away
+  - Some companies have found that even though they many not be getting total optimization, they were still able to save up to 30% of their total cost just by re-hosting
+  - We have found that it is often times easier to optimize applications once they already live in the cloud
+  - In the scenario of a large legacy migration, in which the company is looking to implement its migration and scale quickly, the majority of applications are re-hosted
+
+- **Re-platforming: (AKA "lift, tinker, and shift")**
+  - Involves making a few cloud optimizations to realize a tangible benefit
+  - Optimization is achieved without changing the core architecture of the application
+
+- **Re-factoring: (AKA Re-architecting)**
+  - Involves reimagining how an application is architected and developed by using cloud-native features
+  - Driven by a strong business need to add features, scale, or performance that would otherwise be difficult to achieve in the application's existing environment
+  - Dramatic changes to your architecture can be very beneficial to your enterprise but this will come at the highest initial cost in terms of planning and human effort
+
+- **Repurchasing:**
+  - Involves moving from a traditional license to a software-as-a-service (SaaS) model
+  - Good for companies looking to abandon legacy software vendors and get a fresh start as part of migration
+  - Just remember, you will now be dealing with a new software package and some are easy to implement, some take time
+    - The total upfront expense of this step therefore goes up, but the potential benefits could be substantial
+  - Example: A business might choose to implement the repurchasing strategy by migrating from a customer relationship management (CRM) system to Salesforce.com
+
+- **Retaining:**
+  - Consists of keeping applications that are critical for the business in the source environment
+  - This might include:
+    - Applications that require major refactoring before they can be migrated
+    - Work that can be postponed until a later time
+    - Applications that are about to be deprecated, but not just yet
+      - You could migrate these but does not make much sense
+      - Then you can just deprecate them where they live when the time comes
+  - You should only migrate what makes sense for your business
+
+- **Retiring:**
+  - The process of removing applications that are no longer needed
+  - We've found that as much as 10% to 20% of companies application portfolios include applications that are no longer being used or already have replacements live and functional
+  - Using the AWS migration plan as the opportunity to actually end-of-life these applications can save significant cost and effort for your team
+  - Sometimes you just have to turn off the lights
+
+### Knowledge Check
+
+Which migration strategy involves moving to a different product?
+
+- [ ] Refactoring
+
+- [ ] Retiring
+
+- [ ] Replatforming
+
+- [x] Repurchasing
+
+> The correct response option is **Repurchasing**.
+> 
+> Repurchasing involves replacing an existing application with a cloud-based version, such as software found in AWS Marketplace.
+> 
+> The other response options are incorrect because:
+> 
+> - Refactoring involves changing how an application is architected and developed, typically by using cloud-native features.
+> - Retiring involves removing an application that is no longer used or that can be turned off.
+> - Replatforming involves selectively optimizing aspects of an application to achieve benefits in the cloud without changing the core architecture of the application. It is also known as “lift, tinker, and shift.”
+> 
+> **Learn more:**
+> 
+> - [6 Strategies for Migrating Applications to the Cloud](https://aws.amazon.com/blogs/enterprise-strategy/6-strategies-for-migrating-applications-to-the-cloud/)
+> 
 
 ## AWS Snow Family
 
