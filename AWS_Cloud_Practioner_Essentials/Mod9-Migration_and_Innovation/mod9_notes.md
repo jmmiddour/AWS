@@ -182,8 +182,106 @@ Which migration strategy involves moving to a different product?
 > - [6 Strategies for Migrating Applications to the Cloud](https://aws.amazon.com/blogs/enterprise-strategy/6-strategies-for-migrating-applications-to-the-cloud/)
 > 
 
-## AWS Snow Family
+## [AWS Snow Family](https://aws.amazon.com/snow)
 
+- Theoretically --> A network with 1 Gbps (gigabyte per second) speed moves 1 PB (petabyte) of data in about **100 days**
+  - In the real world it would be likely longer and at a higher cost
+  - This is the reason AWS came up with the Snow Family of device; to shorten the time and reduce the expense of transfering large amounts of data to the Cloud
+- These devices offer different capacity points
+- Most include built-in computing capabilities
+- AWS owns and manages the Snow Family devices
+- They integrate with AWS security, monitoring, storage management, and computing capabilities
+- To obtain any of these devices:
+  - You place an order via tne AWS Management Console
+  - AWS ships the device to you
+  - You plug in the device
+  - You copy your data to the device
+  - You ship the device back to AWS
+  - Once AWS receives the device, they copy the data into your account, usually an S3 bucket that you own
+
+### AWS Snow Family Members
+![](snow_family.jpg)
+
+The AWS Snow Family is a collection of physical devices that help to physically transport up to exabytes of data into and out of AWS
+- All Snow Family devices are designed to be secure and tamper-resistant while on-site or in-transit
+- The hardware and software is cryptographically signed
+- All data stored is automatically encrypted using 256-bit encryption keys, owned and managed by the customer
+- You can use AWS Key Management Service to generate and manage keys
+
+**AWS Snow Family is composed of:**
+- **AWS Snowcone:**
+  - A small, rugged, and secure edge computing and data transfer device
+  - Features:
+    - 2 CPUs
+    - 4 GB of memory
+    - up to 8 TB of usable storage
+    - Contains Edge computing
+      - Edge computing options are: EC2 instances and AWS IoT Greengrass
+
+- **AWS Snowball:**
+  - Fits into existing server racks
+  - Can be clustered for greater computing needs
+  - Once plugged into your infrastructure, you can run AWS Lambda functions, EC2-compatible AMIs, or IoT Greengrass to perform simple processing of data right then and there
+  - Offers two types of devices:
+    - **Snowball Edge Storage Optimized:**
+      - Well suited for large-scale data migrations and recurring transfer workflows, in addition to local computing with higher capacity needs
+      - Features:
+        - Storage:
+          - 80 TB of hard disk drive (HDD) capacity for block volumes and AWS S3 compatible object storage
+          - 1 TB SATA solid state drive (SSD) for block volumes
+        - Compute:
+          - 40 vCPUs
+          - 80 GiB of memory to support AWS EC2 sbe1 instances (equivalent to C5)
+
+    - **Snowball Edge Compute Optimized:**
+      - Provides powerful computing resources for use cases such as machine learning, full motion video analysis, analytics, and local computing stacks
+      - Features:
+        - Storage:
+          - 42 TB usable HDD capacity for AWS S3 compatible object storage or AWS EBS compatible block volumes
+          - 7.68 TB of usable NVMe SSD capacity for AWS EBS compatible block volumes
+        - Compute:
+          - 52 vCPUs
+          - 208 GiB of memory
+          - (Optional) NVIDIA Tesla V100 GPU
+          - Runs AWS EC2 sbe-c and sbe-g instances, which are equivalent to C5, M5a, G3, and P3 instances
+
+- **AWS Snowmobile:**
+  - An exabyte-scale data transfer service used to move large amounts of data to AWS
+  - Can transfer up to 100 petabytes of data per Snowmobile
+  - It is a 45-foot-long rugged shipping container, pulled by a semi-trailer truck
+  - Ideal for the largest migrations and even data center shutdowns
+  - AWS drives the truck to the designated location
+  - They plug it in
+  - Then it appears as a network attached storage device
+  - Features: 
+    - Tamper resistant
+    - Waterproof
+    - Temperature controlled
+    - Fire suppression
+    - GPS tracking
+    - 24/7 video surveillance with a dedicated security team
+    - Escort security vehicle during transit
+
+### Knowledge Check
+
+What is the storage capacity of Snowball Edge Storage Optimized?
+
+- [ ] 40 TB
+
+- [ ] 60 TB
+
+- [x] 80 TB
+
+- [ ] 100 TB
+
+> The correct response option is **80 TB**.
+> 
+> Snowball Edge Storage Optimized is a device that enables you to transfer large amounts of data into and out of AWS. It provides 80 TB of usable HDD storage.
+> 
+> **Learn more:**
+> 
+> - [AWS Snow Family](https://aws.amazon.com/snow/)
+> 
 
 ## Innovation with AWS
 
