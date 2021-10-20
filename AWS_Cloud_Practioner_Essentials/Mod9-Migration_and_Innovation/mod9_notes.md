@@ -285,6 +285,70 @@ What is the storage capacity of Snowball Edge Storage Optimized?
 
 ## Innovation with AWS
 
+- The same VMWare based infrastructure that you use on prem can, in many cases, just be lifted and dropped onto AWS via VMWare Cloud on AWS
+- 
+
+When examining how to use AWS services, it is important to focus on the desired outcomes. You are properly equipped to drive innovation in the cloud if you can clearly articulate the following conditions:
+- The current state
+- The desired state
+- The problems you are trying to solve
+
+Consider some paths you might explore in the future as you continue on your cloud journey.
+
+- **Serverless Applications:**
+  - **Serverless:** Refers to applications that don't require you to provision, maintain, or administer servers
+  - Don't need to worry about fault tolerance or availability
+    - AWS handles these capabilities for you
+  - AWS Lambda is an example
+    - If you design your architecture to trigger Lambda functions to run your code, you can bypass the need to manage a fleet of servers
+
+- **Artificial Intelligence:**
+  - AWS offers a variety of services powered by AI
+  - One of the services AWS offers is Amazon Augmented AI (Amazon A2I)
+    - Provides a machine learning platform that any business can build upon without needing PhD level expertise in-house
+  - Another is Textract:
+    - Extract text and data from documents to make them more usable for your enterprise
+  - Some task you can perform include:
+    - Convert speech to text with Amazon Transcribe
+    - Discover patterns in text with Amazon Comprehend
+    - Identify potential fraudulent online activities with Amazon Fraud Detector
+    - Build voice and text chat bots with Amazon Lex
+
+- **Machine Learning:**
+  - Traditional ML development is complex, expensive, time-consuming, and error-prone
+  - AWS offers Amazon SageMaker to remove the difficult work from the process
+    - You can use ML to analyze data, solve complex problems, and predict outcomes before they happen
+    - Can build custom models with support for all the popular open-source frameworks
+  - AWS offers another service called AWS Deepracer
+    - A chance for your developers to experiment with reinforcement learning; all while having fun in a racing environment
+    - One of the newest branches of ML algorithms
+
+### Knowledge Check
+
+Which service enables you to quickly build, train, and deploy machine learning models?
+
+- [ ] Amazon Textract
+
+- [ ] Amazon Lex
+
+- [ ] AWS DeepRacer
+
+- [x] Amazon SageMaker
+
+> The correct response option is **Amazon SageMaker**.
+> 
+> With Amazon SageMaker, you can quickly and easily begin working on machine learning projects. You do not need to follow the traditional process of manually bringing together separate tools and workflows.
+> 
+> The other response options are incorrect because:
+> 
+> - Amazon Textract is a machine learning service that automatically extracts text and data from scanned documents.
+> - Amazon Lex is a service that enables you to build conversational interfaces using voice and text.
+> - AWS DeepRacer is an autonomous 1/18 scale race car that you can use to test reinforcement learning models.
+> 
+> **Learn more:**
+> 
+> - [Amazon SageMaker](https://aws.amazon.com/sagemaker)
+> 
 
 ## Module 9 Summary
 
