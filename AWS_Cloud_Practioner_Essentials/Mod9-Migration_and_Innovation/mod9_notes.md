@@ -350,9 +350,110 @@ Which service enables you to quickly build, train, and deploy machine learning m
 > - [Amazon SageMaker](https://aws.amazon.com/sagemaker)
 > 
 
-## Module 9 Summary
+## [Module 9 Summary](https://dxdn3xrr0vpde.cloudfront.net/files/a/w/aws_prod1_docebosaas_com/1634706000/A4lj35p9uicwHiyWxZg9O2iOvvfmB8fBABGAzVNfm2w/tincan/9fcdd31716ade4bd2b683417d7ab62bbaa2de2ed/index.html?endpoint=https%3A%2F%2Fexplore.skillbuilder.aws%2Ftcapi%2F&auth=Basic%20L2YyZDI3MjgzLWMzNTYtNDY3ZS04NmQzLWI3M2JkM2Q1OTkyMDokMnkkMTMkNHB5Njg3aVVnSy9vbnA4WTlrSmwwZTIuWTg3bEk3c0RXbnpmOFJ1eGlDaUtvNUxacnhKRnU%3D&actor=%7B%22mbox%22%3A%22mailto%3Ajoanne-middour%40outlook.com%22%2C%22name%22%3A%22Joanne+Middour%22%7D&registration=7eb5932e-f317-4da7-a8a8-17f73f3f0422&activity_id=http%3A%2F%2FJsdOGRWZzljloSEdyFptOL7JZcTBEIYc_rise&Accept-Language=en&course_id=134&content_token=7eb5932e-f317-4da7-a8a8-17f73f3f0422&session_context=lms&course_code=DIG-BF-100-CECPEB-10-EN&course_id=134&username=f2d27283-c356-467e-86d3-b73bd3d59920&user_id=748669&hash=742480e34a02697f77a43362ebb311ab0012df6cf1e43ee8bb14788a6b80eff1#/lessons/-FN8Xw7W5OWCZ-AVySdTKFkoFrUmoKHP)
 
+### Additional resources
+
+- [Migration & Transfer on AWS](https://aws.amazon.com/products/migration-and-transfer)
+- [A Process for Mass Migrations to the Cloud](https://aws.amazon.com/blogs/enterprise-strategy/214-2/)
+- [6 Strategies for Migrating Applications to the Cloud](https://aws.amazon.com/blogs/enterprise-strategy/6-strategies-for-migrating-applications-to-the-cloud/)
+- [AWS Cloud Adoption Framework](https://aws.amazon.com/professional-services/CAF/)
+- [AWS Fundamentals: Core Concepts](https://aws.amazon.com/getting-started/fundamentals-core-concepts/)
+- [AWS Cloud Enterprise Strategy Blog](https://aws.amazon.com/blogs/enterprise-strategy/)
+- [Modernizing with AWS Blog](https://aws.amazon.com/blogs/modernizing-with-aws/)
+- [AWS Customer Stories: Data Center Migration](https://aws.amazon.com/solutions/case-studies/?customer-references-cards.sort-by=item.additionalFields.publishedDate&customer-references-cards.sort-order=desc&awsf.customer-references-location=*all&awsf.customer-references-segment=*all&awsf.customer-references-product=product%23vpc%7Cproduct%23api-gateway%7Cproduct%23cloudfront%7Cproduct%23route53%7Cproduct%23directconnect%7Cproduct%23elb&awsf.customer-references-category=category%23datacenter-migration)
 
 ## Module 9 Quiz
 
+Which Perspective of the AWS Cloud Adoption Framework helps you structure the selection and implementation of permissions?
 
+- [ ] Governance Perspective
+
+- [x] Security Perspective
+
+- [ ] Operations Perspective
+
+- [ ] Business Perspective
+
+> The correct response option is **Security Perspective**.
+> 
+> The Security Perspective of the AWS Cloud Adoption Framework also helps you to identify areas on non-compliance and plan ongoing security initiatives.
+> 
+> The other response options are incorrect because:
+> 
+> - The Governance Perspective helps you to identify and implement best practices for IT governance and support business processes with technology.
+> - The Operations Perspective focuses on operating and recovering IT workloads to meet the requirements of your business stakeholders.
+> - The Business Perspective helps you to move from a model that separates business and IT strategies into a business model that integrates IT strategy.
+> 
+> **Learn more:**
+> 
+> - [Whitepaper: An Overview of the AWS Cloud Adoption Framework](https://d1.awsstatic.com/whitepapers/aws_cloud_adoption_framework.pdf)
+> 
+
+Which strategies are included in the six strategies for application migration? (Select TWO.)
+
+- [ ] Revisiting
+
+- [x] Retaining
+
+- [ ] Remembering
+
+- [ ] Redeveloping
+
+- [x] Rehosting
+
+> The two correct response options are:
+> 
+> - **Retaining**
+> - **Rehosting**
+> 
+> The application migration strategies are rehosting, replatforming, refactoring/re-architecting, repurchasing, retaining, and retiring.
+> 
+> **Learn more:**
+> 
+> - [6 Strategies for Migrating Applications to the Cloud](https://aws.amazon.com/blogs/enterprise-strategy/6-strategies-for-migrating-applications-to-the-cloud/)
+> 
+
+What is the storage capacity of AWS Snowmobile?
+
+- [ ] 40 PB
+
+- [ ] 60 PB
+
+- [ ] 80 PB
+
+- [x] 100 PB
+
+> The correct response option is **100 PB**.
+> 
+> AWS Snowmobile is a service that is used for transferring up to 100 PB of data to AWS. Each Snowmobile is a 45-foot long shipping container that is pulled by a semi trailer truck.
+> 
+> **Learn more:**
+> 
+> - [AWS Snow Family](https://aws.amazon.com/snow)
+> 
+
+Which statement best describes Amazon Lex?
+
+- [x] A service that enables you to build conversational interfaces using voice and text
+
+- [ ] A machine learning service that automatically extracts text and data from scanned documents
+
+- [ ] A document database service that supports MongoDB workloads
+
+- [ ] A service that enables you to identify potentially fraudulent online activities
+
+> The correct response option is **Amazon Lex**.
+> 
+> In Amazon Lex, you can quickly build, test, and deploy conversational chatbots to use in your applications.
+> 
+> The other response options are incorrect because:
+> 
+> - A machine learning service that automatically extracts text and data from scanned document describes Amazon Textract.
+> - A document database service that supports MongoDB workloads describes Amazon DocumentDB.
+> - A service that enables you to identify potentially fraudulent online activities describes Amazon Fraud Detector.
+> 
+> **Learn more:**
+> 
+> - [Amazon Lex](https://aws.amazon.com/lex)
+> 
