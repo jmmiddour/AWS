@@ -212,7 +212,6 @@ Strategy: Think back to the exam domains that were reviewed earlier in this modu
 - [x] Amazon Virtual Private Cloud (Amazon VPC)
 
     > [Amazon VPC](https://aws.amazon.com/vpc/) lets users provision a logically isolated section of the AWS Cloud where users can launch AWS resources in a virtual network that they define.
-
     > 
 
 5. Which of the following is an AWS responsibility under the AWS shared responsibility model?
@@ -249,7 +248,6 @@ Strategy: Think back to the exam domains that were reviewed earlier in this modu
 - [ ] AWS Identity and Access Management (AWS IAM)
 
     > [AWS CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html) helps users enable governance, compliance, and operational and risk auditing of their AWS accounts. Actions taken by a user, role, or an AWS service are recorded as events in CloudTrail. Events include actions taken in the AWS Management Console, AWS Command Line Interface (CLI), and AWS SDKs and APIs.
-
     > 
 
 9. Which service would be used to send alerts based on Amazon CloudWatch alarms?
@@ -269,5 +267,3 @@ Strategy: Think back to the exam domains that were reviewed earlier in this modu
 
     > The [AWS Acceptable Use Policy](https://aws.amazon.com/aup/) provides information regarding prohibited actions on the AWS infrastructure. 
     > 
-
-
