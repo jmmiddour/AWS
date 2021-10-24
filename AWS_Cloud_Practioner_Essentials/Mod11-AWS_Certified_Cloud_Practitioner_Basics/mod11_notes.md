@@ -119,3 +119,155 @@ As part of your preparation for the AWS Certified Cloud Practitioner exam, we re
 - [How AWS Pricing Works](http://d1.awsstatic.com/whitepapers/aws_pricing_overview.pdf)
 - [Compare AWS Support Plans](https://aws.amazon.com/premiumsupport/plans/)
 
+## Exam Strategies
+
+- **Read the FULL Question:**
+  - Make sure you read each question in full
+  - Key words and phrases in the question, if left unread, could result in you selecting an incorrect response
+
+- **Predict the Answer BEFORE Reviewing the Response Options:**
+  - Try to predict the correct answer before looking at any of the response options
+  - This strategy helps you to draw directly from your knowledge and skills without distraction from incorrect response options
+  - If your prediction turns out to be on the response options, you know you are on the right track
+  - Make sure that you review all the other responses though
+
+- **Eliminate incorrect response options:**
+  - Eliminate any options that you believe to be incorrect before selecting your response
+  - This strategy helps you focus on the correct option and ensure that you have fulfilled all the requirements of the question
+
+### Sample Questions
+
+AWS Certified Cloud Practitioner exam results are reported as a score from 100–1,000. What is the minimum passing score?
+
+- [ ] 650
+
+- [ ] 700
+
+- [ ] 850
+
+- [ ] 900
+
+> The correct response option is **700**. 
+> 
+> Key words and phrases that you might have identified in this question include minimum and AWS Certified Cloud Practitioner.
+> 
+
+Which domains are included on the AWS Certified Cloud Practitioner exam? (Select TWO.)
+
+Strategy: Think back to the exam domains that were reviewed earlier in this module. Based on the domains that you recall learning about, which response options do you think that you can eliminate as incorrect?
+
+- [x] Security and Compliance
+
+- [ ] Automation and Optimization
+
+- [ ] Monitoring and Reporting
+
+- [x] Billing and Pricing
+
+- [ ] Deployment and Provisioning
+
+> The two correct response options are:
+> 
+> - **Security and Compliance**
+> - **Billing and Pricing**
+> 
+> Key words and phrases that you might have identified in this question include domains and AWS Certified Cloud Practitioner.
+> 
+> The other three response options are domains that are included on the AWS Certified SysOps Administrator – Associate exam.
+> 
+
+### [Sample Exam Questions](https://d1.awsstatic.com/training-and-certification/docs-cloud-practitioner/AWS-Certified-Cloud-Practitioner_Sample-Questions.pdf)
+
+1. Why is AWS more economical than traditional data centers for applications with varying compute workloads?
+- [ ] Amazon EC2 costs are billed on a monthly basis.
+- [ ] Users retain full administrative access to their Amazon EC2 instances.
+- [x] Amazon EC2 instances can be launched on demand when needed.
+- [ ] Users can permanently run enough instances to handle peak workloads.
+
+    > The ability to [launch instances on demand](https://docs.aws.amazon.com/whitepapers/latest/aws-overview/six-advantages-of-cloud-computing.html) when needed allows users to launch and terminate instances in response to a varying workload. This is a more economical practice than purchasing enough on-premises servers to handle the peak load.
+    > 
+
+2. Which AWS service would simplify the migration of a database to AWS?
+- [ ] AWS Storage Gateway
+- [x] AWS Database Migration Service (AWS DMS)
+- [ ] Amazon EC2
+- [ ] Amazon AppStream 2.0
+
+    > AWS DMS helps users migrate databases to AWS quickly and securely. The source database remains fully operational during the migration, minimizing downtime to applications that rely on the database. [AWS DMS](https://aws.amazon.com/dms/) can migrate data to and from most widely used commercial and open-source databases
+    > 
+
+3. Which AWS offering enables users to find, buy, and immediately start using software solutions in their AWS environment?
+- [ ] AWS Config
+- [ ] AWS OpsWorks
+- [ ] AWS SDK
+- [x] AWS Marketplace
+
+    > [AWS Marketplace](https://aws.amazon.com/marketplace/) is a digital catalog with thousands of software listings from independent software vendors that makes it easy to find, test, buy, and deploy software that runs on AWS.
+    > 
+
+4. Which AWS networking service enables a company to create a virtual network within AWS?
+- [ ] AWS Config
+- [ ] Amazon Route 53
+- [ ] AWS Direct Connect
+- [x] Amazon Virtual Private Cloud (Amazon VPC)
+
+    > [Amazon VPC](https://aws.amazon.com/vpc/) lets users provision a logically isolated section of the AWS Cloud where users can launch AWS resources in a virtual network that they define.
+
+    > 
+
+5. Which of the following is an AWS responsibility under the AWS shared responsibility model?
+- [ ] Configuring third-party applications
+- [x] Maintaining physical hardware
+- [ ] Securing application access and data
+- [ ] Managing guest operating systems
+
+    > Maintaining physical hardware is an AWS responsibility under the [AWS shared responsibility model](https://aws.amazon.com/compliance/shared-responsibility-model/).
+    > 
+
+6. Which component of the AWS global infrastructure does Amazon CloudFront use to ensure low-latency delivery?
+- [ ] AWS Regions
+- [x] Edge locations
+- [ ] Availability Zones
+- [ ] Virtual Private Cloud (VPC)
+
+    > To deliver content to users with lower latency, [Amazon CloudFront](https://aws.amazon.com/cloudfront/) uses a global network of points of presence (edge locations and regional edge caches) worldwide. 
+    > 
+
+7. How would a system administrator add an additional layer of login security to a user's AWS Management Console?
+- [ ] Use Amazon Cloud Directory
+- [ ] Audit AWS Identity and Access Management (IAM) roles
+- [x] Enable multi-factor authentication
+- [ ] Enable AWS CloudTrail
+
+    > [Multi-factor authentication (MFA)](https://aws.amazon.com/iam/features/mfa/) is a simple best practice that adds an extra layer of protection on top of a username and password. With MFA enabled, when a user signs in to an AWS Management Console, they will be prompted for their username and password (the first factor—what they know), as well as for an authentication code from their MFA device (the second factor—what they have). Taken together, these multiple factors provide increased security for AWS account settings and resources.
+    > 
+
+8. Which service can identify the user that made the API call when an Amazon EC2 instance is terminated?
+- [ ] AWS Trusted Advisor
+- [x] AWS CloudTrail
+- [ ] AWS X-Ray
+- [ ] AWS Identity and Access Management (AWS IAM)
+
+    > [AWS CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html) helps users enable governance, compliance, and operational and risk auditing of their AWS accounts. Actions taken by a user, role, or an AWS service are recorded as events in CloudTrail. Events include actions taken in the AWS Management Console, AWS Command Line Interface (CLI), and AWS SDKs and APIs.
+
+    > 
+
+9. Which service would be used to send alerts based on Amazon CloudWatch alarms?
+- [x] Amazon Simple Notification Service (Amazon SNS)
+- [ ] AWS CloudTrail
+- [ ] AWS Trusted Advisor
+- [ ] Amazon Route 53
+
+    > Amazon SNS and Amazon CloudWatch are integrated so users can collect, view, and analyze metrics for every active SNS. Once users have configured [CloudWatch for Amazon SNS](https://docs.aws.amazon.com/sns/latest/dg/sns-monitoring-using-cloudwatch.html), they can gain better insight into the performance of their Amazon SNS topics, push notifications, and SMS deliveries.
+    > 
+
+10. Where can a user find information about prohibited actions on the AWS infrastructure?
+- [X] AWS Trusted Advisor  `<-- Wrong Answer`
+- [ ] AWS Identity and Access Management (IAM)
+- [ ] AWS Billing Console
+- [ ] AWS Acceptable Use Policy  `<-- Correct Answer`
+
+    > The [AWS Acceptable Use Policy](https://aws.amazon.com/aup/) provides information regarding prohibited actions on the AWS infrastructure. 
+    > 
+
+
