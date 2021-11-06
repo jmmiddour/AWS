@@ -10,11 +10,11 @@
 |  |  |  |  |  |  |  |
 |  | Aurora | MySQL/PostgresSQL-compatible [relational database](https://aws.amazon.com/relational-database/) built on the Cloud; Combines performance, security, reliability, and availability of traditional databases with simplicity and 1/10th the cost; 5x faster than MySQL; 3x faster than PostgresSQL | <ul><li>High performance/scalability</li><li>High Availability/durability offering 99.99% availability</li><li>Instance failover typically takes less than 30 seconds</li><li>Highly secure</li><li>MySQL/PostgresSQL compatible</li><li>Fully managed</li><li>Migration support</li><li>Distributed, fault-tolerant, self-healing storage system</li><li>Auto-scales up to 128 TB per database instance</li><li>Up to 15 low-latency read replicas</li><li>Point-in-time recovery</li><li>Continuous backup to S3</li><li>Replicate 6 copies (1 read/1 write per AZ) of your data across 3 AZs</li></ul> | <ul><li>Enterprise applications</li><li>Being a fully managed service, saves enterprises time with automation</li><li>Software as a Service (SaaS) Applications</li><li>Web and Mobile Gaming</li></ul> | 1/10th the cost of commercial-grade databases | https://aws.amazon.com/rds/aurora/ |
 |  |  |  |  |  |  |  |
-|  | Auto Scaling | Monitors your applications and automatically adjusts capacity to maintain steady, predictable performance at the lowest possible cost. Build scaling plans for EC2 instances, Spot Fleets, EC2 tasks, DynamoDB tables and indexes, and Aurora Replicas | <ul><li>Easy to setup within minutes</li><li>Makes scaling simple with recommendations to optimize performance, costs, or balance</li><li>Automatically maintain performance</li></ul> | Automate scaling of your applications and resources. | <ul><li>No additional charge</li><li>Only pay for resources needed and CloudWatch monitoring fees</li></ul> | https://aws.amazon.com/autoscaling/ |
+|  | Auto Scaling | Monitors your applications and automatically adjusts capacity to maintain steady, predictable performance at the lowest possible cost. Build scaling plans for EC2 instances, Spot Fleets, EC2 tasks, DynamoDB tables and indexes, and Aurora Replicas | <ul><li>Easy to setup within minutes</li><li>Makes scaling simple with recommendations to optimize performance, costs, or balance</li><li>Automatically maintain performance</li><li>Scales *in* and *out* (subtract or add instances) only</li></ul> | Automate scaling of your applications and resources. | <ul><li>No additional charge</li><li>Only pay for resources needed and CloudWatch monitoring fees</li></ul> | https://aws.amazon.com/autoscaling/ |
 |  |  |  |  |  |  |  |
 | AZ | Availability Zone | One or more isolated locations within a Region. | <ul><li>Can distribute your instance across multiple AZs to prevent application downtime</li><li>Can use [Elastic IP addresses](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html) to mask a failure of an instance in an AZ</li><li>When setting up an instance in a Region, if no AZ is specified, AWS choose on closest to your customers</li></ul> |  | Varies based on the tier | https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-availability-zones |
 |  |  |  |  |  |  |  |
-| ACM | AWS Certificate Management | Easily provision, manage, and deploy public and private Secure Sockets Layer/Transport Layer Security (SSL/TLS) certificates for use with AWS services and your internal connected resources. |  |  | Security; Identity; Compliance; |  |  | https://aws.amazon.com/certificate-manager/ |
+| ACM | AWS Certificate Management | Easily provision, manage, and deploy public and private Secure Sockets Layer/Transport Layer Security (SSL/TLS) certificates for use with AWS services and your internal connected resources. | <ul><li>Free public certificates for ACM-integrated services</li><li>Managed certificate renewal</li><li>Get certificates easily</li><li>Security</li><li>Identity</li><li>Compliance</li></ul> | <ul><li>Protect and secure your website</li><li>Protect and secure your internal resources</li><li>Help meet compliance requirements</li><li>Improve uptime</li></ul> | No additional charge for public or private SSL/TLS certificates you use with [ACM-integrated services](https://docs.aws.amazon.com/acm/latest/userguide/acm-services.html). Only pay for the AWS resources you create to run your application. | https://aws.amazon.com/certificate-manager/ |
 |  |  |  |  |  |  |  |
 
 ## B
@@ -22,7 +22,9 @@
 | Anagram | Name | Short Description | Benefits | Use Cases | Pricing | Link |
 | --- | --- | --- | --- | --- | --- | --- |
 | - | Batch |  |  | Compute and Serverless |  |  |
+|  |  |  |  |  |  |  |
 | - | Backup |  |  | Storage |  |  |
+|  |  |  |  |  |  |  |
 | - | Budgets |  |  | Management; Monitoring; Governance; |  |  |
 |  |  |  |  |  |  |  |
 
@@ -32,20 +34,35 @@
 | Anagram | Name | Short Description | Benefits | Use Cases | Pricing | Link |
 | --- | --- | --- | --- | --- | --- | --- |
 | - | CloudFormation |  |  | Management; Monitoring; Governance; |  |  |
+|  |  |  |  |  |  |  |
 | - | CloudFront |  |  | Networking; Content Delivery; |  |  |
+|  |  |  |  |  |  |  |
 | - | CloudHSM |  |  | Security; Identity; Compliance; |  |  |
+|  |  |  |  |  |  |  |
 | - | CloudTrail |  |  | Management; Monitoring; Governance; |  |  |
+|  |  |  |  |  |  |  |
 | - | CloudWatch | Monitors your current services and will collect logs (access) /metrics (CPU usage) in real-time. | Keeps logs in CloudWatch for 15 months; Can transfer logs to S3 you specify; Can send notifications via AWS SNS based on a rule (alerts); Can automate actions to take when rule(alert) happens using AWS Lambda | Management; Monitoring; Governance; |  |  |
+|  |  |  |  |  |  |  |
 | - | CodeBuild |  |  | Developer Tools; |  |  |
+|  |  |  |  |  |  |  |
 | - | CodeCommit |  |  | Developer Tools; |  |  |
+|  |  |  |  |  |  |  |
 | - | CodeDeploy |  |  | Developer Tools; |  |  |
+|  |  |  |  |  |  |  |
 | - | CodePipeline | Fully managed continuous delivery service. Helps automate release pipelines for fast, reliable updates. Automates the build, test, and deploy phases everytime there is a code change. | Quickly iterate on feedback and get new features to your users faster; Integrate with source code on GitHub; Connects to existing tools and systems |  |  | https://aws.amazon.com/codepipeline/ |
+|  |  |  |  |  |  |  |
 | - | CodeStar |  |  | Developer Tools; |  |  |
+|  |  |  |  |  |  |  |
 | - | Cognito |  |  | Security; Identity; Compliance; |  |  |
+|  |  |  |  |  |  |  |
 | - | Config |  |  | Management; Monitoring; Governance; |  |  |
+|  |  |  |  |  |  |  |
 | - | Connect |  |  | Customer Engagement; |  |  |
+|  |  |  |  |  |  |  |
 | CLI | Command Line Interface |  |  |  |  |  |
+|  |  |  |  |  |  |  |
 | - | Cost and Usage Report | Only reports usage |  | Management; Monitoring; Governance; |  |  |
+|  |  |  |  |  |  |  |
 | - | Cost Explorer | Reports usage and provides other tools for forecasting future usage based on previous usage |  |  |  |  |
 |  |  |  |  |  |  |  |
 
@@ -54,7 +71,9 @@
 | Anagram | Name | Short Description | Benefits | Use Cases | Pricing | Link |
 | --- | --- | --- | --- | --- | --- | --- |
 | - | Detective |  | Security; Identity; Compliance; |  |
+|  |  |  |  |  |  |  |
 | - | Direct Connect |  | Networking; Content Delivery; |  |
+|  |  |  |  |  |  |  |
 | - | DynamoDB |  | Databases; |  |
 |  |  |  |  |  |  |  |
 
@@ -63,13 +82,21 @@
 | Anagram | Name | Short Description | Benefits | Use Cases | Pricing | Link |
 | --- | --- | --- | --- | --- | --- | --- |
 | - | Elastic Beanstalk |  |  | Compute and Serverless |  |  |
+|  |  |  |  |  |  |  |
 | EBS | Elastic Block Storage |  |  | Storage |  |  |
+|  |  |  |  |  |  |  |
 | - | ElastiCache |  |  | Database; |  |  |
+|  |  |  |  |  |  |  |
 | EC2 | Elastic Cloud Computing | Virtual Server running on AWS Cloud |  | Host an application, connect to a database, anything you need a server for. |  | https://aws.amazon.com/ec2/ |
+|  |  |  |  |  |  |  |
 | ECS | Elastic Container Service | Fully managed container orchestration service. Makes it easier for you to deploy, manage, and scale containerized applications. |  | Containers; Deploy in a hybrid environment; Support batch processing; Scale web applications. |  | https://aws.amazon.com/ecs/ |
+|  |  |  |  |  |  |  |
 | EFS | Elastic File Storage |  |  | Storage |  |  |
+|  |  |  |  |  |  |  |
 | EKS | Elastic Kubernetes Service |  |  | Containers; |  |  |
+|  |  |  |  |  |  |  |
 | - | EventBridge (CloudWatch Events) |  |  | Management; Monitoring; Governance; |  |  |
+|  |  |  |  |  |  |  |
 | ELB | Elastic Load Balancer |  |  |  |  |  |
 |  |  |  |  |  |  |  |
 
@@ -77,7 +104,9 @@
 | Type | Short Description | Benefits | Use Case | Link |
 | --- | --- | --- | --- | --- |
 | On-Demand |  |  |  |  |
+|  |  |  |  |  |
 | Reserved |  |  |  |  |
+|  |  |  |  |  |
 | Dedicated Host |  |  | Comply with per-core software license requirements; |  |
 |  |  |  |  |  |
 
@@ -94,6 +123,7 @@
 | Anagram | Name | Short Description | Benefits | Use Cases | Pricing | Link |
 | --- | --- | --- | --- | --- | --- | --- |
 | - | Global Accelerator | Networking service that improves performance of your user's  |  |  |  |  |
+|  |  |  |  |  |  |  |
 | - | GuardDuty |  |  | Security; Identity; Compliance; |  |  |
 |  |  |  |  |  |  |  |
 
@@ -101,9 +131,13 @@
 | Part | Description | Security | Level | Link |
 | --- | --- | --- | --- | --- |
 | VPC |  |  | Top Level - Your personal cloud |  |
+|  |  |  |  |  |
 | Regions |  |  | Inside your VPC |  |
+|  |  |  |  |  |
 | Subnet |  | NaCL | Inside Region - Houses AZs |  |
+|  |  |  |  |  |
 | AZ | One or more isolated locations within a Region. | Security Groups | Inside a Region | https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-availability-zones |
+|  |  |  |  |  |
 | Local Zone | An extension of an AWS Region in geographic proximity to your users. Have their own connections to the internet and supports AWS Direct Connect | NaCL | Inside a Region | https://aws.amazon.com/about-aws/global-infrastructure/localzones/ |
 
 ## H
@@ -117,8 +151,11 @@
 | Anagram | Name | Short Description | Benefits | Use Cases | Pricing | Link |
 | --- | --- | --- | --- | --- | --- | --- |
 | IAM | Identity and Access Management |  |  | Security; Identity; Compliance; |  |  |
+|  |  |  |  |  |  |  |
 | IaaS | Infrastructure as a Service |  |  |  |  |  |
+|  |  |  |  |  |  |  |
 | IaC | Infrastructure as Code |  |  |  |  |  |
+|  |  |  |  |  |  |  |
 | - | Inspector | Checks for security patches and reports if a new patch is available. |  | Security; Identity; Compliance; |  |  |
 |  |  |  |  |  |  |  |
 
@@ -139,18 +176,25 @@
 
 | Anagram | Name | Short Description | Benefits | Use Cases | Pricing | Link |
 | --- | --- | --- | --- | --- | --- | --- |
-| - | Lambda |  | Compute and Serverless |  |
-| - | Lightsail |  | Compute and Serverless |  |
+| - | Lambda |  | Compute and Serverless |  |  |  |
+|  |  |  |  |  |  |  |
+| - | Lightsail |  | Compute and Serverless |  |  |  |
+|  |  |  |  |  |  |  |
 | - | License Manager |  |  | Management; Monitoring; Governance; Security; Identity; Compliance; |  |  |
+|  |  |  |  |  |  |  |
 |  | Local Zones | Run latency sensitive applications closer to end users. | <ul><li>Build and deploy applications close to end users</li><li>Run low-latency applications at the edge</li><li>Simplify hybrid cloud migrations</li><li>Meet stringent data residency requirements</li></ul> | <ul><li>Real-time gaming</li><li>Live streaming</li><li>Augmented / Virtual Reality (AR / VR)</li><li>Virtual workstations</li><li>Applications requiring low-latency close to large populations, industry, and IT centers</li></ul> | <ul><li>Pay-as-you-go pricing</li><li>No additional fees</li><li>You only pay for the services you consume in Local Zones</li></ul> | <ul><li>https://aws.amazon.com/about-aws/global-infrastructure/localzones/ </li><li>https://aws.amazon.com/about-aws/global-infrastructure/localzones/features/?pg=localzones&sec=hs </li></ul> |
+|  |  |  |  |  |  |  |
 
 ## M
 
 | Anagram | Name | Short Description | Benefits | Use Cases | Pricing | Link |
 | --- | --- | --- | --- | --- | --- | --- |
 | - | Macie |  |  | Security; Identity; Compliance; |  |  |
+|  |  |  |  |  |  |  |
 | - | Managed Services |  |  | Management; Monitoring; Governance; |  |  |
+|  |  |  |  |  |  |  |
 | - | Management Console |  |  |  |  |  |
+|  |  |  |  |  |  |  |
 | - | Marketplace |  |  |  |  |  |
 |  |  |  |  |  |  |  |
 
@@ -165,6 +209,7 @@
 | Anagram | Name | Short Description | Benefits | Use Cases | Pricing | Link |
 | --- | --- | --- | --- | --- | --- | --- |
 | - | Organizations |  |  | Management; Monitoring; Governance; |  |  |
+|  |  |  |  |  |  |  |
 |  | Outposts | Fully managed and configurable compute and storage racks built with AWS-designed hardware that allow customers to run compute and storage on-premisses, while seamlessly connecting to AWS's broad array of services in the cloud. |  |  |  | https://aws.amazon.com/outposts/ |
 |  |  |  |  |  |  |  |
 
@@ -173,7 +218,9 @@
 | Anagram | Name | Short Description | Benefits | Use Cases | Pricing | Link |
 | --- | --- | --- | --- | --- | --- | --- |
 | - | Personal Health Dashboard |  |  |  |  |  |
+|  |  |  |  |  |  |  |
 | PaaS | Platform as a Service |  |  |  |  |  |
+|  |  |  |  |  |  |  |
 | - | Professional Services |  |  |  |  |  |
 |  |  |  |  |  |  |  |
 
@@ -189,7 +236,9 @@
 | Anagram | Name | Short Description | Benefits | Use Cases | Pricing | Link |
 | --- | --- | --- | --- | --- | --- | --- |
 | - | Redshift |  |  | Database; |  |  |
+|  |  |  |  |  |  |  |
 | RDS | Relational Database Service |  |  | Database; |  |
+|  |  |  |  |  |  |  |
 | - | Route 53 |  |  | Networking; Content Delivery; |  |  |
 |  |  |  |  |  |  |  |
 
@@ -198,22 +247,39 @@
 | Anagram | Name | Short Description | Benefits | Use Cases | Pricing | Link |
 | --- | --- | --- | --- | --- | --- | --- |
 | - | Secrets Manager |  |  | Management; Monitoring; Governance; |  |  |
+|  |  |  |  |  |  |  |
 | - | Security Groups |  |  |  |  |  |
+|  |  |  |  |  |  |  |
 | - | Service Catalog |  |  |  |  |  |
+|  |  |  |  |  |  |  |
 | - | Service Health Dashboard |  |  |  |  |  |
+|  |  |  |  |  |  |  |
 | - | Service Quotas |  |  |  |  |  |
+|  |  |  |  |  |  |  |
 | - | Shared Responsibility Model |  |  |  |  |  |
+|  |  |  |  |  |  |  |
 | - | Shield |  |  | Security; Identity; Compliance; |  |  |
+|  |  |  |  |  |  |  |
 | SNS | Simple Notification Service |  |  | Application Integration |  |  |
+|  |  |  |  |  |  |  |
 | SQS | Simple Queue Service |  |  | Application Integration |  |  |
+|  |  |  |  |  |  |  |
 | S3 | Simple Storage Service |  |  | Storage |  |  |
+|  |  |  |  |  |  |  |
 | S3 Glacier | Simple Storage Service Glacier |  |  | Storage |  |  |
+|  |  |  |  |  |  |  |
 | - | Snowball Edge |  |  | Storage |  |  |
+|  |  |  |  |  |  |  |
 | SaaS | Software as a Service | Fully featured application that only requires the user data and access, possibly with branding also allowed |  |  |  |  |
+|  |  |  |  |  |  |  |
 | SDKs | Software Development Kits |  |  |  |  |  |
+|  |  |  |  |  |  |  |
 | - | Storage Gateway |  |  | Storage |  |  |
+|  |  |  |  |  |  |  |
 | - | Support Center |  |  |  |  |  |
+|  |  |  |  |  |  |  |
 | - | Systems Manager |  |  | Management; Monitoring; Governance; |  |  |
+|  |  |  |  |  |  |  |
 | - | Systems Manager Parameter Store |  |  | Management; Monitoring; Governance; |  |  |
 |  |  |  |  |  |  |  |
 
@@ -221,9 +287,13 @@
 | Tier | Price / Month | Shortest Response | Features | Use Case | Link |
 | --- | --- | --- | --- | --- | --- |
 | Basic | Free | 24 hours |  |  |  |
+|  |  |  |  |  |  | 
 | Developer | $29 or 3% | 12 hours |  |  |  |
+|  |  |  |  |  |  | 
 | Business | $100 or 3%-10% | 1 hour |  |  |  |
+|  |  |  |  |  |  | 
 | Enterprise | $15,000 or 3%-10% | 15 mins |  |  |  |
+|  |  |  |  |  |  |
 
 ## T
 
@@ -243,8 +313,11 @@
 | Anagram | Name | Short Description | Benefits | Use Cases | Pricing | Link |
 | --- | --- | --- | --- | --- | --- | --- |
 | VPC | Virtual Private Cloud |  |  | Networking; Content Delivery; |  |  |
+|  |  |  |  |  |  |  |
 | VPN | Virtual Private Network |  |  |  |  |  |
+|  |  |  |  |  |  |  |
 |  | VPC Flow Logs | Logs traffic going in and out of your VPC |  |  |  |  |
+|  |  |  |  |  |  |  |
 
 ## W
 
