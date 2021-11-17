@@ -129,7 +129,7 @@ My Answers and the Correct Answers:
 
       > I believe the answer to this one is Step Function and Lambda because the first clue is the keyword "serverless". So we would use Lambda to setup the 2 am Monday trigger, which will run the Step Function to run the log backup process. 
       > 
-      > > 
+      > > I was close, I got Lambda right for setting up the trigger but now I get why it should be CloudWatch for the second answer since CloudWatch is a monitoring service.
 
 2. Which policy describes prohibited uses of the web services offered by Amazon Web Services?
 
@@ -143,7 +143,7 @@ My Answers and the Correct Answers:
 
       > I believe the answer is Acceptable Use Policy because it just makes the most sense and I think I remember reading something about this.
       > 
-      > > 
+      > > Short answer of what the "AWS Acceptable Use Policy" is: Policy that outlines the prohibited uses of Amazon Web Services.
 
 3. Which AWS service can be used to provision resources to run big data workloads on Hadoop clusters?
 
@@ -157,7 +157,12 @@ My Answers and the Correct Answers:
 
       > I am actually taking a guess on this one. Being that the question is referring to clusters, I am assuming that AWS Batch would be the service to help here, but will have to research to find if I am correct or not.
       > 
-      > > 
+      > > The correct answer is `Amazon EMR` because it supports powerful and proven Hadoop tools for Big Data. Easily run and scale Apache Spark, Hive, Presto, and other big data workloads.
+      > 
+      > `AWS Batch`: Fully managed batch processing at any scale. Dynamically provisions the optimal quantity and type of compute resources.
+      > 
+      > `AWS Step Function`: Visual workflows for modern applications
+      >
 
 4. Which of the following AWS services can be used to prevent Distributed Denial-of-Service (DDoS) attack? (Select three)
 
@@ -175,7 +180,9 @@ My Answers and the Correct Answers:
 
       > I am positive that both AWS Shield (to be precise, AWS Shield Advance) and AWS WAF can be used to prevent a DDos attack. As for the 3rd answer, I had to do some process of elimination to come to AWS CloudHSM. I know that AWS Trusted Advisor is only a reporting tool, AWS Inspector is only a reporting tool, and I believe that Amazon CloudFront with Route 53 is only going to be for routing with low-latency. I am not sure what AWS CloudHSM is but based on knowing what the other services do I was able to eliminate them.
       > 
-      > > 
+      > > I was actually surprised that `AWS Trusted Advisor` was the third answer. I guess it does make sense because it can inform you of an attack but can not take action.
+      > 
+      > `AWS CloudHSM (Hardware Security Module)`: Managed hardware security module on the AWS Cloud that enables you to easily generate and use your own encryption keys.
 
 5. Which of the following statement is correct for a Security Group and a Network Access Control List?
 
@@ -189,7 +196,6 @@ My Answers and the Correct Answers:
 
       > I am pretty certain that this is the correct answer. "Security Group is the security for an instance and the NACL is the security for the subnet/VPC."
       > 
-      > > 
 
 6. Which pillar of AWS Well-Architected Framework is responsible for making sure that you focus on continually improving your processes and procedures?
 
@@ -203,7 +209,6 @@ My Answers and the Correct Answers:
 
       > I believe it is Operational, while performance and operational share a lot of similar responsibilities, if I remember correctly, operational is for continuing processes, while performance is for when you are first setting up the infrastructure.
       > 
-      > > 
 
 7. AWS Trusted Advisor can provide alerts on which of the following common security misconfigurations? (Select two)?
 
@@ -219,7 +224,6 @@ My Answers and the Correct Answers:
 
       > I believe the correct answers are "When you don't turn on user activity logging (AWS CloudTrail)" because this would fall under the security of your infrastructure; and  I was actually torn between "When you allow public access to Amazon S3 buckets" and "When you don't enable data encryption on S3 Glacier" for the second one because I would think that either one of these could be the correct answer. 
       > 
-      > > 
 
 8. A financial services company wants to ensure that all customer data uploaded on its data lake on Amazon S3 always stays private. Which of the following is the MOST efficient solution to address this compliance requirement?
 
@@ -233,7 +237,7 @@ My Answers and the Correct Answers:
 
       > This one is actually a guess between A and B but I choose B because I am not sure yet if "Amazon S3 Block Public Access" service exists or not.
       > 
-      > > 
+      > > Apparently there is a `Amazon S3 Block Public Access` solution. It is a feature that provides settings for access points, buckets, and accounts to help you manage public access to Amazon SW3 resources. By default, new buckets, access points, and objects don't allow public access. Customer can then modify this access.
 
 9. The DevOps team at a Big Data consultancy has set up EC2 instances across two AWS Regions for its flagship application. Which of the following characterizes this application architecture?
 
@@ -247,7 +251,6 @@ My Answers and the Correct Answers:
 
       > Deploying the application across two AWS Regions improves availability because it is making the application accessible to more customers globally with low-latency.
       > 
-      > > 
 
 10. Which AWS services can be used together to send alerts whenever the AWS account root user signs in? (Select two)
 
@@ -263,7 +266,6 @@ My Answers and the Correct Answers:
 
       > With Lambda you can set up a trigger to send the notification via SNS when the root user signs in.
       > 
-      > > 
 
 11. Which of the following entities are part of a VPC in the AWS Cloud? (Select two)
 
