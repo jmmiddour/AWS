@@ -317,7 +317,7 @@ My Answers and the Correct Answers:
 
     - [ ] B. Virtual MFA device
 
-    - [ ] C. U2F security key
+    - [ ] C. **U2F security key**
 
     - [X] D. Hardware MFA device
 
