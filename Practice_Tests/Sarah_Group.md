@@ -115,9 +115,9 @@ My Answers and the Correct Answers:
       > Both Cost Explorer and Budgets are services for those who already have an AWS account setup. Cost Explorer shows you historical usage and predicted future usage based on historical usage. Budgets gives you have ability to set up budgets and get alerts when forecast is predicting you will get close or go over your set budget.
       >
 
-- An IT company wants to run a log backup process every Monday at 2 AM. The usual runtime of the process is 5 minutes. As a Cloud Practitioner, which AWS services would you recommend to build a Serverless solution for this use-case? (Select two)
+1. An IT company wants to run a log backup process every Monday at 2 AM. The usual runtime of the process is 5 minutes. As a Cloud Practitioner, which AWS services would you recommend to build a Serverless solution for this use-case? (Select two)
 
-    - [ ] CloudWatch
+    - [ ] **CloudWatch**
 
     - [x] Step Function
 
@@ -125,15 +125,15 @@ My Answers and the Correct Answers:
 
     - [ ] Systems Manager
 
-    - [x] Lambda
+    - [x] **Lambda**
 
       > I believe the answer to this one is Step Function and Lambda because the first clue is the keyword "serverless". So we would use Lambda to setup the 2 am Monday trigger, which will run the Step Function to run the log backup process. 
       > 
       > > 
 
-- Which policy describes prohibited uses of the web services offered by Amazon Web Services?
+2. Which policy describes prohibited uses of the web services offered by Amazon Web Services?
 
-    - [x] AWS Acceptable Use Policy
+    - [x] **AWS Acceptable Use Policy**
 
     - [ ] AWS Fair Use Policy
 
@@ -145,7 +145,7 @@ My Answers and the Correct Answers:
       > 
       > > 
 
-- Which AWS service can be used to provision resources to run big data workloads on Hadoop clusters?
+3. Which AWS service can be used to provision resources to run big data workloads on Hadoop clusters?
 
     - [x] AWS Batch
 
@@ -153,31 +153,31 @@ My Answers and the Correct Answers:
 
     - [ ] AWS Step Function
 
-    - [ ] Amazon EMR
+    - [ ] **Amazon EMR**
 
       > I am actually taking a guess on this one. Being that the question is referring to clusters, I am assuming that AWS Batch would be the service to help here, but will have to research to find if I am correct or not.
       > 
       > > 
 
-- Which of the following AWS services can be used to prevent Distributed Denial-of-Service (DDoS) attack? (Select three)
+4. Which of the following AWS services can be used to prevent Distributed Denial-of-Service (DDoS) attack? (Select three)
 
     - [x] AWS CloudHSM
 
-    - [x] AWS Shield
+    - [x] **AWS Shield**
 
     - [ ] Amazon Inspector
 
-    - [x] AWS WAF
+    - [x] **AWS WAF**
 
     - [ ] Amazon CloudFront with Route 53
 
-    - [ ] AWS Trusted Advisor
+    - [ ] **AWS Trusted Advisor**
 
       > I am positive that both AWS Shield (to be precise, AWS Shield Advance) and AWS WAF can be used to prevent a DDos attack. As for the 3rd answer, I had to do some process of elimination to come to AWS CloudHSM. I know that AWS Trusted Advisor is only a reporting tool, AWS Inspector is only a reporting tool, and I believe that Amazon CloudFront with Route 53 is only going to be for routing with low-latency. I am not sure what AWS CloudHSM is but based on knowing what the other services do I was able to eliminate them.
       > 
       > > 
 
-- Which of the following statement is correct for a Security Group and a Network Access Control List?
+5. Which of the following statement is correct for a Security Group and a Network Access Control List?
 
     - [ ] Security Group acts as a firewall at the AZ level whereas Network Access Control List acts as a firewall at the VPC level
 
@@ -185,19 +185,19 @@ My Answers and the Correct Answers:
 
     - [ ] Security Group acts as a firewall at the VPC level whereas Network Access Control List acts as a firewall at the AZ level
 
-    - [x] Security Group acts as a firewall at the instance level whereas Network Access Control List acts as a firewall at the subnet level
+    - [x] **Security Group acts as a firewall at the instance level whereas Network Access Control List acts as a firewall at the subnet level**
 
-      > I am pretty certain that this is the correct answer. Security Group is the security for an instance and the NACL is the security for the subnet/VPC.
+      > I am pretty certain that this is the correct answer. "Security Group is the security for an instance and the NACL is the security for the subnet/VPC."
       > 
       > > 
 
-- Which pillar of AWS Well-Architected Framework is responsible for making sure that you focus on continually improving your processes and procedures?
+6. Which pillar of AWS Well-Architected Framework is responsible for making sure that you focus on continually improving your processes and procedures?
 
     - [ ] Performance Efficiency
 
     - [ ] Reliability
 
-    - [x] Operational Excellence
+    - [x] **Operational Excellence**
 
     - [ ] Cost Optimization
 
@@ -205,15 +205,15 @@ My Answers and the Correct Answers:
       > 
       > > 
 
-- AWS Trusted Advisor can provide alerts on which of the following common security misconfigurations? (Select two)?
+7. AWS Trusted Advisor can provide alerts on which of the following common security misconfigurations? (Select two)?
 
-    - [x] When you don't turn on user activity logging (AWS CloudTrail)
+    - [x] **When you don't turn on user activity logging (AWS CloudTrail)**
 
     - [ ] When you share IAM user credentials with others
 
     - [ ] When you don't tag objects in S3 buckets
 
-    - [x] When you allow public access to Amazon S3 buckets
+    - [x] **When you allow public access to Amazon S3 buckets**
 
     - [ ] When you don't enable data encryption on S3 Glacier
 
@@ -221,9 +221,9 @@ My Answers and the Correct Answers:
       > 
       > > 
 
-- A financial services company wants to ensure that all customer data uploaded on its data lake on Amazon S3 always stays private. Which of the following is the MOST efficient solution to address this compliance requirement?
+8. A financial services company wants to ensure that all customer data uploaded on its data lake on Amazon S3 always stays private. Which of the following is the MOST efficient solution to address this compliance requirement?
 
-    - [ ] Use Amazon S3 Block Public Access to ensure that all S3 resources stay private
+    - [ ] **Use Amazon S3 Block Public Access to ensure that all S3 resources stay private**
 
     - [x] Trigger a lambda function every time an object is uploaded on S3. The lambda function should change the object settings to make sure it stays private
 
@@ -235,13 +235,13 @@ My Answers and the Correct Answers:
       > 
       > > 
 
-- The DevOps team at a Big Data consultancy has set up EC2 instances across two AWS Regions for its flagship application. Which of the following characterizes this application architecture?
+9. The DevOps team at a Big Data consultancy has set up EC2 instances across two AWS Regions for its flagship application. Which of the following characterizes this application architecture?
 
     - [ ] Deploying the application across two AWS Regions improves security
 
     - [ ] Deploying the application across two AWS Regions improves performance
 
-    - [x] Deploying the application across two AWS Regions improves the availability
+    - [x] **Deploying the application across two AWS Regions improves the availability**
 
     - [ ] Deploying the application across two AWS Regions improves scalability
 
@@ -249,31 +249,31 @@ My Answers and the Correct Answers:
       > 
       > > 
 
-- Which AWS services can be used together to send alerts whenever the AWS account root user signs in? (Select two)
+10. Which AWS services can be used together to send alerts whenever the AWS account root user signs in? (Select two)
 
     - [ ] Step Function
 
     - [ ] SQS
 
-    - [x] Lambda
+    - [x] **Lambda**
 
     - [ ] CloudWatch
 
-    - [x] SNS
+    - [x] **SNS**
 
       > With Lambda you can set up a trigger to send the notification via SNS when the root user signs in.
       > 
       > > 
 
-- Which of the following entities are part of a VPC in the AWS Cloud? (Select two)
+11. Which of the following entities are part of a VPC in the AWS Cloud? (Select two)
 
     - [ ] API Gateway
 
-    - [x] Subnet
+    - [x] **Subnet**
 
     - [x] Storage Gateway
 
-    - [ ] Internet Gateway
+    - [ ] **Internet Gateway**
 
     - [ ] Object
 
@@ -281,13 +281,13 @@ My Answers and the Correct Answers:
       > 
       > > 
 
-- A multi-national organization has separate VPCs for each of its business units on the AWS Cloud. The organization also wants to connect its on-premises data center with all VPCs for better organization-wide collaboration. Which AWS services can be combined to build the MOST efficient solution for this use-case? (Select two)
+12. A multi-national organization has separate VPCs for each of its business units on the AWS Cloud. The organization also wants to connect its on-premises data center with all VPCs for better organization-wide collaboration. Which AWS services can be combined to build the MOST efficient solution for this use-case? (Select two)
 
     - [x] VPC Peering
 
-    - [ ] AWS Transit Gateway
+    - [ ] **AWS Transit Gateway**
 
-    - [x] AWS Direct Connect
+    - [x] **AWS Direct Connect**
 
     - [ ] AWS Internet Gateway
 
@@ -297,7 +297,7 @@ My Answers and the Correct Answers:
       > 
       > > 
 
-- Which AWS entity enables you to privately connect your VPC to an Amazon SQS queue?
+13. Which AWS entity enables you to privately connect your VPC to an Amazon SQS queue?
 
     - [ ] AWS Direct Connect
 
@@ -305,11 +305,8 @@ My Answers and the Correct Answers:
 
     - [x] VPC Gateway Endpoint
 
-    - [ ] VPC Interface Endpoint
+    - [ ] **VPC Interface Endpoint**
 
       > Being that it needs to be a **private** connection, I can eliminate "Internet Gateway" right away. Since we are connecting AWS services to each other, there is no need for "AWS Direct Connect". So that only leaves me with two choices and the one that makes the most sense to me is the "VPC Gateway Endpoint".
       > 
       > >
-
-
-
