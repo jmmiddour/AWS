@@ -313,183 +313,183 @@ My Answers and the Correct Answers:
 
 14. Which of the following AWS authentication mechanisms supports a Multi-Factor Authentication (MFA) device that you can plug into a USB port on your computer?
 
-    - A. SMS text message-based MFA
+    - [ ] A. SMS text message-based MFA
 
-    - B. Virtual MFA device
+    - [ ] B. Virtual MFA device
 
-    - C. U2F security key
+    - [ ] C. U2F security key
 
-    - D. Hardware MFA device
+    - [X] D. Hardware MFA device
 
-      > 
+      > `D` makes the most sense to me because you would be using a thumb/flash drive. I will have to do some research on `B` and `C` because I am not sure about those, but I do know it is not `A`.
       > 
       > > 
 
 15. Which of the following is the best way to protect your data from accidental deletion on Amazon S3?
 
-    - A. S3 Transfer Acceleration
+    - [ ] A. S3 Transfer Acceleration
 
-    - B. S3 Versioning
+    - [ ] B. S3 Versioning
 
-    - C. S3 Storage Classes
+    - [ ] C. S3 Storage Classes
 
-    - D. S3 lifecycle configuration
+    - [x] D. S3 lifecycle configuration
 
-      >
+      > Out of all the answers `B` seems to resonate with me the most. I believe that I saw something on Versioning before and I think it was something akin to backing up your data into multiple places. However, it could also be `D` now that I am thinking about it more because I think `D` is where you actually set how long data remains in your S3 bucket and I believe you can also set a "read" only setting to avoid certain objects from being deleted until the specified time frame that is set for expiring the data. So I am changing to `D` as my answer for this question.
       > 
       > > 
 
 16. Amazon CloudWatch billing metric data is stored in which AWS Region?
 
-    - A. In the AWS Region where the AWS resource is provisioned
+    - [ ] A. In the AWS Region where the AWS resource is provisioned
 
-    - B. US West (N. California) - us-west-1
+    - [ ] B. US West (N. California) - us-west-1
 
-    - C. In the AWS Region where the AWS account is created
+    - [ ] C. In the AWS Region where the AWS account is created
 
-    - D. US East (N. Virginia) - us-east-1
+    - [x] D. US East (N. Virginia) - us-east-1
 
-      > 
+      > I am certain that `D` is the correct answer because that is the only Region where you can do any billing operations.
       > 
       > > 
 
 17. Which AWS service will you use to privately connect your VPC to Amazon S3?
 
-    - A. Amazon API Gateway
+    - [ ] A. Amazon API Gateway
 
-    - B. VPC Endpoint Gateway
+    - [ ] B. VPC Endpoint Gateway
 
-    - C. AWS Direct Connect
+    - [ ] C. AWS Direct Connect
 
-    - D. AWS Transit Gateway
+    - [x] D. AWS Transit Gateway
 
-      > 
+      > I am about 75% sure that the answer is `D` for this one because I believe going over this one in one of Navi's sessions
       > 
       > > 
 
 18. An IT company has deployed a static website on S3, but the website is still inaccessible. As a Cloud Practitioner, which of the following solutions would you suggest addressing this issue?
 
-    - A. Fix the S3 bucket policy
+    - [x] A. Fix the S3 bucket policy
 
-    - B. Enable S3 replication
+    - [ ] B. Enable S3 replication
 
-    - C. Disable S3 encryption
+    - [ ] C. Disable S3 encryption
 
-    - D. Enable S3 versioning
+    - [ ] D. Enable S3 versioning
 
-      > 
+      > Well this one is going to be a guess because I am not really sure but my instinct is saying that it would be `A` because it could just be the security settings in the policy which is making the website inaccessible. I do not think that you ever want to disable encryption for security reasons. I do not see how enabling replication would change the accessibility of the website. Versioning I guess could be a close contender but I will stay with my first guess of `A` on this one.
       > 
       > > 
 
 19. A research lab wants to optimize the caching capabilities for its scientific computations application running on EC2 instances. Which EC2 storage option is best suited for this use case?
 
-    - A. Amazon EBS
+    - [ ] A. Amazon EBS
 
-    - B. Amazon EC2 Instance Store
+    - [x] B. Amazon EC2 Instance Store
 
-    - C. Amazon EFS
+    - [ ] C. Amazon EFS
 
-    - D. Amazon S3
+    - [ ] D. Amazon S3
 
-      > 
+      > I am certain that the answer is `B` because this would give the fastest caching capabilities and do not need the ability to maintain the data because it will only be preforming calulatations that I am assuming do not need to be saved.
       > 
       > > 
 
 20. A company is planning to develop an application consisting of hundreds of microservices. They decide to host the application on the AWS Cloud. Since there are a large number of services produced by the application, it needs a powerful tool for analysis and debugging. Which of the following services can best meet this requirement?
 
-    - A. AWS OpsWorks
+    - [x] A. AWS OpsWorks
 
-    - B. AWS CloudWatch
+    - [ ] B. AWS CloudWatch
 
-    - C. Amazon Aurora
+    - [ ] C. Amazon Aurora
 
-    - D. AWS X-Ray
+    - [ ] D. AWS X-Ray
 
-      > 
+      > For analyzing and debugging, I believe that the correct answer here is `A`
       > 
       > > 
 
 21. A company is currently using the Enterprise Support plan. They want quick and efficient guidance with their billing and account inquiries. Which of the following included services could assist them?
 
-    - A. AWS Support API
+    - [ ] A. AWS Support API
 
-    - B. AWS Support Concierge
+    - [x] B. AWS Support Concierge
 
-    - C. AWS Advisor
+    - [ ] C. AWS Advisor
 
-    - D. None of the above
+    - [ ] D. None of the above
 
-      > 
+      > The Support Concierge is one of the biggest advantages of having the Enterprise Support Plan and can take care of all that for the company. It is like having their own account manager.
       > 
       > > 
 
 22. An organization has decided to reserve EC2 compute capacity for three years to get more discounts. Their application workloads are likely to change during this time period. What is the EC2 Reserved Instance (RI) type that allows them to change the attributes of the RI whenever they need?
 
-    - A. Standard RIs
+    - [x] A. Standard RIs
 
-    - B. Convertible RIs
+    - [ ] B. Convertible RIs
 
-    - C. Scheduled RIs
+    - [ ] C. Scheduled RIs
 
-    - D. Elastic RIs
+    - [ ] D. Elastic RIs
 
-      > 
+      > I am choosing `A` for this one just because I have to do research on these. I do not recall going over these yet and nothing is really "jumping" out at me right now.
       > 
       > > 
 
 23. What is the main benefit of decoupling an application?
 
-    - A. Make updates quickly and easily.
+    - [ ] A. Make updates quickly and easily.
 
-    - B. Optimize costs
+    - [ ] B. Optimize costs
 
-    - C. Increase the integrity of the application's components
+    - [ ] C. Increase the integrity of the application's components
 
-    - D. Reduce inter-dependencies so failures do not impact other components of the application.
+    - [x] D. Reduce inter-dependencies so failures do not impact other components of the application.
 
-      > 
+      > All of these answers expect for `B` are benefits of decoupling but I believe the main benefit is `D` because of fault-tolerance being one of the biggest best practices.
       > 
       > > 
 
 24. A company is planning to introduce a new product to their customers. They are expecting high traffic to their web application. As part of the Enterprise support plan, which of the following could provide them with architectural and scaling guidance?
 
-    - A. Infrastructure Event Management
+    - [x] A. Infrastructure Event Management
 
-    - B. AWS Management Support
+    - [ ] B. AWS Management Support
 
-    - C. AWS Support API
+    - [ ] C. AWS Support API
 
-    - D. AWS Support Concierge Service
+    - [ ] D. AWS Support Concierge Service
 
-      > 
+      > This one makes the most sense and I would say I am about 70% certain that `A` is the answer.
       > 
       > > 
 
 25. According to the AWS Acceptable Use Policy, penetration testing of EC2 instances:
 
-    - A. Will be performed by AWS upon customer request.
+    - [ ] A. Will be performed by AWS upon customer request.
 
-    - B. May be performed by the customer on their own instances with prior authorization from AWS.
+    - [x] B. May be performed by the customer on their own instances with prior authorization from AWS.
 
-    - C. Are expressly prohibited under all circumstances.
+    - [ ] C. Are expressly prohibited under all circumstances.
 
-    - D. May be performed by the customer on their own instances without prior authorization from AWS.
+    - [ ] D. May be performed by the customer on their own instances without prior authorization from AWS.
 
-      > 
+      > I am torn between `B` and `D` being the correct answers but I am leaning more towards `B`.
       > 
       > > 
 
 26. A company has decided to migrate to the AWS Cloud. AWS offers a wide range of services and instance types. They want to reduce costs as much as possible. Which of the following is the main factor to consider when choosing the instance type of services like Amazon RDS and Amazon Redshift?
 
-    - A. Your team experience with these services.
+    - [ ] A. Your team experience with these services.
 
-    - B. Workload utilization of CPU & RAM.
+    - [ ] B. Workload utilization of CPU & RAM.
 
-    - C. The type of your current on-premise database.
+    - [x] C. The type of your current on-premise database.
 
-    - D. Sources of traffic.
+    - [ ] D. Sources of traffic.
 
-      > 
+      > I believe the main factor would be based on the type of databases you currently have and then your teams experience will just fall in line if you go with the same type of database you are already using.
       > 
       > > 
 
