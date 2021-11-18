@@ -174,9 +174,9 @@ My Answers and the Correct Answers:
 
     - [x] **AWS WAF**
 
-    - [ ] Amazon CloudFront with Route 53
+    - [ ] **Amazon CloudFront with Route 53**
 
-    - [ ] **AWS Trusted Advisor**
+    - [ ] AWS Trusted Advisor
 
       > I am positive that both AWS Shield (to be precise, AWS Shield Advance) and AWS WAF can be used to prevent a DDos attack. As for the 3rd answer, I had to do some process of elimination to come to AWS CloudHSM. I know that AWS Trusted Advisor is only a reporting tool, AWS Inspector is only a reporting tool, and I believe that Amazon CloudFront with Route 53 is only going to be for routing with low-latency. I am not sure what AWS CloudHSM is but based on knowing what the other services do I was able to eliminate them.
       > 
@@ -258,9 +258,9 @@ My Answers and the Correct Answers:
 
     - [ ] SQS
 
-    - [x] **Lambda**
+    - [x] Lambda
 
-    - [ ] CloudWatch
+    - [ ] **CloudWatch**
 
     - [x] **SNS**
 
@@ -281,7 +281,9 @@ My Answers and the Correct Answers:
 
       > I am positive about the Subnet being part of the VPC but I can not remember for sure which one of the gateways are inside the VPC but I believe it is the Storage Gateway.
       > 
+      > > The "Internet Gateway" is on the edge of the VPC so I did not think that this would have been the other answer but I guess it is.
       > > 
+      > > ![](../VPC_structure_diagram2.png)
 
 12. A multi-national organization has separate VPCs for each of its business units on the AWS Cloud. The organization also wants to connect its on-premises data center with all VPCs for better organization-wide collaboration. Which AWS services can be combined to build the MOST efficient solution for this use-case? (Select two)
 
@@ -297,7 +299,10 @@ My Answers and the Correct Answers:
 
       > I am certain that AWS Direct Connect would be used for connecting the on-premises data center to the AWS services (VPCs) but as far as setting up the collaboration between VPCs I am not 100% but VPC Peering seems to make the most sense to me.
       > 
-      > > 
+      > > `AWS Transit Gateway`: Easily connect Amazon VPCs, AWS accounts, and on-premises networks to a single gateway.
+      > >
+      > > https://aws.amazon.com/transit-gateway/?whats-new-cards.sort-by=item.additionalFields.postDateTime&whats-new-cards.sort-order=desc
+      > 
 
 13. Which AWS entity enables you to privately connect your VPC to an Amazon SQS queue?
 
@@ -311,7 +316,7 @@ My Answers and the Correct Answers:
 
       > Being that it needs to be a **private** connection, I can eliminate "Internet Gateway" right away. Since we are connecting AWS services to each other, there is no need for "AWS Direct Connect". So that only leaves me with two choices and the one that makes the most sense to me is the "VPC Gateway Endpoint".
       > 
-      > >
+      > > 
 
 14. Which of the following AWS authentication mechanisms supports a Multi-Factor Authentication (MFA) device that you can plug into a USB port on your computer?
 
@@ -331,7 +336,7 @@ My Answers and the Correct Answers:
 
     - [ ] A. S3 Transfer Acceleration
 
-    - [ ] B. S3 Versioning
+    - [ ] B. **S3 Versioning**
 
     - [ ] C. S3 Storage Classes
 
@@ -349,7 +354,7 @@ My Answers and the Correct Answers:
 
     - [ ] C. In the AWS Region where the AWS account is created
 
-    - [x] D. US East (N. Virginia) - us-east-1
+    - [x] D. **US East (N. Virginia) - us-east-1**
 
       > I am certain that `D` is the correct answer because that is the only Region where you can do any billing operations.
       > 
@@ -361,7 +366,7 @@ My Answers and the Correct Answers:
 
     - [ ] B. VPC Endpoint Gateway
 
-    - [ ] C. AWS Direct Connect
+    - [ ] C. **AWS Direct Connect**
 
     - [x] D. AWS Transit Gateway
 
@@ -371,7 +376,7 @@ My Answers and the Correct Answers:
 
 18. An IT company has deployed a static website on S3, but the website is still inaccessible. As a Cloud Practitioner, which of the following solutions would you suggest addressing this issue?
 
-    - [x] A. Fix the S3 bucket policy
+    - [x] A. **Fix the S3 bucket policy**
 
     - [ ] B. Enable S3 replication
 
@@ -387,13 +392,13 @@ My Answers and the Correct Answers:
 
     - [ ] A. Amazon EBS
 
-    - [x] B. Amazon EC2 Instance Store
+    - [x] B. **Amazon EC2 Instance Store**
 
     - [ ] C. Amazon EFS
 
     - [ ] D. Amazon S3
 
-      > I am certain that the answer is `B` because this would give the fastest caching capabilities and do not need the ability to maintain the data because it will only be preforming calulatations that I am assuming do not need to be saved.
+      > I am certain that the answer is `B` because this would give the fastest caching capabilities and do not need the ability to maintain the data because it will only be preforming calculations that I am assuming do not need to be saved.
       > 
       > > 
 
@@ -405,7 +410,7 @@ My Answers and the Correct Answers:
 
     - [ ] C. Amazon Aurora
 
-    - [ ] D. AWS X-Ray
+    - [ ] D. **AWS X-Ray**
 
       > For analyzing and debugging, I believe that the correct answer here is `A`
       > 
@@ -415,7 +420,7 @@ My Answers and the Correct Answers:
 
     - [ ] A. AWS Support API
 
-    - [x] B. AWS Support Concierge
+    - [x] B. **AWS Support Concierge**
 
     - [ ] C. AWS Advisor
 
@@ -429,7 +434,7 @@ My Answers and the Correct Answers:
 
     - [x] A. Standard RIs
 
-    - [ ] B. Convertible RIs
+    - [ ] B. **Convertible RIs**
 
     - [ ] C. Scheduled RIs
 
@@ -447,7 +452,7 @@ My Answers and the Correct Answers:
 
     - [ ] C. Increase the integrity of the application's components
 
-    - [x] D. Reduce inter-dependencies so failures do not impact other components of the application.
+    - [x] D. **Reduce inter-dependencies so failures do not impact other components of the application.**
 
       > All of these answers expect for `B` are benefits of decoupling but I believe the main benefit is `D` because of fault-tolerance being one of the biggest best practices.
       > 
@@ -455,7 +460,7 @@ My Answers and the Correct Answers:
 
 24. A company is planning to introduce a new product to their customers. They are expecting high traffic to their web application. As part of the Enterprise support plan, which of the following could provide them with architectural and scaling guidance?
 
-    - [x] A. Infrastructure Event Management
+    - [x] A. **Infrastructure Event Management**
 
     - [ ] B. AWS Management Support
 
@@ -475,7 +480,7 @@ My Answers and the Correct Answers:
 
     - [ ] C. Are expressly prohibited under all circumstances.
 
-    - [ ] D. May be performed by the customer on their own instances without prior authorization from AWS.
+    - [ ] D. **May be performed by the customer on their own instances without prior authorization from AWS.**
 
       > I am torn between `B` and `D` being the correct answers but I am leaning more towards `B`.
       > 
@@ -485,7 +490,7 @@ My Answers and the Correct Answers:
 
     - [ ] A. Your team experience with these services.
 
-    - [ ] B. Workload utilization of CPU & RAM.
+    - [ ] B. **Workload utilization of CPU & RAM.**
 
     - [x] C. The type of your current on-premise database.
 
