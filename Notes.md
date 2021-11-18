@@ -12,7 +12,7 @@
 |  |  |  |  |  |  |  |
 |  | Auto Scaling | Monitors your applications and automatically adjusts capacity to maintain steady, predictable performance at the lowest possible cost. Build scaling plans for EC2 instances, Spot Fleets, EC2 tasks, DynamoDB tables and indexes, and Aurora Replicas | <ul><li>Easy to setup within minutes</li><li>Makes scaling simple with recommendations to optimize performance, costs, or balance</li><li>Automatically maintain performance</li><li>Scales *in* and *out* (subtract or add instances) only</li></ul> | Automate scaling of your applications and resources. | <ul><li>No additional charge</li><li>Only pay for resources needed and CloudWatch monitoring fees</li></ul> | https://aws.amazon.com/autoscaling/ |
 |  |  |  |  |  |  |  |
-| AZ | Availability Zone | One or more isolated locations within a Region. | <ul><li>Can distribute your instance across multiple AZs to prevent application downtime</li><li>Can use [Elastic IP addresses](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html) to mask a failure of an instance in an AZ</li><li>When setting up an instance in a Region, if no AZ is specified, AWS choose on closest to your customers</li></ul> |  | Varies based on the tier | https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-availability-zones |
+| AZ | Availability Zone | One or more isolated locations within a Region. Like a cluster of data centers | <ul><li>Can distribute your instance across multiple AZs to prevent application downtime</li><li>Can use [Elastic IP addresses](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html) to mask a failure of an instance in an AZ</li><li>When setting up an instance in a Region, if no AZ is specified, AWS choose on closest to your customers</li></ul> |  | Varies based on the tier | https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-availability-zones |
 |  |  |  |  |  |  |  |
 | ACM | AWS Certificate Management | Easily provision, manage, and deploy public and private Secure Sockets Layer/Transport Layer Security (SSL/TLS) certificates for use with AWS services and your internal connected resources. | <ul><li>Free public certificates for ACM-integrated services</li><li>Managed certificate renewal</li><li>Get certificates easily</li><li>Security</li><li>Identity</li><li>Compliance</li></ul> | <ul><li>Protect and secure your website</li><li>Protect and secure your internal resources</li><li>Help meet compliance requirements</li><li>Improve uptime</li></ul> | No additional charge for public or private SSL/TLS certificates you use with [ACM-integrated services](https://docs.aws.amazon.com/acm/latest/userguide/acm-services.html). Only pay for the AWS resources you create to run your application. | https://aws.amazon.com/certificate-manager/ |
 |  |  |  |  |  |  |  |
@@ -35,7 +35,7 @@
 | --- | --- | --- | --- | --- | --- | --- |
 | - | CloudFormation |  |  | Management; Monitoring; Governance; |  |  |
 |  |  |  |  |  |  |  |
-| - | CloudFront |  |  | Networking; Content Delivery; |  |  |
+| - | CloudFront | Service that speeds up distribution of your static and dynamic web content to your users on a global level | Uses `Edge Locations` to reduce latency;  | Networking; Content Delivery; |  | https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html |
 |  |  |  |  |  |  |  |
 | - | CloudHSM |  |  | Security; Identity; Compliance; |  |  |
 |  |  |  |  |  |  |  |
@@ -74,16 +74,19 @@
 |  |  |  |  |  |  |  |
 | - | Direct Connect |  | Networking; Content Delivery; |  |
 |  |  |  |  |  |  |  |
-| - | DynamoDB |  | Databases; |  |
+| - | DynamoDB | Managed schemaless NoSQL database | Key value store; Faster query time; Low-Latency; Serverless; Consistent Performance at any scale; Less than 10 milliseconds latency per query; | Databases; Does not need complex queries or joins; Gaming application; Mobile application; Global audience;  |  |  |
 |  |  |  |  |  |  |  |
 
 ## E
+
+**AWS Elsticity:**
+    Scaling up and down with the demand of your needs
 
 | Anagram | Name | Short Description | Benefits | Use Cases | Pricing | Link |
 | --- | --- | --- | --- | --- | --- | --- |
 | - | Elastic Beanstalk |  |  | Compute and Serverless |  |  |
 |  |  |  |  |  |  |  |
-| EBS | Elastic Block Storage |  |  | Storage |  |  |
+| EBS | Elastic Block Storage | Block storage service that needs to be connected to one EC2 instance at a time in the same AZ. EBS is scalable but you have to manually scale it. | Files are separated into equal-sized pieces (blocks) of data; Can take a "SnapShot" (backup) of the data and store in an S3; Can recreate an EBS from a prior EBS SnapShot; Incremental (chained - only backs up changed data) faster backups (SnapShots); Restore from a specific backup (Snapshot) | Storage; Used for applications that run on Amazon EC2 instances; Best for databases | Pay for the amount of storage space you ask for, whether using all or not |  |
 |  |  |  |  |  |  |  |
 | - | ElastiCache |  |  | Database; |  |  |
 |  |  |  |  |  |  |  |
@@ -91,7 +94,7 @@
 |  |  |  |  |  |  |  |
 | ECS | Elastic Container Service | Fully managed container orchestration service. Makes it easier for you to deploy, manage, and scale containerized applications. |  | Containers; Deploy in a hybrid environment; Support batch processing; Scale web applications. |  | https://aws.amazon.com/ecs/ |
 |  |  |  |  |  |  |  |
-| EFS | Elastic File Storage |  |  | Storage |  |  |
+| EFS | Elastic File Storage | Can connect to multiple EC2 instances in the same Region. Like the file system on your computer with folders and files. | Scalable; Connects to multiple EC2 instances; Fast performance; | Storage | Pay only for the storage you use |  |
 |  |  |  |  |  |  |  |
 | EKS | Elastic Kubernetes Service |  |  | Containers; |  |  |
 |  |  |  |  |  |  |  |
@@ -105,7 +108,11 @@
 | --- | --- | --- | --- | --- |
 | On-Demand |  |  |  |  |
 |  |  |  |  |  |
+| Spot Instance |  |  |  |  |
+|  |  |  |  |  |
 | Reserved |  |  |  |  |
+|  |  |  |  |  |
+| Savings Plan |  |  |  |  |
 |  |  |  |  |  |
 | Dedicated Host |  |  | Comply with per-core software license requirements; |  |
 |  |  |  |  |  |
@@ -128,11 +135,14 @@
 |  |  |  |  |  |  |  |
 
 ### AWS Global Infrastructure
+
+![](VPC_structure_diagram.png)
+
 | Part | Description | Security | Level | Link |
 | --- | --- | --- | --- | --- |
-| VPC |  |  | Top Level - Your personal cloud |  |
+| VPC (Virtual Private Cloud) | Automatically created for you when you sign up for an AWS account |  | Top Level - Your personal virtual machine (VM) in the cloud |  |
 |  |  |  |  |  |
-| Regions |  |  | Inside your VPC |  |
+| Regions | <ul><li>Collection of AWS resources in a geographic area</li><li>Made up of 2 or more AZs</li><li>Each Region is isolated and independent of other Regions</li></ul> |  | Inside your VPC | https://docs.aws.amazon.com/general/latest/gr/rande-manage.html |
 |  |  |  |  |  |
 | Subnet |  | NaCL | Inside Region - Houses AZs |  |
 |  |  |  |  |  |
@@ -148,15 +158,19 @@
 
 ## I
 
+![](IT_servivce_models.jpg)
+
 | Anagram | Name | Short Description | Benefits | Use Cases | Pricing | Link |
 | --- | --- | --- | --- | --- | --- | --- |
 | IAM | Identity and Access Management |  |  | Security; Identity; Compliance; |  |  |
 |  |  |  |  |  |  |  |
-| IaaS | Infrastructure as a Service |  |  |  |  |  |
+| IaaS | Infrastructure as a Service | Services approach to IT infrastructure. AWS gives you the server and you can build whatever you want/need on that server. | <ul><li>Can design the infrastructure for your specific needs</li><li>Similar to having your own server on-premises without the extra cost</li><li>You control all aspects of the server, minus the physical aspects</li></ul> | <ul><li>Companies that want full control without the hassle of maintaining an on-premises data center.</li><li>Example Services: AWS EC2 and S3</li></ul> |  |  |
 |  |  |  |  |  |  |  |
 | IaC | Infrastructure as Code |  |  |  |  |  |
 |  |  |  |  |  |  |  |
 | - | Inspector | Checks for security patches and reports if a new patch is available. |  | Security; Identity; Compliance; |  |  |
+|  |  |  |  |  |  |  |
+|  | Instance Store | Block storage attached to the EC2 instance; part of the server; when EC2 instance is stopped all data is deleted from the instance store | Super fast because it is right on the server; Quickest access rate; Data is deleted when EC2 is stopped | Temporary complex calculations; Data needs to be accessed quickly but does not need to be kept or is stored elsewhere before stopping the EC2 instance |  |  |
 |  |  |  |  |  |  |  |
 
 ## J
@@ -202,7 +216,7 @@
 
 | Anagram | Name | Short Description | Benefits | Use Cases | Pricing | Link |
 | --- | --- | --- | --- | --- | --- | --- |
-|  |  |  |  |  |  |  |
+| NACL | Network Access Control List | Security (firewall) for the VPC subnets. Any access to resources inside the subnet is controlled by the subnet's NACL. Subnet can have only one NACL. | <ul><li>First layer of defense</li><li>Stateless (Brainless/Forgetful)</li><li>Checks both inbound and outbound traffic against predefined rules</li><li>Have rules for both incoming and outgoing traffic</li><li>Supports allow and deny rules</li><li>All rules are numbered and applied in order from lowest to highest number</li></ul> |  |  | <ul><li>https://medium.com/awesome-cloud/aws-difference-between-security-groups-and-network-acls-adc632ea29ae</li><li></li></ul> |
 
 ## O
 
@@ -219,7 +233,7 @@
 | --- | --- | --- | --- | --- | --- | --- |
 | - | Personal Health Dashboard |  |  |  |  |  |
 |  |  |  |  |  |  |  |
-| PaaS | Platform as a Service |  |  |  |  |  |
+| PaaS | Platform as a Service | Platform to build your own applications on. | <ul><li>No need to setup underlying infrastructure on the server</li><li>AWS builds out/maintains the server with needed security, patches, updates, etc.</li><li>You only need to maintain your application and the data related to that application</li></ul> | <ul><li>Companies looking for a serverless solution</li><li>Example Service: Amazon Relational Database Service (RDS)</li><li>Build an application without setting up the underlying infrastructure</li><li>Storing data</li></ul> |  |  |
 |  |  |  |  |  |  |  |
 | - | Professional Services |  |  |  |  |  |
 |  |  |  |  |  |  |  |
@@ -237,7 +251,7 @@
 | --- | --- | --- | --- | --- | --- | --- |
 | - | Redshift |  |  | Database; |  |  |
 |  |  |  |  |  |  |  |
-| RDS | Relational Database Service |  |  | Database; |  |
+| RDS | Relational Database Service | Service for managing relational databases | Managed by AWS, you only have to control the data; Serverless; | Database; Using Microsoft SQL, Oracle, MySQL, PostgresSQL, MariaDB, and AWS Aurora; Need organized consistent data schema; Need unique answers; Banks; |  |
 |  |  |  |  |  |  |  |
 | - | Route 53 |  |  | Networking; Content Delivery; |  |  |
 |  |  |  |  |  |  |  |
@@ -248,7 +262,7 @@
 | --- | --- | --- | --- | --- | --- | --- |
 | - | Secrets Manager |  |  | Management; Monitoring; Governance; |  |  |
 |  |  |  |  |  |  |  |
-| - | Security Groups |  |  |  |  |  |
+| - | Security Groups | Security (firewall) for instances that need to assigned explicitly to the instance. | <ul><li>Stateful (Remembers)</li><li>Only need to set up incoming allow rules</li><li>By default all ***incoming*** traffic is denied.</li><li>Instance can have multiple Security Groups</li><li>All rules are applied</li></ul> | Tied to Instances only; Used to control who can access your instance. |  | <ul><li>https://medium.com/awesome-cloud/aws-difference-between-security-groups-and-network-acls-adc632ea29ae</li><li></li></ul> |
 |  |  |  |  |  |  |  |
 | - | Service Catalog |  |  |  |  |  |
 |  |  |  |  |  |  |  |
@@ -264,13 +278,17 @@
 |  |  |  |  |  |  |  |
 | SQS | Simple Queue Service |  |  | Application Integration |  |  |
 |  |  |  |  |  |  |  |
-| S3 | Simple Storage Service |  |  | Storage |  |  |
+| S3 | Simple Storage Service | Object storage service which is serverless. A bucket is equivalent to a file folder/directory and an object is equivalent to a file. Regional storage service. | Can be accessed via a URL; AWS makes copies across 3 AZs of the data; Highly durable; Highly available; Serverless; Set permissions to control access to objects; Choose from a range of storage classes for different use cases | Storage; Images for a static webpage; Log files; Files that will not change often or at all | Pay only for the storage you use based on the storage class |  |
 |  |  |  |  |  |  |  |
 | S3 Glacier | Simple Storage Service Glacier |  |  | Storage |  |  |
 |  |  |  |  |  |  |  |
+|  | S3 Glacier Vault Lock Policy | User can define a policy that locks the data in the S3 from being deleted for selected time frame |  |  |  |  |
+|  |  |  |  |  |  |  |
+|  | S3 Lifecycle Policy | User can set up a policy that controls how much time from last access until a file is moved or deleted |  |  |  |  |
+|  |  |  |  |  |  |  |
 | - | Snowball Edge |  |  | Storage |  |  |
 |  |  |  |  |  |  |  |
-| SaaS | Software as a Service | Fully featured application that only requires the user data and access, possibly with branding also allowed |  |  |  |  |
+| SaaS | Software as a Service | Fully featured application that only requires the user data and access, possibly with branding also allowed | <ul><li>Application is already create for you</li><li>No need to hire specialist to build the technology for you</li><li>Ready to go solution</li><li>AWS maintains everything for you, you just maintain/control your data</li></ul> | <ul><li>Companies that do not have the budget to hire engineers to build/maintain applications</li><li>Examples:<ul><li>Gmail</li><li>Outlook</li><li>Canva</li><li>Salesforce</li></ul></ul> |  |  |
 |  |  |  |  |  |  |  |
 | SDKs | Software Development Kits |  |  |  |  |  |
 |  |  |  |  |  |  |  |
@@ -283,6 +301,24 @@
 | - | Systems Manager Parameter Store |  |  | Management; Monitoring; Governance; |  |  |
 |  |  |  |  |  |  |  |
 
+### S3 Storage Classes
+| Class | Pricing | Use Cases | 
+| --- | --- | --- |
+| Standard | Most expensive of all classes | Data accessed very frequently | 
+|  |  |  | 
+| Intelligent Tiering |  | Data with changing or unknown access patterns | 
+|  |  |  | 
+| Standard Infrequent Access (IA) | 2nd  | Long-lived infrequently accessed data with a few minutes | 
+|  |  |  | 
+| One Zone-IA |  | Long-lived, infrequently accessed, non-critical data that is okay if it is not accessible at all times; Only saves data in one AZ | 
+|  |  |  | 
+| Glacier |  | Archived data that can be retrieved within a few minutes to hours; | 
+|  |  |  | 
+| Glacier Deep Archive | $1 / month / Terabyte | Archived data that can wait up to 12 hours to retrieve | 
+|  |  |  | 
+| Reduced redundancy |  | Frequently accessed, non-critical data | 
+|  |  |  | 
+
 ### Support Plan Tiers
 | Tier | Price / Month | Shortest Response | Features | Use Case | Link |
 | --- | --- | --- | --- | --- | --- |
@@ -294,6 +330,14 @@
 |  |  |  |  |  |  | 
 | Enterprise | $15,000 or 3%-10% | 15 mins |  |  |  |
 |  |  |  |  |  |  |
+
+### Subnets
+| Type | Description | Benefits | Use Cases |
+| --- | --- | --- | --- |
+| Public |  | <ul><li></li></ul> | <ul><li></li></ul> |
+|  |  |  |  | 
+| Private |  | <ul><li></li></ul> | <ul><li></li></ul> | 
+|  |  |  |  |
 
 ## T
 
